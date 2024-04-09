@@ -1030,6 +1030,7 @@ p {
 }
 
 .industries-subtitle {
+  font-family: 'Chakra Petch', sans-serif;
   text-align: left;
   z-index: 1;
   position: relative;
