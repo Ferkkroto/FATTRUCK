@@ -338,6 +338,9 @@ p {
 /* Media queries para móviles */
 /* Media queries para móviles */
 @media (max-width: 768px) {
+  .bg-custom {
+    height: 100vh;
+}
   h1 {
     font-size: 2.4rem; /* Reduce aún más el tamaño de la fuente para móviles */
     margin-bottom: 5%;
