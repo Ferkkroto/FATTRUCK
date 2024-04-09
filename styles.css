@@ -1598,8 +1598,8 @@ p {
  
   .point {
     /* La posición será ajustada dinámicamente por JavaScript, no necesitas definir top y left aquí */
-    width: 20px; /* Puedes ajustar el tamaño si es necesario */
-    height: 20px;
+    width: 28px; /* Puedes ajustar el tamaño si es necesario */
+    height: 28px;
     /* Asegúrate de que las posiciones inline no se calculen aquí, sino en el JS */
   }
 }
@@ -1635,8 +1635,8 @@ p {
 
   /* Ajustes específicos para la posición de los puntos interactivos */
   .point {
-    width: 25px; /* Un poco más grande para pantallas más grandes */
-    height: 25px;
+    width: 30px; /* Un poco más grande para pantallas más grandes */
+    height: 30px;
     /* Posiciones ajustadas dinámicamente si es necesario */
   }
 
