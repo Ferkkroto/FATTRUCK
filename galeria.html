@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Opcional: incluir íconos de FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-- Tu CSS personalizado aquí -->
+    <link rel="stylesheet" href="galeria.css">
+</head>
+<body>
+    <header>
+        <!-- Aquí va el contenido del encabezado, como la barra de navegación y los títulos principales -->
+        <nav class="navbar navbar-expand-lg navbar-custom">
+          <a class="navbar-brand" href="index.html">
+            <img src="imagenes/fattruck-logo_white.svg" alt="Logo"> <!-- Ajusta el path a tu logo -->
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active mr-3">
+                <a class="nav-link" href="index.html">
+                  <i class="fas fa-home"></i> <span>HOGAR</span><span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <!-- Enlace VEHÍCULOS que siempre redirige, visible solo en dispositivos grandes -->
+              <li class="nav-item mr-3 d-none d-lg-block">
+                <a class="nav-link" href="vehiculos.html">VEHÍCULOS +</a>
+              </li>
+      
+              <!-- Menú desplegable para dispositivos móviles, visible solo en dispositivos pequeños -->
+              <li class="nav-item dropdown mr-3 d-lg-none">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  VEHÍCULOS +
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="pickup2.4.html">PICKUP 2.4</a>
+                  <a class="dropdown-item" href="pickup2.8.html">PICKUP 2.8</a>
+                  <a class="dropdown-item" href="wagon8x8.html">WAGON 2.8</a>
+                  <!-- Agrega más enlaces según sea necesario -->
+                </div>
+              </li>             
+              <!-- Resto de elementos del menú -->
+              <li class="nav-item mr-3">
+                <a class="nav-link" href="caracteristicas.html">CARACTERÍSTICAS</a>
+              </li>
+              <li class="nav-item mr-3">
+                <a class="nav-link" href="galeria.html">GALERIA</a>
+              </li>
+              <li class="nav-item active mr-3">
+                <a class="nav-link btn-contact" href="contacto.html">CONTACTANOS</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      
+    </header>
+
+    <main>
+        
+      <div class="container-fluid top-spacing">
+        <div class="row no-gutters">
+          <!-- Contenedor de 8 columnas -->
+            <div class="col-12 col-md-8 image-container " data-toggle="modal" data-target="#videoCarouselModal" data-video="https://www.youtube.com/embed/tS1-pYOJvD4">
+              <div class="image-overlay">
+                  <div class="image-overlay-text">Fat Truck sobre varios terrenos</div>
+              </div>
+              <img src="imagenes/video1-copy.webp" alt="Video 1" class="img-fluid">
+          </div>
+           <!-- Contenedor de 4 columnas para Video 2 -->
+            <div class="col-12 col-md-4 image-container" data-toggle="modal" data-target="#videoCarouselModal" data-video="https://www.youtube.com/embed/ZrhLLET1-lE">
+              <div class="image-overlay">
+                  <div class="image-overlay-text">Camión Gordo 8x8: Descripción General</div>
+              </div>
+              <img src="imagenes/video2-copy.webp" alt="Video 2" class="img-fluid">
+          </div>
+
+          <div class="col-12 col-md-4 image-container"data-toggle="modal" data-target="#videoCarouselModal" data-video="https://www.youtube.com/embed/sArp22EQm7c">
+            <div class="image-overlay">
+              <div class="image-overlay-text">Alineación Fat Truck 2023</div>
+            </div>
+            <img src="imagenes/video3-copy.webp" alt="Video 3" class="img-fluid">
+          </div>  
+          <!-- Contenedor de 8 columnas -->
+          <div class="col-12 col-md-8 image-container"data-toggle="modal" data-target="#videoCarouselModal"data-video="https://www.youtube.com/embed/C4hBvEC568s" >
+            <div class="image-overlay">
+              <div class="image-overlay-text">Fat Truck 8x8: Escalado de pared</div>
+            </div>
+            <img src="imagenes/video4-copy.webp" alt="Video 4"class="img-fluid">
+          </div>
+          
+          
+          <div class="col-12 col-md-8 image-container"data-toggle="modal" data-target="#videoCarouselModal" data-video="https://www.youtube.com/embed/KRJgf3_Ojf4">
+            <div class="image-overlay">
+              <div class="image-overlay-text">Fat Truck: varios clips</div>
+            </div>
+            <img src="imagenes/video5-copy.webp" alt="Video 5" class="img-fluid">
+          </div>
+          <!-- Contenedor de 4 columnas -->
+          <div class="col-12 col-md-4 image-container"data-toggle="modal" data-video="https://www.youtube.com/embed/qwUDU_SknZA">
+            <div class="image-overlay">
+              <div class="image-overlay-text">Fat Truck 8x8: Sobre agua y hielo</div>
+            </div>
+            <img src="imagenes/video6-copy.webp" class="img-fluid">
+          </div>
+           <!-- Contenedor de 4 columnas -->
+           <div class="col-12 col-md-4 image-container"data-toggle="modal" data-target="#videoCarouselModal" data-video="https://www.youtube.com/embed/_I8A2PQVHIE">
+            <div class="image-overlay">
+              <div class="image-overlay-text">Fat Truck 8x8: Sobre la nieve a toda velocidad</div>
+            </div>
+            <img src="imagenes/video7-copy.webp" alt="Video 7" class="img-fluid">
+          </div>
+          <div class="col-12 col-md-8 image-container"data-toggle="modal" data-target="#videoCarouselModal" data-video="https://www.youtube.com/embed/q5qDuuo_95w">
+            <div class="image-overlay">
+              <div class="image-overlay-text">Fat Truck 8x8: Articulación</div>
+            </div>
+            <img  src="imagenes/video8-copy.webp" alt="Video 8" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    
+
+
+  
+      
+     
+<!-- Modal Fullscreen -->
+<div class="modal fade" id="videoCarouselModal" tabindex="-1" role="dialog" aria-labelledby="videoCarouselModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="videoCarouselModalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Carrusel -->
+        <div id="videoCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicadores de carrusel -->
+          
+          <!-- Contenedor de slides -->
+          <div class="carousel-inner">
+            <!-- Item del carrusel activo    1-->
+             <div class="carousel-item active">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/tS1-pYOJvD4?enablejsapi=1&si=S5Um7aHqxkrTv2mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <!-- Otros items del carrusel  2-->
+            <div class="carousel-item">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/ZrhLLET1-lE?enablejsapi=1&si=S5Um7aHqxkrTv2mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <!-- Otros items del carrusel  3-->
+            <div class="carousel-item">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/sArp22EQm7c?enablejsapi=1&si=S5Um7aHqxkrTv2mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <!-- Otros items del carrusel  4-->
+              <div class="carousel-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/C4hBvEC568s?enablejsapi=1&si=S5Um7aHqxkrTv2mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+                <!-- Otros items del carrusel  5-->
+              <div class="carousel-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KRJgf3_Ojf4?enablejsapi=1&si=S5Um7aHqxkrTv2mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+                <!-- Otros items del carrusel  6-->
+              <div class="carousel-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qwUDU_SknZA?enablejsapi=1&si=S5Um7aHqxkrTv2mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+                <!-- Otros items del carrusel  7-->
+              <div class="carousel-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_I8A2PQVHIE?enablejsapi=1&si=S5Um7aHqxkrTv2mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+                <!-- Otros items del carrusel  8-->
+              <div class="carousel-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/q5qDuuo_95w?enablejsapi=1&si=S5Um7aHqxkrTv2mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+          </div>
+          <!-- Controles del carrusel -->
+          <a class="carousel-control-prev" href="#videoCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a class="carousel-control-next" href="#videoCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+          </a>
+        </div>
+        <!-- Miniaturas de videos debajo del carrusel -->
+
+        <!-- Miniaturas de videos debajo del carrusel -->
+        <div class="carousel-thumbnails">
+          <div class="thumbnails-container">
+          <!-- Miniatura para el Video 1 -->
+            <div class="video-thumbnail" data-video="https://www.youtube.com/embed/tS1-pYOJvD4" data-slide-to="0">
+              <img src="https://img.youtube.com/vi/tS1-pYOJvD4/hqdefault.jpg" alt="Video 1" class="img-fluid">
+            </div>
+            <!-- Miniatura para el Video 2 -->
+            <div class="video-thumbnail" data-video="https://www.youtube.com/embed/ZrhLLET1-lE" data-slide-to="1">
+              <img src="https://img.youtube.com/vi/ZrhLLET1-lE/hqdefault.jpg" alt="Video 2" class="img-fluid">
+            </div>
+            <!-- Miniatura para el Video 3 -->
+            <div class="video-thumbnail" data-video="https://www.youtube.com/embed/sArp22EQm7c" data-slide-to="2">
+              <img src="https://img.youtube.com/vi/sArp22EQm7c/hqdefault.jpg" alt="Video 3" class="img-fluid">
+            </div>
+            <!-- Miniatura para el Video 4 -->
+            <div class="video-thumbnail" data-video="https://www.youtube.com/embed/C4hBvEC568s" data-slide-to="3">
+              <img src="https://img.youtube.com/vi/C4hBvEC568s/hqdefault.jpg" alt="Video 4" class="img-fluid">
+            </div>
+            <!-- Miniatura para el Video 5 -->
+            <div class="video-thumbnail" data-video="https://www.youtube.com/embed/KRJgf3_Ojf4" data-slide-to="4">
+              <img src="https://img.youtube.com/vi/KRJgf3_Ojf4/hqdefault.jpg" alt="Video 5" class="img-fluid">
+            </div>
+            <!-- Miniatura para el Video 6 -->
+            <div class="video-thumbnail" data-video="https://www.youtube.com/embed/qwUDU_SknZA" data-slide-to="5">
+              <img src="https://img.youtube.com/vi/qwUDU_SknZA/hqdefault.jpg" alt="Video 6" class="img-fluid">
+            </div>
+            <!-- Miniatura para el Video 7 -->
+            <div class="video-thumbnail" data-video="https://www.youtube.com/embed/_I8A2PQVHIE" data-slide-to="6">
+              <img src="https://img.youtube.com/vi/_I8A2PQVHIE/hqdefault.jpg" alt="Video 7" class="img-fluid">
+            </div>
+            <!-- Miniatura para el Video 8 -->
+            <div class="video-thumbnail" data-video="https://www.youtube.com/embed/q5qDuuo_95w" data-slide-to="7">
+              <img src="https://img.youtube.com/vi/q5qDuuo_95w/hqdefault.jpg" alt="Video 8" class="img-fluid">
+            </div>
+            <!-- Puedes seguir añadiendo miniaturas aquí -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="faq-preguntas">
+  <div class="background-image-half"></div>
+  <div class="faq-header">
+    <h2>PREGUNTAS FRECUENTES</h2>
+    <a href="contacto.html" class="faq-button">¿TENGO UNA PREGUNTA?</a>
+  </div>
+  <div class="faq-content">
+    <!-- Pregunta 1 -->
+    <div class="faq-item">
+      <div class="faq-question">
+        <h3 >
+          ¿Cómo maneja Fat Truck diferentes terrenos, incluido el terreno?
+      </h3>              <button class="faq-toggle">+</button>
+      </div>
+      <div class="faq-answer">
+          <span class="response-prefix">R:</span>
+          <p>El excepcional diseño anfibio de Fat Truck le permite navegar sin esfuerzo por diversos terrenos, desde paisajes cubiertos de nieve hasta cruces de agua. Con sus capacidades de rendimiento versátiles, realiza una transición perfecta entre tierra y agua, lo que garantiza una operación confiable y eficiente en diversos entornos.</p>
+        </div>
+    </div>
+      <!-- Pregunta 2 -->
+    <div class="faq-item">
+      <div class="faq-question">
+        <h3>
+          ¿Puede Fat Truck acomodar un equipo de trabajadores o equipo adicional?
+      </h3>              <button class="faq-toggle">+</button>
+      </div>
+      <div class="faq-answer">
+          <span class="response-prefix">R:</span>
+          <p>Absolutamente. Fat Truck está diseñado para satisfacer las necesidades tanto de su equipo como de equipo. Ya sea que esté transportando un equipo de trabajadores a ubicaciones remotas o llevando equipo adicional para sus proyectos, el diseño espacioso y la capacidad de carga útil de Fat Truck lo convierten en una solución versátil para diversos escenarios de trabajo.</p>
+        </div>
+    </div>
+     <!-- Pregunta 3 -->
+     <div class="faq-item">
+      <div class="faq-question">
+        <h3 >
+          ¿Qué características de seguridad tiene Fat Truck para proyectos todo terreno?
+      </h3>              <button class="faq-toggle">+</button>
+      </div>
+      <div class="faq-answer">
+          <span class="response-prefix">R:</span>
+          <p>Fat Truck prioriza la seguridad con características robustas como una estructura de protección antivuelco (ROPS) que cumple con la norma ISO 3471, garantizando la protección de los ocupantes durante maniobras todoterreno desafiantes. El freno de seguridad automático mejora aún más la seguridad al proporcionar una desaceleración controlada, agregando una capa adicional de seguridad durante la operación en terrenos exigentes.</p>
+        </div>
+    </div>
+     <!-- Pregunta 4 -->
+     <div class="faq-item">
+      <div class="faq-question">
+        <h3 >
+          ¿Qué tan fácil es operar el Fat Truck, especialmente en condiciones difíciles ?
+      </h3>
+        <button class="faq-toggle">+</button>
+      </div>
+      <div class="faq-answer">
+          <span class="response-prefix">R:</span>
+          <p>Fat Truck está diseñado con controles fáciles de usar, que incluyen un joystick proporcional intuitivo y una pantalla a color para facilitar la navegación. Incluso en condiciones difíciles, sus controles avanzados contribuyen a una operación sencilla y fluida, lo que permite a los operadores maniobrar con confianza.</p>
+        </div>
+    </div>
+    <!-- Más preguntas aquí -->
+  </div>
+</div>
+
+
+<div class="container-images">
+  <img src="imagenes/cta-top-bg.webp" class="image-large" alt="Imagen Grande">
+    <!-- Contenedor Intermedio -->
+   <!-- Nuevo Contenedor Intermedio -->
+   <div class="content-overlay">
+    <h2>¿LISTO PARA MEJORAR TUS CAPACIDADES TODOTERRENO?</h2>
+    <div class="text-and-button">
+      <p>Elija la excelencia con Fat Truck. Como distribuidor autorizado, Fat Truck Alberta es su puerta de entrada a un rendimiento, versatilidad y confiabilidad inigualables. Contáctenos hoy para explorar las posibilidades y llevar el poder de Fat Truck a su flota.</p>
+      <a href="contacto.html" class="btn-sales-inquiry">CONTACTE CON VENTAS AHORA!</a>
+    </div>
+  </div>
+  <img src="imagenes/dot-bg.png" class="image-small" alt="Imagen Pequeña">
+</div>
+          
+  
+</main>
+
+<footer class="footer container-fluid-ultimo  text-white ">
+<div class="row">
+    <!-- Sección de texto -->
+    <div class="col-12 col-md-5 text-center text-md-left mb-3 mb-md-0">
+        <img src="imagenes/logooriginal.png" alt="logo" class="footer-logo mb-2">
+        <p class="p-custom">Como distribuidor autorizado de Fat Truck, Fat Truck Alberta está listo para conectarte con estos vehículos extraordinarios.</p>
+        <a href="contacto.html" class="btn btn-direction">Obtener dirección</a>
+      </div>
+
+    <!-- Sección de modelos e información -->
+    <div class="col-12 col-md-4 mb-3 mb-md-0">
+        <div class="row custom-row">
+            <div class="col-6 custom-col">
+                <h5>Modelos</h5>
+                <ul class="list-unstyled">
+                
+                    <li><a href="pickup2.4.html" class="text-white">Pickup 2.4</a></li>
+                    <li><a href="pickup2.8.html" class="text-white">Pickup 2.8</a></li>
+                    <li><a href="wagon8x8.html" class="text-white">Wagon 8x8</a></li>
+                   
+                </ul>
+            </div>
+            <div class="col-6 custom-col">
+                <h5>Más información</h5>
+                <ul class="list-unstyled">
+                    <li><a href="caracteristicas.html" class="text-white">Características</a></li>
+                    <li><a href="#" class="text-white"><!--Acerca de nosotros --></a></li>
+                    <li><a href="contacto.html" class="text-white">Contacto</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Sección de membresía y CTA -->
+    <div class="col-12 col-md-3 texto-boton">
+      <a href="contacto.html" class="btn btn-contact-venta mb-4">CONTACTA CON VENTAS AHORA!</a>
+        <div class="text-and-image">
+            <p>MIEMBROS ORGULLOSOS DE</p>
+            <img src="imagenes/webclip.png" alt="AEM Member" class="membership-logo mb-2">
+        </div>
+
+        <div class="social-icons">
+          <a href="https://web.facebook.com/FatTruckAlberta/?_rdc=1&_rdr" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/fattruckalberta/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/7802203779" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        
+    </div>
+</div>
+</footer>    
+    
+    
+
+    <!-- Scripts al final del body para cargar la página más rápido -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script>
+      $(document).ready(function() {
+        var $videoCarousel = $('#videoCarousel');
+    
+        // Configurar el carrusel para desactivar la reproducción automática.
+        $videoCarousel.carousel({
+            interval: false // Desactiva la rotación automática
+        });
+    
+        // Detener la reproducción de videos cuando el carrusel cambia de slide.
+        $videoCarousel.on('slid.bs.carousel', function(e) {
+            // Detener cualquier video que esté reproduciéndose.
+            $('iframe').each(function() {
+                // Envía el comando para detener el video de YouTube.
+                this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+            });
+        });
+    
+        // Cambiar a la diapositiva correspondiente al hacer clic en una miniatura.
+        $('.carousel-thumbnails .video-thumbnail').click(function(e) {
+            e.preventDefault(); // Previene cualquier comportamiento por defecto del clic
+            var slideTo = $(this).data('slide-to');
+            // Mueve el carrusel a la diapositiva que corresponde a la miniatura clickeada.
+            $videoCarousel.carousel(parseInt(slideTo, 10));
+            // Abre el modal después de cambiar la diapositiva.
+            $('#videoCarouselModal').modal('show');
+        });
+    
+        // Detener la reproducción del video cuando se cierra la modal, utilizando el botón de cierre.
+        $('#videoCarouselModal .close').click(function() {
+            $('#videoCarousel iframe').each(function() {
+                // Envía el comando para detener el video de YouTube.
+                this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+            });
+        });
+    });
+     // Esta función se ejecutará cuando se haga clic en cualquier contenedor de imagen.
+      $('.image-container').click(function() {
+        var slideIndex = $(this).index(); // Obtiene el índice del contenedor de imagen en el conjunto de contenedores.
+        $('#videoCarousel').carousel(slideIndex); // Mueve el carrusel a la diapositiva correspondiente.
+        $('#videoCarouselModal').modal('show'); // Abre el modal.
+    });
+    /*preguntas*/
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.faq-toggle').forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          toggle.classList.toggle('active');
+          let answer = toggle.closest('.faq-item').querySelector('.faq-answer');
+          if (toggle.classList.contains('active')) {
+            answer.style.display = 'block';
+            toggle.textContent = '−';
+          } else {
+            answer.style.display = 'none';
+            toggle.textContent = '+';
+          }
+        });
+      });
+    });
+
+    </script>
+    
+</body>
+</html>

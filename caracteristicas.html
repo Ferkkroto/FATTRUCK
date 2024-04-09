@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <!-- Coloca aquí tus enlaces a hojas de estilo o fuentes externas -->
+  
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="caracteristicas.css">
+    
+
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <a class="navbar-brand" href="index.html">
+        <img src="imagenes/fattruck-logo_white.svg" alt="Logo"> <!-- Ajusta el path a tu logo -->
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active mr-3">
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-home"></i> <span>HOGAR</span><span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <!-- Enlace VEHÍCULOS que siempre redirige, visible solo en dispositivos grandes -->
+          <li class="nav-item mr-3 d-none d-lg-block">
+            <a class="nav-link" href="vehiculos.html">VEHÍCULOS +</a>
+          </li>
+  
+          <!-- Menú desplegable para dispositivos móviles, visible solo en dispositivos pequeños -->
+          <li class="nav-item dropdown mr-3 d-lg-none">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              VEHÍCULOS +
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="pickup2.4.html">PICKUP 2.4</a>
+              <a class="dropdown-item" href="pickup2.8.html">PICKUP 2.8</a>
+              <a class="dropdown-item" href="wagon8x8.html">WAGON 2.8</a>
+              <!-- Agrega más enlaces según sea necesario -->
+            </div>
+          </li>             
+          <!-- Resto de elementos del menú -->
+          <li class="nav-item mr-3">
+            <a class="nav-link" href="caracteristicas.html">CARACTERÍSTICAS</a>
+          </li>
+          <li class="nav-item mr-3">
+            <a class="nav-link" href="galeria.html">GALERIA</a>
+          </li>
+          <li class="nav-item active mr-3">
+            <a class="nav-link btn-contact" href="contacto.html">CONTACTANOS</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+  <div class="container-fluid bg-custom">
+    <div class="dark-overlay"></div>
+  
+    <div class="image-overlay">
+      <img src="imagenes/dot-bg.png" alt="Imagen superpuesta">
+    </div>
+  
+    <div class="content-center">
+        <div class="row">
+            <div class="col-12">
+                <h1>DESCUBRA LAS EXTRAORDINARIAS CARACTERÍSTICAS DE FAT TRUCK</h1> <!-- Eliminada la clase text-center -->
+            </div>
+        </div>
+        <div class="row centered-content">
+            <div class="col-md-4">
+                <p>Explora un mundo donde cada viaje es un testimonio de potencia, rendimiento y posibilidades ilimitadas.</p> <!-- Eliminada la clase text-center -->
+            </div>
+            <div class="button-container">
+              <button class="btn btn-contact-aprender" data-target="#sectionTarget">APRENDE MÁS</button>
+          </div>
+          
+            
+      </div>
+  </div>
+  
+  </header>
+
+
+
+
+    <main>
+        <!-- Sección de Características del Vehículo -->
+        <div class="container-fluid my-custom-bg-black py-5" id="sectionTarget">
+            <div class="row custom-background">
+              <!-- Lado izquierdo: Título y párrafo -->
+              <div class="col-md-6 my-auto text-white d-flex justify-content-center">
+                <div class="col-12 col-md-6 unique-class">
+                  <h2 class="features-title">CARACTERÍSTICAS CLAVE</h2>
+                  <p class="features-description">Descubra por qué Fat Truck no es sólo un vehículo, sino un elemento revolucionario en el mundo de la versatilidad y la confiabilidad.</p>
+                </div>
+              </div>
+              
+              <!-- Lado derecho: Imagen del vehículo como fondo -->
+              <!-- Lado derecho: Imagen del vehículo como fondo -->
+              <div class="col-12 col-md-6 pl-0 custom-container d-flex justify-content-start">
+                <img src="imagenes/fattruck-army3-real-copy.webp" alt="Descripción" class="custom-img">
+              </div>
+              
+            </div>
+          
+            <div class="container-fluid mi-fluid-container">
+              <div class="row mi-centered-row">
+                <div class="col-md-3 col-12">
+                  <div class="feature">
+                    <img src="imagenes/safety_red.svg" alt="Safety" class="feature-icon img-fluid">
+                    <div class="feature-title">Seguridad</div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-12">
+                  <div class="feature">
+                    <img src="imagenes/interface_red.svg" alt="User Interface" class="feature-icon img-fluid">
+                    <div class="feature-title">Interfaz de usuario</div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-12">
+                  <div class="feature">
+                    <img src="imagenes/performance_red.svg" alt="Performance" class="feature-icon img-fluid">
+                    <div class="feature-title">Actuación</div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-12">
+                  <div class="feature">
+                    <img src="imagenes/maintenance_red.svg" alt="Maintenance" class="feature-icon img-fluid">
+                    <div class="feature-title">Mantenimiento</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          
+        </div>
+
+        <!-- esta es la primera seccion, la seccion de SEGURIDAD-->
+        <div class="highlight-section-fluid1 ">
+          <div class="image-superpuesta">
+            <img src="imagenes/dot-bg.png" alt="Imagen superpuesta">
+          </div>
+            <div class="content-wrapper">
+              <div class="row align-items-center">
+                <div class="col-md-8 d-flex align-items-center">
+                  <div class="highlight-icon">
+                    <!-- Asegúrate de que la ruta a la imagen sea correcta -->
+                    <img src="imagenes/safety_red.svg" alt="Seguridad">
+                </div>
+                  <div class="highlight-title">
+                    <h1>SEGURIDAD</h1>
+                  </div>
+                </div>
+                <div class="col-md-4 py-2 d-flex justify-content-end">
+                  <div class="highlight-action">
+                    <a href="contacto.html" class="button-style">PREGUNTA AHORA</a>
+                  </div>
+                </div>
+              </div>
+                <!-- Contenedor Bootstrap con tres columnas para características -->
+                <div class="row feature-lists">
+                    <div class="col-md-4">
+                      <h4 class="category-title" style="text-align: left;">SEGURIDAD Y CUMPLIMIENTO</h4> <!-- Título para la primera columna -->
+                        <ul class="custom-list">
+                            <li>Certificado ROPS</li>
+                            <li>Cumple con la EPA</li>
+                            <li>Diseñado según OSHA, ASME, ANSI, ISO, SAE</li>
+                            <li>Limitador de velocidad máxima</li>
+                            <li>Frenos automáticos cuando el vehículo no está en movimiento</li>
+                            <li>Cinturón de seguridad de 3 puntos en todos los asientos</li>
+                            <li>Kit de seguridad para neumáticos pinchados</li>                              
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-4">
+                      <h4 class="category-title" style="text-align: left;">VISIBILIDAD Y ACCESO</h4> <!-- Título para la primera columna -->
+                        <ul class="custom-list">
+                            <li>Visibilidad 360°</li>
+                            <li>Espejos laterales</li>
+                            <li>Escalera delantera y trasera con 3 puntos de contacto todo el tiempo</li>
+                            <li>Agarraderas en todos los puntos de entrada</li>
+                            <li>Cumple con la EPA</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                      <h4 class="category-title" style="text-align: left;">COMODIDAD Y CARACTERÍSTICAS ESPECIALES</h4> <!-- Título para la primera columna -->
+                        <ul class="custom-list">
+                            <li>Nivel de ruido controlado</li>
+                            <li>Sistema automático de inflado de neumáticos</li> 
+                            <li>Ajuste camilla</li>                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+          </div>
+            <!-- Contenedor de imágenes fuera de highlight-section -->
+        
+            <div class="container-fluid custom-padding">
+              <div class="row">
+                  <div class="col-md-8 col-lg-8 col-padding-8">
+                      <img src="imagenes/rear-seats-copy.webp" class="img-fluid w-100 img-big" alt="Descripción de la imagen grande">
+                  </div>
+                  <div class="col-md-4 col-lg-4 col-padding-4">
+                      <div class="img-small-container">
+                          <img src="imagenes/rear-entry-copy.webp" class="img-fluid w-100" alt="Descripción de la imagen pequeña">
+                      </div>
+                  </div>
+              </div>
+          </div>
+              
+            <!-- esta es la segunda seccion, la seccion de INTERFAZ DE USUARIO-->
+        <div class="highlight-section-fluid">
+          <div class="image-superpuesta">
+            <img src="imagenes/dot-bg.png" alt="Imagen superpuesta">
+          </div>
+          <div class="content-wrapper">
+            <div class="row align-items-center">
+              <div class="col-md-8 d-flex align-items-center">
+                <div class="highlight-icon">
+                  <img src="imagenes/interface_red.svg" alt="Interfaz de usuario">
+                </div>
+                <div class="highlight-title">
+                  <h1>INTERFAZ DE USUARIO</h1>
+                </div>
+              </div>
+              <div class="col-md-4 py-2 d-flex justify-content-end">
+                <div class="highlight-action">
+                  <a href="contacto.html" class="button-style">PREGUNTA AHORA</a>
+                </div>
+                
+              </div>
+            </div>
+              <!-- Contenedor Bootstrap con tres columnas para características -->
+              <div class="row feature-lists">
+                <div class="col-md-4">
+                  <h4 class="category-title" style="text-align: left;">INTERFAZ</h4> <!-- Título para la primera columna -->
+                  <ul class="custom-list">
+                      <li>Manejo de joystick proporcional intuitivo</li>
+                      <li>Pantalla de tablero intuitiva</li>
+                      <li>Modos de conducción automática</li>
+                      <li>Transmisión automática</li>                            
+                  </ul>
+              </div>
+              <div class="col-md-4">
+                <h4 class="category-title" style="text-align: left;">FLEXIBILIDAD Y COMODIDAD</h4> <!-- Título para la segunda columna -->
+                <ul class="custom-list">
+                    <li>Posibilidad de conducir desde el lado izquierdo o derecho.</li>
+                    <li>El mayor espacio de cabina del mercado</li>
+                    <li>Asientos ergonómicos en todas las posiciones</li>
+                    <li>Descongelador del calentador</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+              <h4 class="category-title" style="text-align: left;">EXPERIENCIA DE MANEJO</h4> <!-- Título para la primera columna -->
+              <ul class="custom-list">
+                  <li>Aceleración y frenado suaves</li>
+                  <li>Controles responsivos</li>
+                  <li>Funciones de visibilidad mejoradas</li>
+                  <li>Configuraciones personalizables</li>                            
+              </ul>
+          </div>
+          
+                  
+              </div>
+          </div>
+        </div>
+          <!-- Contenedor de imágenes fuera de highlight-section -->
+          <div class="container-fluid custom-padding">
+            <div class="row">
+                <div class="col-md-8 col-lg-8 col-padding-8">
+                    <img src="imagenes/controls-copy.webp" class="img-fluid w-100 img-big" alt="Descripción de la imagen grande">
+                </div>
+                <div class="col-md-4 col-lg-4 col-padding-4">
+                    <div class="img-small-container">
+                        <img src="imagenes/joystick-2-copy.webp" class="img-fluid w-100" alt="Descripción de la imagen pequeña">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+          
+          <!-- esta es la tercera seccion, la seccion de ACTUACIÓN -->
+        <div class="highlight-section-fluid"> 
+          <div class="image-superpuesta">
+            <img src="imagenes/dot-bg.png" alt="Imagen superpuesta">
+          </div>  
+          <div class="content-wrapper">
+            <div class="row align-items-center">
+              <div class="col-md-8 d-flex align-items-center">
+                <div class="highlight-icon">
+                  <img src="imagenes/performance_red.svg" alt="Actuacion">
+                </div>
+                <div class="highlight-title">
+                  <h1>ACTUACIÓN</h1>
+                </div>
+              </div>
+              <div class="col-md-4 py-2 d-flex justify-content-end">
+                <div class="highlight-action">
+                  <a href="contacto.html" class="button-style">PREGUNTA AHORA</a>
+                </div>
+              </div>
+            </div>
+              <!-- Contenedor Bootstrap con tres columnas para características -->
+              <div class="row feature-lists">
+                  <div class="col-md-4">
+                    <h4 class="category-title" style="text-align: left;">VERSATILIDAD</h4> <!-- Título para la primera columna -->
+                      <ul class="custom-list">
+                          <li>Anfibio</li>
+                          <li>Todos los terrenos</li>
+                          <li>Todas las temporadas</li>
+                          <li>Modo terreno</li>                            
+                      </ul>
+                  </div>
+                  
+                  <div class="col-md-4">
+                    <h4 class="category-title" style="text-align: left;">CAPACIDAD Y AUTONOMÍA</h4> <!-- Título para la primera columna -->
+                      <ul class="custom-list">
+                          <li>Capacidad para transportar hasta 16 personas</li>
+                          <li>Presión sobre el suelo ultrabaja</li>
+                          <li>Autonomía de combustible</li>
+                          
+                      </ul>
+                  </div>
+                  <div class="col-md-4">
+                    <h4 class="category-title" style="text-align: left;">MEJORA DEL RENDIMIENTO</h4> <!-- Título para la primera columna -->
+                      <ul class="custom-list">
+                          <li>Funciones avanzadas de tracción y estabilidad.</li>
+                          <li>Espejos laterales</li>
+                          <li>Sistema automático de inflado de neumáticos</li>
+                      </ul>
+                  </div>
+                  
+              </div>
+          </div>
+        </div>
+          <!-- Contenedor de imágenes fuera de highlight-section -->
+          <div class="container-fluid custom-padding">
+            <div class="row">
+                <div class="col-md-8 col-lg-8 col-padding-8">
+                    <img src="imagenes/performance-snow-copy.webp" class="img-fluid w-100 img-big" alt="Descripción de la imagen grande">
+                </div>
+                <div class="col-md-4 col-lg-4 col-padding-4">
+                    <div class="img-small-container">
+                        <img src="imagenes/transport-copy.webp" class="img-fluid w-100" alt="Descripción de la imagen pequeña">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+          <!-- esta es la segunda seccion, la seccion de MANTENIMIENTO-->
+        <div class="highlight-section-fluid">
+          <div class="image-superpuesta">
+            <img src="imagenes/dot-bg.png" alt="Imagen superpuesta">
+          </div>
+          <div class="content-wrapper">
+            <div class="row align-items-center">
+              <div class="col-md-8 d-flex align-items-center">
+                <div class="highlight-icon">
+                  <img src="imagenes/maintenance_red.svg" alt="Seguridad">
+                </div>
+                <div class="highlight-title">
+                  <h1>MANTENIMIENTO</h1>
+                </div>
+              </div>
+              <div class="col-md-4 py-2 d-flex justify-content-end">
+                <div class="highlight-action">
+                  <a href="contacto.html" class="button-style">PREGUNTA AHORA</a>
+                </div>
+                
+              </div>
+            </div>
+              <!-- Contenedor Bootstrap con tres columnas para características -->
+              <div class="row feature-lists">
+                <div class="col-md-4">
+                  <h4 class="category-title" style="text-align: left;">CONTROL DE EMISIÓN</h4> <!-- Título para la primera columna -->
+                    <ul class="custom-list">
+                        <li>Motor Tier 4 final/Fase V (sin DPF)</li>
+                        <li>Bajas emisiones de NOx</li>
+                        <li>Sistema de postratamiento de gases de escape eficiente</li>
+                        <li>Reducción de las emisiones de partículas</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                  <h4 class="category-title" style="text-align: left;">TRANSMISIÓN Y TREN MOTRIZ</h4> <!-- Título para la primera columna -->
+                    <ul class="custom-list">
+                        <li>Transmisión Danfoss</li>
+                        <li>Transmisión sin mantenimiento</li>
+                        <li>Control electrónico de transmisión</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                  <h4 class="category-title" style="text-align: left;">EFICIENCIA DE MANTENIMIENTO GENERAL</h4> <!-- Título para la primera columna -->
+                    <ul class="custom-list">
+                        <li>Funciones de mantenimiento predictivo</li>
+                        <li>Sistema de diagnóstico fácil de usar</li>
+                    </ul>
+                </div>
+
+              </div>
+          </div>
+        </div>
+          <!-- Contenedor de imágenes fuera de highlight-section -->
+      
+          <div class="container-fluid custom-padding">
+            <div class="row">
+                <div class="col-md-8 col-lg-8 col-padding-8">
+                    <img src="imagenes/24-copy.webp" class="img-fluid w-100 img-big" alt="Descripción de la imagen grande">
+                </div>
+                <div class="col-md-4 col-lg-4 col-padding-4">
+                    <div class="img-small-container">
+                        <img src="imagenes/24pickup.webp" class="img-fluid w-100" alt="Descripción de la imagen pequeña">
+                    </div>
+                </div>
+            </div>
+        </div>  
+        
+        
+
+      <div class="container-images">
+        <img src="imagenes/cta-top-bg.webp" class="image-large" alt="Imagen Grande">
+          <!-- Contenedor Intermedio -->
+         <!-- Nuevo Contenedor Intermedio -->
+         <div class="content-overlay">
+          <h2>¿LISTO PARA MEJORAR TUS CAPACIDADES TODOTERRENO?</h2>
+          <div class="text-and-button">
+            <p>Elija la excelencia con Fat Truck. Como distribuidor autorizado, Fat Truck Alberta es su puerta de entrada a un rendimiento, versatilidad y confiabilidad inigualables. Contáctenos hoy para explorar las posibilidades y llevar el poder de Fat Truck a su flota.</p>
+            <a href="contacto.html" class="btn-sales-inquiry">CONTACTE CON VENTAS AHORA!</a>
+          </div>
+        </div>
+        <img src="imagenes/dot-bg.png" class="image-small" alt="Imagen Pequeña">
+      </div>
+                
+        
+    </main>
+    
+    <footer class="footer container-fluid-ultimo  text-white ">
+      <div class="row">
+          <!-- Sección de texto -->
+          <div class="col-12 col-md-5 text-center text-md-left mb-3 mb-md-0">
+              <img src="imagenes/logooriginal.png" alt="logo" class="footer-logo mb-2">
+              <p class="p-custom">Como distribuidor autorizado de Fat Truck, Fat Truck Alberta está listo para conectarte con estos vehículos extraordinarios.</p>
+              <a href="contacto.html" class="btn btn-direction">Obtener dirección</a>
+            </div>
+      
+          <!-- Sección de modelos e información -->
+          <div class="col-12 col-md-4 mb-3 mb-md-0">
+              <div class="row custom-row">
+                  <div class="col-6 custom-col">
+                      <h5>Modelos</h5>
+                      <ul class="list-unstyled">
+                      
+                          <li><a href="pickup2.4.html" class="text-white">Pickup 2.4</a></li>
+                          <li><a href="pickup2.8.html" class="text-white">Pickup 2.8</a></li>
+                          <li><a href="wagon8x8.html" class="text-white">Wagon 8x8</a></li>
+                         
+                      </ul>
+                  </div>
+                  <div class="col-6 custom-col">
+                      <h5>Más información</h5>
+                      <ul class="list-unstyled">
+                          <li><a href="caracteristicas.html" class="text-white">Características</a></li>
+                          <li><a href="#" class="text-white"><!--Acerca de nosotros --></a></li>
+                          <li><a href="contacto.html" class="text-white">Contacto</a></li>
+                      </ul>
+                  </div>
+                  
+              </div>
+          </div>
+      
+          <!-- Sección de membresía y CTA -->
+          <div class="col-12 col-md-3 texto-boton">
+            <a href="contacto.html" class="btn btn-contact-venta mb-4">CONTACTA CON VENTAS AHORA!</a>
+              <div class="text-and-image">
+                  <p>MIEMBROS ORGULLOSOS DE</p>
+                  <img src="imagenes/webclip.png" alt="AEM Member" class="membership-logo mb-2">
+              </div>
+      
+              <div class="social-icons">
+                <a href="https://web.facebook.com/FatTruckAlberta/?_rdc=1&_rdr" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/fattruckalberta/" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/7802203779" target="_blank">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+              
+          </div>
+      </div>
+    </footer>
+    
+    
+    
+
+<!-- Scripts al final del body para cargar la página más rápido -->
+<!-- jQuery, asegúrate de incluir la versión completa si es necesario para otros scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Tu archivo JavaScript personalizado -->
+<script src="avanzar.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Encuentra el botón por su clase
+    const button = document.querySelector('.btn-contact-aprender');
+  
+    // Añade un escuchador de eventos de clic al botón
+    button.addEventListener('click', function() {
+      // Lee el atributo 'data-target' para saber el objetivo
+      const targetId = this.getAttribute('data-target');
+      const targetElement = document.querySelector(targetId);
+  
+      // Desplaza hacia el elemento objetivo suavemente
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+  </script>
+</body>
+</html>

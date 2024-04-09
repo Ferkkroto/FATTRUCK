@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff0100;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path id="dashboard" class="cls-1" d="M7.5,37.5h13.75v-10H7.5v10ZM7.5,25h13.75V7.5H7.5v17.5ZM23.75,37.5h13.75v-17.5h-13.75v17.5ZM23.75,17.5h13.75V7.5h-13.75v10ZM5,45c-1.33.02-2.61-.51-3.53-1.47C.51,42.61-.02,41.33,0,40V5c-.02-1.33.51-2.61,1.47-3.53C2.39.51,3.67-.02,5,0h35c1.33-.02,2.61.51,3.53,1.47.96.92,1.49,2.2,1.47,3.53v5h5v5h-5v5h5v5h-5v5h5v5h-5v5c.02,1.33-.51,2.61-1.47,3.53-.92.96-2.2,1.49-3.53,1.47H5ZM5,40h35V5H5v35Z"/>
+  </g>
+</svg>

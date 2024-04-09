@@ -1,0 +1,739 @@
+/* Restablecer estilos predeterminados de Bootstrap que puedan afectar */
+.navbar {
+  margin-bottom: 0; /* Remover el margen inferior */
+}
+
+/* Estilos para la barra de navegación */
+.navbar-custom {
+  z-index: 10000;
+  background-color: transparent; /* Fondo transparente */
+  position: fixed;
+  top: 0;
+  left: 0; /* Asegúrate de que la barra de navegación comienza en la esquina izquierda */
+  width: 100%; /* La barra de navegación debe ocupar toda la anchura */
+  z-index: 10;
+  margin: 0; /* Eliminar cualquier margen */
+  padding: 0; /* Eliminar cualquier relleno */
+  display: flex; /* Habilita flexbox para alinear elementos verticalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  height: 85px; /* Ajusta la altura del navbar según necesites */
+}
+/* Asegurar que el logotipo y el botón de toggler no tengan fondo y sean visibles sobre cualquier contenido */
+.navbar-custom .navbar-brand {
+  padding-left: 18px; /* Añade un poco de espacio a la izquierda del logo */
+  height: 100%; /* Iguala la altura de la barra de navegación */
+  width: 35%;
+  display: flex;
+  align-items: center; /* Centra el logo verticalmente */
+}
+
+.navbar-custom .navbar-brand img {
+  height: 45px; /* Ajusta la altura del logo */
+  width: auto; /* Mantiene la relación de aspecto del logo */
+  display: block; /* Asegura que el img se comporte como un bloque */
+}
+/* Estilos para los elementos dentro del navbar-collapse */
+.navbar-custom .navbar-collapse {
+  height: 100%; /* Iguala la altura de la barra de navegación */
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para el fondo blanco */
+}
+
+/* Eliminar el relleno predeterminado de Bootstrap en .navbar-nav */
+.navbar-custom .navbar-nav {
+  height: 100%; /* Iguala la altura de la barra de navegación */
+  display: flex;
+  flex-direction: row; /* en línea para pantallas grandes */
+  align-items: center; /* Alineación vertical */
+  justify-content: center; /* Alineación horizontal */
+
+}
+
+/* Estilos para los enlaces de navegación */
+.navbar-custom .nav-link {
+  font-family: Arial, Helvetica, sans-serif;  
+  font-weight: bold;
+  color: #646262; /* Color del texto para los enlaces */
+  margin-right: 10px; /* Espaciado a la derecha para cada enlace */
+}
+
+.navbar-custom .btn-contact {
+  background-color: red; /* Fondo rojo para el botón */
+  color: #fff; /* Texto blanco */
+  border: none; /* Elimina el borde */
+  padding: 0.5rem 1rem; /* Ajustar el relleno */
+  transition: background-color 0.3s; /* Suaviza la transición del color de fondo */
+}
+
+/* Cambio de color al pasar el mouse por encima del botón */
+.navbar-custom .btn-contact:hover {
+  background-color: darkred;
+}/* Estilos globales, aplicables a todas las resoluciones */
+.navbar-custom .navbar-toggler-icon {
+  /* SVG del icono del toggler en color blanco */
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+/* Cambia el color de fondo del menú desplegable a negro */
+.navbar-custom .dropdown-menu {
+  background-color: #202020; /* Establece el color de fondo a negro */
+}
+
+/* Hace que el menú desplegable ocupe todo el ancho horizontal */
+.navbar-custom .dropdown-menu {
+  width: 100%; /* Hace que el menú desplegable tenga un ancho del 100% del elemento padre */
+  box-sizing: border-box; /* Asegura que el padding y border estén incluidos en el ancho total */
+}
+
+/* Opcional: si necesitas que el menú desplegable ocupe todo el ancho de la ventana del navegador, usa width: 100vw y position: fixed con un z-index alto. */
+.navbar-custom .dropdown-menu {
+  width: 92vw; /* Establece el ancho a la anchura completa de la ventana del navegador */
+  position: relative; /* Fija el menú desplegable en la pantalla */
+  z-index: 1030; /* Asegúrate de que el z-index sea suficiente para estar por encima de otros elementos */
+}
+
+/* Ajusta los elementos del menú desplegable para que el texto sea blanco */
+.navbar-custom .dropdown-menu .dropdown-item {
+  color: #ffffff; /* Establece el color del texto de los elementos a blanco */
+}
+
+@media (max-width: 991px) {
+  .navbar-custom {
+    background-color: rgb(27, 25, 25); /* Fondo negro para la barra de navegación */
+  }
+
+  .navbar-custom .navbar-toggler {
+    margin-right: 15px; /* Espacio al lado derecho */
+
+    border-color: black; /* Borde del botón toggler */
+  }
+  .navbar-custom .navbar-nav {
+    flex-direction: column; /* Apila los enlaces en dispositivos móviles */
+    margin-left: 0; /* Anula el margen automático a la derecha */
+    align-items: flex-start; /* Alinea los enlaces al borde izquierdo */
+  }
+
+  .navbar-custom .navbar-collapse {
+    background-color: #ffffff; /* Fondo negro para el contenedor colapsado */
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    padding-left: 15px; /* Agrega un poco de espacio al borde izquierdo para evitar que los elementos toquen el borde */
+  }
+  .navbar-custom .btn-contact {
+    color: #fff; /* Texto blanco */
+  }
+  .navbar-custom .navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: bold;
+    color: #515151; /* Color del texto para los enlaces de navegación */
+  }
+  /* Aumentando la especificidad */
+.navbar-custom .navbar-nav .btn-contact {
+  font-size: 19px;
+  color: #fff; /* Color blanco */
+}
+
+  
+  .navbar-custom .navbar-collapse.show {
+    height: auto; /* Altura automática según el contenido */
+  }
+
+  .navbar-custom .navbar-nav {
+    margin-top: 1rem; /* Espacio superior para los enlaces */
+  }
+
+  .navbar-custom .navbar-nav .nav-item {
+    margin-bottom: 1rem; /* Espacio inferior para cada ítem */
+  }
+
+  .navbar-custom .navbar-toggler-icon {
+    /* Icono de menú por defecto */
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  .navbar-custom .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    /* Icono de cierre cuando el menú está abierto */
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M7 7l16 16M7 23L23 7'/%3E%3C/svg%3E");
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+/* Estilos Base para Contenedor de Contacto */
+.contenedor-contacto {
+  background: url('imagenes/about-img-copy.webp') no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20vh;
+  padding-bottom: 20px;
+  min-height: 100vh;
+}
+
+/* Overlay oscuro para el fondo */
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(69, 67, 67, 0.5), #221f1f);
+}
+
+/* Estilos de Columna Izquierda */
+.izquierda-column {
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 15px;
+}
+
+.izquierda-column h1 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
+}
+
+.izquierda-column .lead {
+  font-size: 18px;
+  color: #fff9f9;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Estilos para Iconos Sociales */
+.social-icons2 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.social-icons2 a {
+  color: #ccc;
+  margin: 10px;
+  font-size: 25px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Estilos para Texto "Síguenos en" */
+.follow-us {
+  margin-top: 12px;
+  margin-right: 0px;
+}
+
+/* Estilos para la Columna Derecha */
+.derecha-column {
+  font-family: 'Oswald', sans-serif;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 10px;
+}
+
+/* Estilos para Formulario */
+.contact-form-container {
+  background-color: #ffffff;
+  padding: 1rem;
+  margin: auto;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid #000;
+  border-radius: 0;
+  margin-top: .5rem;
+}
+
+.label {
+  font-weight: normal;
+}
+
+/* Botón Peligro/Danger */
+.btn-danger {
+  background-color: #fd0000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-danger:hover, .btn-danger:focus {
+  background-color: #e6561d;
+  transform: scale(1.05);
+}
+
+/* Alineación de Texto a la Derecha */
+.form-group.text-right {
+  text-align: right;
+}
+
+/* Estilos para Dispositivos Tabletas */
+@media (max-width: 768px) {
+  .izquierda-column h1 {
+      font-size: 2rem; /* Tamaño para tabletas */
+  }
+  
+  .form-group.text-right {
+      text-align: center !important;
+  }
+  
+  .form-group.text-right button {
+      display: inline-block;
+      margin: 0 auto;
+  }
+}
+
+/* Estilos para Dispositivos Móviles */
+@media (max-width: 576px) {
+  .izquierda-column h1 {
+      font-size: 2rem; /* Tamaño para móviles */
+  }
+  
+  .izquierda-column {
+      padding-left: 15px;
+  }
+  
+  .social-icons2 {
+      justify-content: flex-start;
+  }
+  
+  .follow-us {
+      text-align: left;
+  }
+  
+  .form-group.text-right {
+      text-align: center !important;
+  }
+  
+  .form-group.text-right button {
+      display: inline-block;
+      margin: 0 auto;
+  } 
+}
+
+/* Estilos para pantallas de 1500px en adelante */
+@media (min-width: 1500px) {
+  .contenedor-contacto {
+    padding-top: 25vh;
+    padding-bottom: 40px;
+  }
+
+  .izquierda-column {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .izquierda-column h1 {
+    font-size: 4rem;
+  }
+
+  .izquierda-column .lead,
+  .follow-us {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  .follow-us {
+    font-size: 1.5rem;
+  }
+
+  .social-icons2 a {
+    margin: 15px;
+    font-size: 35px;
+  }
+
+  .contact-form-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 50px;
+  }
+
+  .contact-form-container form {
+    padding-top: 3vh;
+    font-size: 22px;
+  }
+
+  .contact-form-container form input,
+  .contact-form-container form textarea,
+  .contact-form-container form button {
+    font-size: 1.5rem;
+    padding: 30px;
+  }
+
+  .contact-form-container form button {
+    width: auto;
+    padding: 15px 30px;
+  }
+
+  .btn-danger {
+    padding: 15px 30px;
+    font-size: 1.25rem;
+  }
+}
+
+
+.footer {
+  height: 70vh;
+  min-height: auto; /* Usa min-height para garantizar que el contenido no se desborde */
+  background-color: #221f1f;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar contenido verticalmente si hay menos contenido */
+}
+
+.footer-logo{
+  max-width: 60%;
+  margin-bottom: 40px;
+}
+
+.p-custom {
+  width: 50%;
+  color: #ffffff; /* Cambia el color del texto */
+  font-size: 1rem; /* Establece el tamaño del texto */
+  /* Añade cualquier otro estilo que necesites */
+}
+
+.btn-direction {
+  margin-left: 0; /* Elimina cualquier margen izquierdo si existe */
+  color: #ff0404; /* Color del texto del botón */
+  border: 1px solid #f0f0f0; /* Estilo y color del borde */
+  padding: 0.5rem 1rem; /* Relleno del botón */
+  font-size: 1rem; /* Tamaño del texto */
+  text-transform: uppercase; /* Transformación del texto */
+  transition: background-color 0.3s ease; /* Transición suave al cambiar el fondo */
+
+}
+
+.btn-direction:hover {
+  color: #000; /* Color del texto al pasar el ratón por encima */
+  background-color: #fff; /* Color de fondo al pasar el ratón por encima */
+}
+/* Establece la fila para usar flex y tener una altura completa */
+.custom-row {
+  display: flex;
+  align-items: center; /* Esto centrará los ítems verticalmente */
+  height: 100%; /* O define una altura específica */
+}
+
+/* Asegúrate de que cada columna flexione sus ítems internos también */
+.custom-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Esto centrará el contenido verticalmente dentro de la columna */
+  padding-top: 20px; /* Ajusta este valor según sea necesario */
+
+} 
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+}
+
+.text-white {
+  color: rgb(49, 4, 4);
+}
+
+.texto-boton {
+  text-align: right; /* Alinea el contenido a la derecha */
+  padding-right: 0; /* Elimina el padding derecho si lo hay */
+  padding-left: 0; /* Elimina el padding derecho si lo hay */
+
+
+}
+
+.btn-contact-venta {
+  background-color: rgb(227, 10, 10);
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+.btn-contact-venta:hover {
+  background-color: #e6561d; /* Un color ligeramente más claro al pasar el ratón por encima o enfocar */
+  color: rgb(255, 255, 255);
+}
+
+.text-and-image {
+  display: flex;
+  align-items:end;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.membership-logo {
+  width: 40px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.custom-col li {
+  margin-top: 10px;
+  margin-bottom: 5px; /* Ajusta el margen superior e inferior de las listas */
+}
+.custom-col ul.list-unstyled li {
+  margin-bottom: 2vh; /* Aumenta el margen inferior para separar más los elementos de la lista */
+}
+
+
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end; /* Alinea los íconos al final del contenedor */
+  align-items: center; /* Alinea los íconos verticalmente en el centro */
+  gap: 10px; /* Ajusta el espacio entre íconos */
+  height: 100px; /* Ajusta según necesites */
+}
+
+.social-icons a {
+  color: inherit; /* Hereda el color del texto del elemento padre o especifica uno */
+  margin: 0 10px; /* Espacio a cada lado del ícono */
+  font-size: 24px; /* Ajusta el tamaño de los íconos de Font Awesome */
+  display: flex; /* Hace que el enlace (a) se comporte como un flex container */
+  align-items: center; /* Centra el ícono en el enlace */
+}
+
+.social-icons a:hover {
+  color: #333; /* Cambia el color del ícono al pasar el ratón por encima */
+}
+
+/* Opcional: Si quieres utilizar un texto/etiqueta junto a los íconos */
+.social-icons-label {
+  margin-right: 10px; /* Ajusta el margen según necesites */
+  display: inline-flex; /* Muestra la etiqueta como un flex container inline */
+  align-items: center; /* Alinea verticalmente el texto de la etiqueta */
+}
+
+/* Adicional: ajustes para garantizar que los íconos mantengan su aspecto */
+.fa-facebook-f, .fa-instagram, .fa-whatsapp {
+  width: auto; /* Asegura que el ancho se ajuste al contenido (el ícono) */
+  height: auto; /* Asegura que la altura se ajuste al contenido */
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+    padding: 15px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .footer-logo {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .p-custom {
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .btn-direction, .btn-contact-venta {
+    justify-content: center;
+    width: auto;
+    padding: 0.375rem 0.75rem;
+    font-size: 18px;
+    margin: 5vh auto; /* Margen vertical y centrado horizontalmente */
+    display: inline-block; /* El botón ocupa solo el ancho de su contenido */
+  }
+  
+
+  .custom-row {
+    text-align: center; /* Centra el texto de estos elementos */
+    align-items: center; /* Alinea los elementos hijos al centro */
+    justify-content: center; /* Centra los elementos hijos en el eje principal */
+    flex-direction: row; /* Organiza los elementos hijos en una columna */
+  }
+
+  .text-and-image {
+    padding-top: 5vh;
+    display: flex; /* Continúa usando Flexbox */
+    flex-direction: row; /* Mantiene elementos en una fila */
+    align-items: center; /* Alinea elementos en el centro verticalmente */
+    justify-content: start; /* Centra los elementos en el eje principal */
+    gap: 20px; /* Aumenta el espacio entre el texto y la imagen */
+    margin-bottom: 20px; /* Espacio adicional debajo de esta sección si es necesario */
+    border-top: 1px solid #ffffff; /* Agrega una línea sólida en la parte inferior */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Asegúrate de que el texto y la imagen no ocupen más espacio del necesario */
+  .text-and-image p {
+    font-size: 18px; /* Ajusta si es necesario para móviles */
+    margin: 0; /* Elimina los márgenes del párrafo si es necesario */
+  }
+  
+
+  .text-and-image img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+  }
+
+  .texto-boton {
+    text-align: center; /* Alinea el contenido a la derecha */
+    padding-right: 0; /* Elimina el padding derecho si lo hay */
+
+  }
+  .custom-col {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .custom-col ul, .custom-col li {
+    
+    padding-left: 0; /* Asegura que no haya padding a la izquierda */
+    margin-top: 5px;
+    margin-bottom: 5px; /* Ajusta el margen superior e inferior de las listas */
+  }
+  .custom-col ul.list-unstyled li {
+    margin-bottom: 7vh; /* Aumenta el margen inferior para separar más los elementos de la lista */
+  }
+  .custom-col ul {
+    padding-bottom: 0; /* Elimina el padding inferior de las listas */
+  }
+
+  .social-icons {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 1vh;
+    justify-content: flex-start; /* Cambia a 'center' para centrar los íconos en móviles */
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Continúa permitiendo que los íconos se ajusten dentro del contenedor */
+    display: flex; /* Asegura que los íconos se muestren en línea */
+  }
+
+  .social-icons a {
+    margin: 10px; /* Aumenta el margen para mejorar la tocabilidad en pantallas táctiles */
+    font-size: 30px; /* Aumenta el tamaño de los íconos para mejorar la visibilidad */
+    display: inline-flex; /* Hace que el enlace se comporte como un contenedor flex */
+    align-items: center; /* Centra el ícono verticalmente dentro del enlace */
+  }
+
+  .membership-logo {
+    margin-bottom: 10px;
+  }
+
+ 
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  /* Ajustes para el logo, que suele necesitar tamaño específico en tablets */
+  .footer-logo {
+    max-width: 70%; /* Ajusta el tamaño del logo */
+    margin-bottom: 30px; /* Ajusta el margen inferior */
+  }
+
+  /* Para garantizar que los párrafos no sean demasiado anchos y difíciles de leer */
+  .p-custom {
+    width: 70%; /* Aumenta o disminuye el ancho según sea necesario */
+  }
+
+  /* Si los botones se ven demasiado grandes o pequeños en tabletas */
+  .btn-direction, .btn-contact-venta {
+    padding: 10px 20px; /* Ajusta el padding para cambiar el tamaño */
+    font-size: 0.95rem; /* Ajusta el tamaño de la fuente si es necesario */
+  }
+
+  /* Si necesitas ajustar el espaciado de la lista para este rango */
+  .custom-col ul.list-unstyled li {
+    margin-bottom: 15px; /* Aumenta el margen inferior para más espacio entre elementos de la lista */
+  }
+
+  /* Para ajustar el alineamiento y el espaciado de los iconos sociales */
+  .social-icons {
+    justify-content: center; /* Centra los iconos si se dispersan demasiado en tabletas */
+  }
+}
+@media (min-width: 1500px) {
+  /* Estilos que solo se aplicarán para pantallas de 1500px en adelante */
+  
+  .footer {
+    height: 50vh;
+    /* Ajustes para .footer en pantallas grandes */
+    padding: 40px; /* Aumenta el padding para una mejor proporción */
+    justify-content: center; /* Cambia la justificación si es necesario */
+  }
+
+  .footer-logo {
+    /* Ajustes para .footer-logo en pantallas grandes */
+    max-width: 50%; /* Ajusta si el logo se ve muy pequeño o muy grande */
+  }
+
+  .p-custom {
+    /* Ajustes para .p-custom en pantallas grandes */
+    font-size: 27px; /* Aumenta el tamaño de fuente para una mejor legibilidad */
+  }
+
+  /* Ajustes para botones en pantallas grandes */
+  .btn-direction, .btn-contact-venta {
+    padding: 1rem 1rem; /* Aumenta el relleno para botones más grandes */
+    font-size: 23px; /* Aumenta el tamaño de fuente para una mejor visibilidad */
+  }
+
+  /* Ajustes para listas en pantallas grandes */
+  .custom-col ul.list-unstyled li {
+    margin-bottom: 25px; /* Aumenta el espacio entre elementos de lista para evitar que se vean apretados */
+    font-size: 24px;
+  }
+  .membership-logo {
+    width: 60px; /* Ajusta el tamaño de la imagen de membresía */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    /* Agrega más estilos si es necesario */
+  }
+  /* Ajustes para iconos sociales en pantallas grandes */
+  .social-icons {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: flex-end; /* Mantiene los íconos alineados al final del contenedor */
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+    flex-wrap: nowrap; /* Asegura que los íconos se mantengan en una sola línea */
+  }
+
+  .social-icons a {
+    margin: 0 15px; /* Aumenta el margen para más espacio entre íconos en pantallas grandes */
+    font-size: 40px; /* Aumenta el tamaño de los íconos para una mejor visualización */
+    display: inline-flex; /* Asegura que los enlaces se comporten como contenedores flex */
+    align-items: center; /* Centra los íconos verticalmente dentro del enlace */
+  }
+  .custom-col h5 {
+    /* Estilos para pantallas más pequeñas (hasta 768px) */
+    font-size: 35px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    /* Otros ajustes de estilo según sea necesario */
+  }
+  /* Otros ajustes específicos que necesites */
+  .text-and-image p {
+    font-size: 25px; /* Aumenta el tamaño de fuente para pantallas grandes */
+    margin-bottom: 20px; /* Aumenta el espaciado si es necesario */
+    /* Puedes ajustar también la línea de altura, color, etc., para estos dispositivos */
+    line-height: 1.4;
+  }
+}

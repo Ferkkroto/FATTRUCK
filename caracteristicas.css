@@ -1,0 +1,1710 @@
+
+
+.navbar {
+  margin-bottom: 0; /* Remover el margen inferior */
+}
+
+/* Estilos para la barra de navegación */
+.navbar-custom {
+  background-color: transparent; /* Fondo transparente */
+  position: fixed;
+  top: 0;
+  left: 0; /* Asegúrate de que la barra de navegación comienza en la esquina izquierda */
+  width: 100%; /* La barra de navegación debe ocupar toda la anchura */
+  z-index: 10;
+  margin: 0; /* Eliminar cualquier margen */
+  padding: 0; /* Eliminar cualquier relleno */
+  display: flex; /* Habilita flexbox para alinear elementos verticalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  height: 85px; /* Ajusta la altura del navbar según necesites */
+}
+/* Asegurar que el logotipo y el botón de toggler no tengan fondo y sean visibles sobre cualquier contenido */
+.navbar-custom .navbar-brand {
+  padding-left: 18px; /* Añade un poco de espacio a la izquierda del logo */
+  height: 100%; /* Iguala la altura de la barra de navegación */
+  width: 30%;
+  display: flex;
+  align-items: center; /* Centra el logo verticalmente */
+}
+
+.navbar-custom .navbar-brand img {
+  height: 45px; /* Ajusta la altura del logo */
+  width: auto; /* Mantiene la relación de aspecto del logo */
+  display: block; /* Asegura que el img se comporte como un bloque */
+}
+/* Estilos para los elementos dentro del navbar-collapse */
+.navbar-custom .navbar-collapse {
+  height: 100%; /* Iguala la altura de la barra de navegación */
+  background-color: rgb(236, 236, 236);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para el fondo blanco */
+}
+
+
+/* Eliminar el relleno predeterminado de Bootstrap en .navbar-nav */
+.navbar-custom .navbar-nav {
+  height: 100%; /* Iguala la altura de la barra de navegación */
+  display: flex;
+  flex-direction: row; /* en línea para pantallas grandes */
+  align-items: center; /* Alineación vertical */
+  justify-content: center; /* Alineación horizontal */
+
+}
+
+/* Estilos para los enlaces de navegación */
+.navbar-custom .nav-link {
+  font-family: Arial, Helvetica, sans-serif;  
+  font-weight: bold;
+  color: #646262; /* Color del texto para los enlaces */
+  margin-right: 10px; /* Espaciado a la derecha para cada enlace */
+}
+
+.navbar-custom .btn-contact {
+  background-color: red; /* Fondo rojo para el botón */
+  color: #fff; /* Texto blanco */
+  border: none; /* Elimina el borde */
+  padding: 0.5rem 1rem; /* Ajustar el relleno */
+  transition: background-color 0.3s; /* Suaviza la transición del color de fondo */
+}
+
+/* Cambio de color al pasar el mouse por encima del botón */
+.navbar-custom .btn-contact:hover {
+  background-color: #e6561d; /* Un color ligeramente más claro al pasar el ratón por encima o enfocar */
+}
+/* Estilos globales, aplicables a todas las resoluciones */
+.navbar-custom .navbar-toggler-icon {
+  /* SVG del icono del toggler en color blanco */
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+/* Cambia el color de fondo del menú desplegable a negro */
+.navbar-custom .dropdown-menu {
+  background-color: #202020; /* Establece el color de fondo a negro */
+}
+
+/* Hace que el menú desplegable ocupe todo el ancho horizontal */
+.navbar-custom .dropdown-menu {
+  width: 100%; /* Hace que el menú desplegable tenga un ancho del 100% del elemento padre */
+  box-sizing: border-box; /* Asegura que el padding y border estén incluidos en el ancho total */
+}
+
+/* Opcional: si necesitas que el menú desplegable ocupe todo el ancho de la ventana del navegador, usa width: 100vw y position: fixed con un z-index alto. */
+.navbar-custom .dropdown-menu {
+  width: 92vw; /* Establece el ancho a la anchura completa de la ventana del navegador */
+  position: relative; /* Fija el menú desplegable en la pantalla */
+  z-index: 1030; /* Asegúrate de que el z-index sea suficiente para estar por encima de otros elementos */
+}
+
+/* Ajusta los elementos del menú desplegable para que el texto sea blanco */
+.navbar-custom .dropdown-menu .dropdown-item {
+  color: #ffffff; /* Establece el color del texto de los elementos a blanco */
+}
+@media (min-width: 992px) and (max-width: 1089px) {
+  .navbar-custom .navbar-brand {
+    width: 25%; /* Ancho cuando la pantalla está entre 992px y 1089px */
+  }
+  /* Estilos para los enlaces de navegación */
+.navbar-custom .nav-link {
+font-size: 14px;}
+}
+/* Media query para pantallas de ancho entre 1200px y 1920px */
+@media (min-width: 1300px) and (max-width: 1400px) {
+  .navbar-custom .navbar-brand {
+    width: 40%; /* Ancho se cambia a 50% para pantallas entre 1200px y 1920px */
+  }
+}
+@media (min-width: 1450px) and (max-width: 1500px) {
+  .navbar-custom .navbar-brand {
+    width: 40%; /* Ancho se cambia a 50% para pantallas entre 1200px y 1920px */
+  }
+}
+@media (min-width: 1500px) and (max-width: 2000px) {
+  .navbar-custom .navbar-brand {
+    width: 50%; /* Ancho se cambia a 50% para pantallas entre 1200px y 1920px */
+  }
+}
+@media (max-width: 991px) {
+
+  .navbar-custom {
+    background-color: rgb(27, 25, 25); /* Fondo negro para la barra de navegación */
+  }
+
+  .navbar-custom .navbar-toggler {
+    margin-right: 15px; /* Espacio al lado derecho */
+
+    border-color: black; /* Borde del botón toggler */
+  }
+  .navbar-custom .navbar-nav {
+    flex-direction: column; /* Apila los enlaces en dispositivos móviles */
+    margin-left: 0; /* Anula el margen automático a la derecha */
+    align-items: flex-start; /* Alinea los enlaces al borde izquierdo */
+  }
+
+  .navbar-custom .navbar-collapse {
+    background-color: #ffffff; /* Fondo negro para el contenedor colapsado */
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    padding-left: 15px; /* Agrega un poco de espacio al borde izquierdo para evitar que los elementos toquen el borde */
+  }
+  .navbar-custom .btn-contact {
+    color: #fff; /* Texto blanco */
+  }
+  .navbar-custom .navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: bold;
+    color: #515151; /* Color del texto para los enlaces de navegación */
+  }
+  /* Aumentando la especificidad */
+.navbar-custom .navbar-nav .btn-contact {
+  font-size: 19px;
+  color: #fff; /* Color blanco */
+}
+
+  
+  .navbar-custom .navbar-collapse.show {
+    height: auto; /* Altura automática según el contenido */
+  }
+
+  .navbar-custom .navbar-nav {
+    margin-top: 1rem; /* Espacio superior para los enlaces */
+  }
+
+  .navbar-custom .navbar-nav .nav-item {
+    margin-bottom: 1rem; /* Espacio inferior para cada ítem */
+  }
+
+  .navbar-custom .navbar-toggler-icon {
+    /* Icono de menú por defecto */
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  .navbar-custom .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    /* Icono de cierre cuando el menú está abierto */
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M7 7l16 16M7 23L23 7'/%3E%3C/svg%3E");
+  }
+  
+}
+
+
+/* Establece el fondo y el overlay oscuro */
+.bg-custom {
+  position: relative;
+  background: url('imagenes/industry-bg.webp') no-repeat center center / cover;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end; /* Alinea verticalmente */
+  
+}
+
+.bg-custom::before{
+  z-index: 1;
+  content: '';
+  position: absolute;
+  bottom: 0; /* Colocado en la parte inferior del contenedor */
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to right, #201b1b 50%, transparent 50%);
+}
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.189); /* Ajusta la opacidad según sea necesario */
+  z-index: 0;
+}
+
+
+.content-center {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 6%;
+  align-items: flex-start; /* Alinea los elementos hijos a la derecha */
+
+}
+
+h1 {
+  padding-top: 20px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
+  font-size: 5rem;
+  line-height: 1;
+  color: white;
+  padding-bottom: 0.4rem;
+}
+p {
+  font-size: 1.1rem;
+  color: white;
+  margin-bottom:5%;
+}
+.btn {
+  margin-left: 60px;
+}
+/* Estilos personalizados para el botón de contacto */
+.button-container {
+  z-index: 2;
+  display: flex; /* Esto alineará los botones en una fila */
+  justify-content: center; /* Centra los botones horizontalmente */
+  align-items: flex-start; /* Centra los botones verticalmente */
+  flex-wrap: wrap; /* Permite que los botones pasen a la siguiente línea si no hay suficiente espacio */
+  gap: 10px; /* Espaciado entre botones */
+  transition: all 0.3s ease; /* Transición suave para todos los efectos */
+
+}
+
+.btn-contact-aprender {
+  background-color: red;
+  border: none;
+  color: white;
+  border: 2px solid rgb(231, 49, 49);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+  
+}
+
+
+.btn-contact-aprender:hover {
+  background-color: rgb(190, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+
+.image-overlay {
+  position: absolute;
+  bottom: 0; /* Posición en la esquina inferior */
+  right: 0; /* Posición en la esquina derecha */
+  width: 100%; /* Ocupa la mitad del ancho de su contenedor */
+  height: auto; /* Altura especificada */
+  z-index: 0; /* Asegura que la imagen aparezca encima del overlay oscuro */
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente */
+}
+
+.image-overlay img {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho de .image-overlay */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+
+
+/* Otra opción para resoluciones aún más grandes */
+@media (min-width: 1600px) {
+  h1 {
+    font-size: 9rem; /* Ajusta el tamaño de la fuente para resoluciones ultra grandes */
+    /* Añade más estilos específicos para resoluciones ultra grandes si es necesario */
+  }
+
+  /* Ajustes adicionales para contenido y botones */
+  p, .btn {
+    font-size: 1.9rem; /* Ajuste del tamaño de la fuente */
+    margin: 12px; /* Ajuste del espaciado */
+  }
+}
+
+/* Media queries para tabletas */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 4rem; /* Reduce el tamaño de la fuente para tabletas */
+  }
+
+  .content-center {
+    padding-bottom: 4%; /* Ajuste de padding para tabletas */
+  }
+}
+
+/* Media queries para móviles */
+/* Media queries para móviles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem; /* Reduce aún más el tamaño de la fuente para móviles */
+    margin-bottom: 5%;
+  }
+  p {
+    font-size: 19px;
+    margin-bottom:10%;
+  }
+
+  /* Establece los botones en una columna */
+  .button-container {
+    display: flex;
+    flex-direction: column; /* Apila los botones verticalmente */
+    align-items: center; /* Centra los botones horizontalmente */
+    justify-content: center; /* Centra los botones verticalmente, útil si el contenedor tiene altura específica */
+    width: 80%; /* O una anchura específica según el diseño */
+    gap: 10px; /* Espacio entre botones */
+    padding: 0 20px; /* Evita que los botones toquen los bordes */
+    margin: 0 auto; /* Si el contenedor de botones necesita centrarse dentro de su padre */
+  }
+
+  .btn {
+    width: 100%; /* Opcional: puedes ajustar al ancho completo para que los botones ocupen todo el espacio horizontal disponible */
+    margin: 10px 0; /* Ajusta el margen para tener solo espacio vertical entre botones */
+  }
+
+  .content-center {
+    padding-bottom: 2%; /* Ajuste de padding para móviles */
+    align-items: flex-start; /* Centra el contenido en dispositivos móviles */
+  }
+
+  .bg-custom {
+    padding-top: 20%;
+    justify-content: center; /* Alinea verticalmente todo el contenido en el centro en móviles */
+  }
+  .image-overlay {
+    width: 100%; /* Puedes ajustar esto si deseas cambiar el ancho en móviles */
+    height: auto; /* Ajusta la altura si es necesario */
+    bottom: 0; /* Ajusta la posición si es necesario */
+    right: 0; /* Ajusta la posición si es necesario */
+  }
+  
+  .image-overlay img {
+    width: 100%; /* Asegura que la imagen se ajuste al nuevo tamaño del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.cont-imagenes {
+width: calc(100% - 40px); /* Ajusta esto según el padding general que desees añadir */
+height: calc(100vh - 40px); /* Ajusta esto según el padding general que desees añadir */
+position: relative;
+overflow: hidden;
+margin: 15px; /* Esto añade separación respecto a los bordes de la ventana/contenedor padre */
+padding: 15px; /* Esto añade espacio alrededor del contenido interno del contenedor */
+box-sizing: border-box; /* Incluye el padding y border en la medida del height y width */
+}
+
+.img-fluid {
+
+display: block;
+transition: transform 0.3s ease-in-out;
+}
+.img-fluid1{
+height: 60%;
+width: 100%;
+margin-bottom: 10px; /* Añade un margen en la parte inferior de la primera imagen */
+
+}
+.img-fluid2{
+width: 100%;
+height: 40%;
+}
+
+.centered-contenido {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+padding: 20px; /* Aumentar el padding para una mejor visualización en móviles */
+background: rgba(255, 255, 255, 0.975); /* Fondo semitransparente para mejorar la legibilidad */
+box-sizing: border-box; /* Asegura que el padding no afecte al ancho final del contenedor */
+z-index: 10; /* Asegúrate de que el contenido esté por encima de las imágenes de fondo */
+}
+.centered-contenido h2{
+font-family: 'Chakra Petch', sans-serif;
+font-weight: bold;
+}
+.btn-red {
+background-color: #ff0000;
+color: #fff;
+padding: 0.75rem 1.5rem;
+border: none;
+border-radius: 0.3rem;
+transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-red:hover, .btn-red:focus {
+background-color: #e60000;
+box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.text-and-button p {
+color: #040404;
+margin-bottom: 1rem;
+margin-top: 20px;
+}
+
+
+/* Media query para móviles */
+@media (max-width: 576px) {
+.centered-contenido {
+  width: 80%; /* Opcionalmente, ajusta el ancho para estos dispositivos */
+  padding: 5px; /* Reduce el padding para disminuir la altura total */
+  font-size: 14px; /* Opcionalmente, ajusta el tamaño de fuente para reducir espacio */
+}
+.cont-imagenes {
+  width: calc(100% - 20px); /* Reduce el padding para dispositivos móviles */
+  height: calc(100vh - 20px); /* Reduce el padding para dispositivos móviles */
+  margin: 10px; /* Reduce la separación externa para dispositivos móviles */
+  padding: 10px; /* Reduce el espacio alrededor del contenido interno para dispositivos móviles */
+}
+}
+/* Media query para tabletas */
+@media (min-width: 577px) and (max-width: 768px) {
+.centered-contenido {
+  width: 60%; /* Opcionalmente, ajusta el ancho para estos dispositivos */
+  padding: 15px; /* Ajusta el padding si es necesario */
+  font-size: 16px; /* Ajusta el tamaño de fuente para mantener la legibilidad */
+}
+}
+
+
+@media (min-width: 769px) {
+.centered-contenido {
+  left: 30%; /* Ajusta este valor según necesites para mover el contenedor hacia la izquierda */
+  transform: translate(-40%, -50%); /* Asegúrate de ajustar este valor para mantener el contenedor centrado respecto a su nueva posición `left` */
+  width: 60%; /* Opcionalmente, ajusta el ancho para estos dispositivos */
+  padding: 1rem; /* Ajusta el padding según el contenido */
+}
+}
+/* Para escritorios grandes */
+@media (min-width: 992px) {
+.centered-contenido {
+  width: 60%;
+  left: 30%;
+}
+}
+
+
+
+.my-custom-bg-black {
+background-color: #221f1f;
+}
+
+
+/* Contenedor con fondo personalizado */
+.custom-background {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 15vh;
+  background-image: url('imagenes/feature-bg-copy.webp');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative; /* Posición relativa para posicionar absolutamente los elementos internos */
+}
+
+.custom-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65vh; /* Ajusta esto según la altura deseada para tu contenedor */
+  position: relative;
+  z-index: 1; /* Asegura que el contenedor tenga un z-index más alto que la imagen que se desborda */
+}
+
+.custom-img {
+  
+  width: calc(100% + 40px); /* Aumenta el ancho en un valor fijo, por ejemplo, 40px más que el contenedor */
+  position: absolute; /* Posicionamiento absoluto respecto a su contenedor */
+  right: -20px; /* Ajusta esto para que la imagen 'sobresalga' del contenedor */
+  top: 50%;
+  transform: translateY(-50%); /* Centra la imagen verticalmente */
+  z-index: 0; /* Un z-index más bajo para que la imagen quede debajo del contenido de texto */
+}
+.unique-class {
+  padding-top: 20px; /* Ajusta este valor según necesites */
+}
+/* Estilos para el título */
+.features-title {
+  font-family: 'Chakra Petch', sans-serif;
+  color: #fff; /* Establece el color del texto a blanco */
+  font-size: 40px; /* Tamaño de fuente grande para el título */
+  font-weight: bold; /* Fuente en negrita para destacar */
+  text-transform: uppercase; /* Opcional: Transforma el texto a mayúsculas para darle énfasis */
+}
+
+/* Estilos para la descripción */
+.features-description {
+  color: #ddd; /* Un blanco ligeramente más apagado para el párrafo, para diferenciarlo del título */
+  font-size: 18px; /* Tamaño de fuente estándar para el texto */
+  line-height: 1.5; /* Altura de línea para mejorar la legibilidad */
+  text-align: justify; /* Justifica el texto para un aspecto más uniforme. Puede cambiarse a 'left' si se prefiere */
+}
+
+/* Asegúrate de ajustar los tamaños de fuente (font-size) y los espacios (margin) según las necesidades específicas de tu diseño */
+
+/* Estilos base */
+.my-custom-bg-black {
+  background-color: #221f1f; /* Tu color de fondo marrón oscuro */
+}
+
+
+.mi-fluid-container {
+  height: 40vh;
+  padding: 20px; /* Añade un padding interior */
+  background-color: transparent; /* Un color de fondo ligero */
+}
+
+.mi-centered-row {
+  display: flex; /* Activa Flexbox */
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: center; /* Centra los elementos horizontalmente si es necesario */
+  margin: 0 auto; /* Centra la fila horizontalmente con respecto a su contenedor */
+  height: 100%; /* Asegura que la fila ocupe el 100% de la altura de su contenedor */
+}
+
+.feature {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px; /* A consistent margin for all feature blocks */
+}
+.feature-icon {
+  width: 35px; /* Ajusta el ancho como lo necesites */
+  height: auto; /* Esto mantendrá la proporción de la imagen */
+  margin: 8px;
+}
+.feature-title {
+  color: white;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .custom-background {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  .mi-fluid-container {
+    height: auto;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-right: 0; /* Elimina el padding derecho */
+    padding-left: 0; /* Elimina el padding izquierdo */
+  }
+  .custom-container {
+    height: 50vh; /* Ajuste para la altura en dispositivos móviles */
+  }
+
+  .custom-img {
+    width: calc(100%); /* Ajusta para que la imagen no 'sobresalga' del contenedor */
+    right: 0;
+  }
+
+  .features-title {
+    padding-top: 20px;
+    font-size: 30px; /* Ajuste de tamaño de fuente para el título */
+  }
+
+  .features-description {
+    font-size: 17px; /* Ajuste de tamaño de fuente para la descripción */
+  }
+
+
+  .feature-icon {
+    width: 25px; /* Reducción del tamaño del icono */
+  }
+
+  .feature-title {
+    font-size: 25px; /* Ajuste de tamaño de fuente para el título de la característica */
+  }
+}
+
+
+/* Estilos para tabletas */
+@media only screen and (min-width: 601px) and (max-width: 1204px) {
+  .custom-background {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+  }
+
+  .custom-container {
+    height: 75vh; /* Altura coincidente con .custom-background */
+  }
+  .mi-fluid-container {
+    height: auto;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-right: 0; /* Elimina el padding derecho */
+    padding-left: 0; /* Elimina el padding izquierdo */
+  }
+  .custom-img {
+    width: calc(100% + 20px); /* Un poco de desbordamiento para efecto visual */
+    right: -10px; /* Posicionamiento ligero */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .features-title {
+    font-size: 30px; /* Tamaño de fuente más grande para tabletas */
+    margin-bottom: 0.4em;
+  }
+
+  .features-description {
+    font-size: 16px; /* Tamaño de fuente intermedio para la descripción */
+    text-align: left;
+  }
+
+  .feature-icon {
+    width: 26px; /* Reducción del tamaño del icono */
+  }
+
+  .feature-title {
+    font-size: 26px; /* Ajuste de tamaño de fuente para el título de la característica */
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Ajustar el tamaño de los íconos dentro de este rango */
+  .feature-icon {
+      width: 20px; /* Ajusta el ancho de los íconos */
+      height: auto; /* Mantiene la proporción de los íconos */
+  }
+
+  /* Ajustar el tamaño del texto del título dentro de este rango */
+  .feature-title {
+      font-size: 18px; /* Establece el tamaño del texto a 20px */
+  }
+}
+
+@media only screen and (min-width: 1501px) {
+  .custom-background {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 40px;
+    /* Puedes optar por una altura más grande si es necesario debido a la mayor área de pantalla */
+    height: 70vh;
+  }
+
+  .custom-container {
+    /* Dado que es una pantalla grande, quizás quieras aumentar la altura del contenedor */
+    height: 75vh;
+    /* Ajusta el alineamiento y el espaciado si es necesario */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .custom-img {
+    /* Para pantallas grandes, podrías querer que la imagen sea un poco más grande para aprovechar el espacio extra */
+    width: calc(100% + 60px); /* Aumenta el ancho de la imagen un poco más que el contenedor */
+    right: -30px; /* Ajusta la imagen para que 'sobresalga' del contenedor */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .features-title {
+    /* En una pantalla grande, podrías querer un tamaño de fuente más grande para el título */
+    font-size: 70px;
+  
+  }
+
+  .features-description {
+    /* Así mismo, incrementa el tamaño de la descripción para que coincida con el título */
+    font-size: 27px;
+    margin-top: 1em;
+    /* En pantallas grandes, a veces es mejor alinear el texto a la izquierda o derecha en lugar de justificar */
+    text-align: left;
+  }
+
+  .feature-icon {
+    /* Tal vez quieras un icono más grande en pantallas grandes */
+    font-size: 35px;
+    margin-right: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .feature-title {
+    /* Ajusta el tamaño del título de la característica */
+    font-size: 35px;
+  }
+
+  /* Aquí puedes agregar o ajustar otros estilos para elementos específicos para pantallas grandes */
+}
+
+
+
+
+
+
+
+
+
+.highlight-section-fluid1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-image: linear-gradient(to bottom, #ffffff, #f0f0f0);
+}
+
+.highlight-section-fluid1::before{
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0; /* Colocado en la parte inferior del contenedor */
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to left, #201b1b 50%, transparent 50%);
+  }
+.highlight-section-fluid {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-image: linear-gradient(to bottom, #ffffff, #f0f0f0);
+}
+
+.highlight-section-fluid::before{
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0; /* Colocado en la parte inferior del contenedor */
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to left, #f0f0f0 50%, transparent 50%);
+  }
+.content-wrapper {
+  padding-top: 15vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column; /* Esto garantizará que todo dentro de content-wrapper se apile verticalmente */
+  align-items: left; /* Alinea los elementos al principio del contenedor interno */
+  justify-content: space-between; /* Separa los elementos internos entre sí */
+  width: 100%;
+  
+}
+
+.icon-title-wrapper {
+  max-width: 1200px; /* o el ancho máximo que prefieras */
+  margin: auto; /* Centra el content-wrapper */
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+.custom-list {
+  padding-left: 0; /* Elimina el padding izquierdo */
+  margin-top: 0.3em;
+  list-style: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.custom-list li {
+  margin-bottom: 2px; /* Espacio entre elementos de la lista */
+  line-height: 1.6; /* Espacio entre líneas */
+  position: relative;
+  padding-left: 20px; /* Espacio para el ícono o guion */
+}
+
+.custom-list li:before {
+  content: "—\00a0"; /* Este es el código Unicode para un guion medio seguido de un espacio duro */
+  font-weight: bold; /* Hace que el guion medio sea más grueso */
+  transform: scaleX(0.5); /* Ajusta el valor para hacer el guion más corto */
+  padding-right: 5px; /* Añade espacio entre el guion y el texto */  
+  font-family: "Font Awesome 5 Free"; /* Asegúrate de incluir Font Awesome en tu proyecto */
+  color: #000000; /* Color del ícono */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.highlight-icon img {
+  width: 30px; /* Ajusta el ancho como lo necesites */
+  height: auto; /* Esto mantendrá la proporción de la imagen */
+  margin: 8px;
+  /* Añade más estilos según sea necesario */
+}
+
+.highlight-title h1 {
+  font-family: 'Chakra Petch', sans-serif;
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0; /* Quita el margen por defecto del h1 */
+}
+
+
+.highlight-action {
+  padding-top: 4vh;
+  padding-bottom: 2vh;
+  text-align: center; /* Centra el botón en su contenedor si es necesario */
+  /* Agrega más estilos al contenedor si lo necesitas */
+}
+
+.button-style {
+  
+  display: inline-block; /* Hace que el enlace se comporte como un botón */
+  padding: 10px 25px; /* Espacio dentro del botón */
+  font-size: 16px; /* Tamaño del texto */
+  font-weight: bold; /* Peso del texto */
+  color: #000000d4; /* Color del texto */
+  background-color: #FFF; /* Fondo del botón */
+  text-align: center; /* Alinea el texto al centro */
+  border: 2px solid #000000cc; /* Borde del botón */
+  text-decoration: none; /* Quita el subrayado del enlace */
+  cursor: pointer; /* Cambia el cursor a una manita */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+.button-style:hover {
+  text-decoration: none;
+  color: #000;
+  background-color: #c2c0c0; /* Color de fondo al pasar el mouse */
+  /* Puedes agregar otros estilos para el estado hover si lo deseas */
+}
+
+.button-style:focus {
+  outline: none; /* Quita el borde que se muestra al hacer clic */
+  /* Puedes agregar otros estilos para el estado focus si lo deseas */
+}
+
+.category-title{
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+  padding-top:20px;
+}
+
+.image-superpuesta {
+  position: absolute;
+  top: 0; /* Posición en la esquina inferior */
+  right: 0; /* Posición en la esquina derecha */
+  width: 100%; /* Ocupa la mitad del ancho de su contenedor */
+  height: auto; /* Altura especificada */
+  z-index: 0; /* Asegura que la imagen aparezca encima del overlay oscuro */
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente */
+  opacity: 0.2;
+}
+
+.image-superpuesta img {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho de .image-overlay */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+
+
+
+@media (max-width: 768px) {
+  .highlight-section-fluid1, .highlight-section-fluid {
+    padding: 5px; /* Reducimos el padding */
+  }
+
+  .content-wrapper {
+    padding-top: 10vh; /* Ajuste del padding superior */
+    padding-left: 10px; /* Reducción del padding lateral */
+    padding-right: 10px;
+  }
+
+  .icon-title-wrapper {
+    flex-direction: column; /* Los íconos y los títulos se apilarán verticalmente */
+    align-items: flex-start; /* Alineación al inicio */
+  }
+
+  .highlight-title h1 {
+    font-size: 30px; /* Reducimos el tamaño de la fuente para el título */
+  }
+
+  .category-title {
+    font-size: 18px; /* Tamaño de fuente más pequeño para los títulos de categoría */
+  }
+  .highlight-action {
+    margin-left: 0; /* Elimina cualquier margen izquierdo que empuje el botón hacia el centro o la derecha */
+    margin-right: auto; /* Asegura que cualquier margen automático no afecte la alineación */
+    align-self: flex-start; /* Alinea el botón hacia el inicio del contenedor, que en un contexto de flexbox significa la izquierda */
+  }
+  .highlight-action button {
+    color: #515151;
+    margin-top: 35px;
+    padding: 5px 20px; /* Reducimos el padding del botón */
+    font-size: 1em; /* Tamaño de fuente más pequeño para el texto del botón */
+  }
+
+  .custom-list li {
+    font-size: 0.9em; /* Reducción del tamaño de la fuente para la lista */
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .highlight-section-fluid1, .highlight-section-fluid {
+    padding: 8px; /* Un punto intermedio de padding */
+  }
+
+  .content-wrapper {
+    padding-top: 12vh; /* Ajuste del padding superior */
+    padding-left: 15px; /* Ajuste ligero del padding lateral */
+    padding-right: 15px;
+  }
+
+  .icon-title-wrapper {
+    flex-direction: row; /* Mantenemos la disposición en fila */
+    justify-content: space-between; /* Ajustamos el contenido para separarlo uniformemente */
+  }
+
+  .highlight-title h1 {
+    font-size: 40px; /* Ajustamos el tamaño de la fuente para el título */
+  }
+
+  .category-title {
+    padding-top: 5vh;
+    font-size: 20px; /* Ajustamos el tamaño de la fuente para los títulos de categoría */
+  }
+
+  .highlight-action button {
+    padding: 8px 15px; /* Ajuste del padding para botones */
+    font-size: 0.95em; /* Ajustamos el tamaño de la fuente para el texto del botón */
+  }
+
+  .custom-list li {
+    font-size: 1em; /* Ajuste del tamaño de la fuente para la lista */
+  }
+}
+@media (min-width: 1500px) {
+  .highlight-icon img {
+    width: 50px; /* Aumentamos el ancho del icono */
+    height: auto; /* Mantenemos la proporción del icono */
+    /* Añade aquí cualquier otro ajuste de estilo necesario para los iconos */
+  }
+  .highlight-section-fluid1, .highlight-section-fluid {
+    /* Ajustes específicos para pantallas grandes, como aumentar el padding */
+    padding: 20px;
+  }
+
+  .content-wrapper {
+    /* Aumentar el padding superior para más espacio en contenido grande */
+    padding-top: 10vh;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .icon-title-wrapper {
+    /* Ajustes para mejorar la distribución del espacio o el tamaño en pantallas grandes */
+    justify-content: space-around; /* O cualquier otro ajuste necesario */
+  }
+
+  .highlight-title h1 {
+    /* Incrementar el tamaño de la fuente para títulos en pantallas grandes */
+    font-size: 60px;
+  }
+
+  .category-title {
+    padding-top:5vh;
+    /* Aumentar el tamaño de la fuente para visibilidad mejorada */
+    font-size: 30px;
+  }
+
+  .highlight-action button {
+    /* Ajustar el tamaño del botón y el padding para una mejor interacción */
+    padding: 15px 30px;
+    font-size: 1.2em;
+  }
+
+  
+  .custom-list li {
+    /* Ajustar el tamaño de la fuente y el espaciado para la lista */
+    font-size: 25px;
+    margin-bottom: 4px; /* Espacio adicional entre elementos de la lista */
+  }
+
+  /* Puedes añadir más reglas específicas para elementos dentro de tu diseño */
+}
+
+
+
+
+.custom-padding .row {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos de la fila se ajusten */
+  padding-bottom: 15vh;
+
+}
+
+/* Estilos para las columnas de 8 y 4 */
+.custom-padding .col-padding-8,
+.custom-padding .col-padding-4 {
+  padding-right: 15px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Esto empujará el contenido hacia el final (parte inferior) */
+}
+
+/* Estilos para la columna de 8 */
+.custom-padding .col-padding-8 {
+  height: 80vh; /* Altura fija para la columna de 8 */
+}
+
+/* Estilos para la imagen grande */
+.custom-padding .col-padding-8 .img-big {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 80vh; /* Altura fija */
+  object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsión */
+  border-radius: 0; /* Esquinas redondeadas */
+  margin-top: auto; /* Esto empuja la imagen hacia el final del contenedor */
+}
+
+/* Estilos para la columna de 4 */
+.custom-padding .col-padding-4 {
+  height: 80vh; /* Altura fija para la columna de 4 */
+}
+
+/* Estilos para el contenedor de la imagen pequeña */
+.custom-padding .col-padding-4 .img-small-container {
+  
+  height: 50vh; /* Altura fija para el contenedor de la imagen pequeña */
+  display: flex; /* Convierte en contenedor flex */
+  justify-content: flex-end; /* Alinea el contenido (imagen) al final */
+}
+
+/* Estilos para la imagen pequeña */
+.custom-padding .col-padding-4 .img-small-container img {
+
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: auto; /* La altura se ajustará a la proporción de la imagen */
+  object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsión */
+  border-radius: 0rem; /* Esquinas redondeadas */
+}
+
+
+
+
+@media (max-width: 768px) {
+  .custom-padding .row {
+    padding-bottom: 10vh; /* Menor padding en la parte inferior */
+  }
+
+  /* Ajustes para las columnas en dispositivos móviles */
+  .custom-padding .col-padding-8,
+  .custom-padding .col-padding-4 {
+    padding-top: 20px;
+    padding-right: 14px;
+    padding-left: 15px;
+    height: auto; /* Altura automática para adaptarse al contenido */
+  }
+
+  /* Ajustes para la imagen grande en dispositivos móviles */
+  .custom-padding .col-padding-8 .img-big {
+    height: 65vh; /* Altura reducida */
+  }
+
+  /* Ajustes para el contenedor de la imagen pequeña en dispositivos móviles */
+  .custom-padding .col-padding-4 .img-small-container {
+    height: 65vh; /* Altura reducida */
+
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .custom-padding .row {
+    padding-bottom: 12vh; /* Ajuste intermedio para el padding inferior */
+  }
+
+  /* Ajustes para las columnas en tabletas */
+  .custom-padding .col-padding-8,
+  .custom-padding .col-padding-4 {
+    padding-right: 12px;
+    padding-left: 12px;
+    height: 60vh; /* Altura ajustada */
+  }
+
+  /* Ajustes para la imagen grande en tabletas */
+  .custom-padding .col-padding-8 .img-big {
+    height: 60vh; /* Altura ajustada */
+  }
+
+  /* Ajustes para el contenedor de la imagen pequeña en tabletas */
+  .custom-padding .col-padding-4 .img-small-container {
+    height: 40vh; /* Altura ajustada */
+  }
+}
+
+
+
+
+
+
+
+.container-images {
+  position: relative; /* Necesario para la posición absoluta de los hijos */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 135vh;
+  overflow: hidden;
+}
+
+.image-large {
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%; /* Ajustamos el ancho al del contenedor */
+  height: 75vh; /* Ajustamos la altura al 70% del viewport */
+  object-fit: cover; /* La imagen cubre su área asignada sin perder proporciones */
+  background-color: white;
+  padding-bottom: 5px; /* Modificado para agregar espacio para el contenedor intermedio */
+}
+
+/* Contenedor Intermedio */
+.intermediate-container {
+  width: 100%; /* Ajustamos el ancho al del contenedor */
+  /* Ajusta la altura según el contenido o la altura deseada */
+  padding: 20px; /* Añade padding si es necesario */
+  /* Añade más estilos aquí si es necesario */
+}
+
+.image-small {
+  padding-top: 5px; /* Añadido para mantener consistencia en el espaciado */
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%; /* Ajustamos el ancho al del contenedor */
+  height: 60vh; /* Ajustamos la altura al 30% del viewport */
+  object-fit: cover; /* La imagen cubre su área asignada sin perder proporciones */
+  background-color: white;
+  opacity: 0.5;
+}
+
+.content-overlay {
+  position: absolute;
+  top: 60%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  width: 58%;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: white;
+  z-index: 2;
+}
+
+.content-overlay h2 {
+  
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  color: black;
+  text-align: left;
+  margin-bottom: 20px; /* Ajusta el margen según necesites */
+  padding-top: 20px;
+  /* Aquí pueden ir más estilos para el título */
+}
+
+.text-and-button {
+  gap: 10px; /* Espacio entre el párrafo y el botón */
+  display: flex;
+  justify-content: space-between; /* Separa el texto y el botón a cada extremo */
+  align-items: flex-start; /* Alinea verticalmente */
+}
+
+.text-and-button p {
+  margin-top: 0;
+  font-size: 17px;
+  color: black;
+  text-align: left;
+  width: 70%; /* Ajusta este porcentaje según lo necesites */
+  margin-right: 20px; /* Añade un margen a la derecha si es necesario */
+  /* Aquí pueden ir más estilos para el párrafo */
+}
+
+.btn-sales-inquiry {
+
+  text-decoration: none; /* Elimina el subrayado */
+  background-color: #f00; /* Color de fondo más claro al pasar el ratón */
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  /* Aquí pueden ir más estilos para el botón */
+}
+.btn-sales-inquiry:hover {
+  text-decoration: none; /* Elimina el subrayado */
+  color: #fff;
+  background-color: #d60000; /* Color de fondo más oscuro al pasar el mouse */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada para efecto de elevación */
+}
+
+
+
+/* Media Queries para dispositivos más grandes que escritorios */
+@media (min-width: 1700px) {
+  .container-images {
+    padding: 40px; /* Añade padding si es necesario */
+    height: 100vh; /* O un valor que se ajuste a la altura deseada */
+    padding-bottom: 0; /* Remueve el padding adicional si no es necesario */
+  }
+
+  .image-large {
+    height: 70vh; /* Ajusta la altura para pantallas grandes */
+    padding: 0; /* Remueve el padding si no es necesario */
+    object-fit: cover; /* Asegura que la imagen cubra su espacio */
+  }
+
+  .image-small {
+    height: 50vh; /* Ajusta la altura para pantallas grandes */
+    padding: 0; /* Remueve el padding si no es necesario */
+    object-fit: cover; /* Asegura que la imagen cubra su espacio */
+  }
+
+  .content-overlay {
+    position: absolute;
+    top: 60%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    width: 50%; /* Ajusta el ancho para pantallas grandes */
+    padding: 20px; /* Padding para mantener el contenido espaciado */
+    background-color: white;
+    z-index: 2;
+  }
+
+  .content-overlay h2 {
+    font-size: 50px; /* Aumenta el tamaño de fuente para pantallas grandes */
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+
+  .text-and-button {
+    flex-direction: row; /* Elementos en fila para pantallas grandes */
+    justify-content: space-between; /* Separa el texto y el botón */
+    align-items: start; /* Alinea elementos verticalmente */
+    padding: 0; /* Remueve el padding si no es necesario */
+  }
+
+  .text-and-button p {
+    font-size: 26px; /* Aumenta el tamaño de fuente para pantallas grandes */
+    text-align: left; /* Alinea el texto a la izquierda */
+    width: 75%; /* Ajusta el ancho del párrafo */
+  }
+
+  .text-and-button button {
+    font-size: 21px; /* Aumenta el tamaño de fuente para pantallas grandes */
+    padding: 12px 24px; /* Aumenta el padding para un botón más grande y tocable */
+  }
+  .btn-sales-inquiry {
+    font-size: 1.4rem;
+  }
+}
+/* Media Queries para dispositivos móviles */
+@media (max-width: 992px) {
+  .container-images {
+    height: auto; /* La altura se adapta al contenido */
+  }
+
+  .image-large {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 70vh; /* Ajusta la altura para que sea proporcional y no demasiado grande */
+    object-fit: cover; /* La imagen cubre su espacio asignado */
+  }
+
+  .image-small {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 50vh; /* Ajusta la altura para equilibrar con la imagen grande */
+    object-fit: cover; /* La imagen cubre su espacio asignado */
+  }
+
+  .content-overlay {
+    position: absolute;
+    top: 50%; /* Coloca el overlay en la mitad de la pantalla para evitar superposición */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Utiliza la mayor parte del ancho de la pantalla para el overlay */
+    padding: 15px; /* Ajusta el padding para mantener el contenido bien espaciado */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    background-color: white;
+    z-index: 2; /* Asegúrate de que se muestre por encima de las imágenes */
+
+  }
+
+  .content-overlay h2 {
+    font-size: 29px; /* Reduce el tamaño de fuente para adaptarlo a la pantalla */
+    margin: 0 0 10px 0; /* Reduce el margen debajo del título */
+    text-align: left; /* Alinea el título a la izquierda */
+  }
+
+  .text-and-button {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: flex-start; /* Alinea elementos a la izquierda */
+    gap: 15px; /* Reduce el espacio entre elementos */
+  }
+
+  .text-and-button p {
+    color: black;
+    width: 100%; /* Ajusta este porcentaje según lo necesites */
+    font-size: 19px; /* Reduce el tamaño de fuente para una mejor legibilidad */
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+  
+
+  .text-and-button button {
+    width: 100%; /* El botón se extiende a lo ancho del contenedor */
+    padding: 12px; /* Ajusta el padding para hacerlo más tocable */
+    font-size: 14px; /* Tamaño de fuente adecuado para botones en dispositivos móviles */
+    margin-top: 20px; /* Añade espacio encima del botón */
+  }
+}
+
+
+
+
+
+.footer {
+  height: 70vh;
+  min-height: auto; /* Usa min-height para garantizar que el contenido no se desborde */
+  background-color: #221f1f;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar contenido verticalmente si hay menos contenido */
+}
+
+.footer-logo{
+  max-width: 60%;
+  margin-bottom: 40px;
+}
+
+.p-custom {
+  width: 50%;
+  color: #ffffff; /* Cambia el color del texto */
+  font-size: 1rem; /* Establece el tamaño del texto */
+  /* Añade cualquier otro estilo que necesites */
+}
+
+.btn-direction {
+  margin-left: 0; /* Elimina cualquier margen izquierdo si existe */
+  color: #ff0404; /* Color del texto del botón */
+  border: 1px solid #f0f0f0; /* Estilo y color del borde */
+  padding: 0.5rem 1rem; /* Relleno del botón */
+  font-size: 1rem; /* Tamaño del texto */
+  text-transform: uppercase; /* Transformación del texto */
+  transition: background-color 0.3s ease; /* Transición suave al cambiar el fondo */
+
+}
+
+.btn-direction:hover {
+  color: #000; /* Color del texto al pasar el ratón por encima */
+  background-color: #fff; /* Color de fondo al pasar el ratón por encima */
+}
+/* Establece la fila para usar flex y tener una altura completa */
+.custom-row {
+  display: flex;
+  align-items: center; /* Esto centrará los ítems verticalmente */
+  height: 100%; /* O define una altura específica */
+}
+
+/* Asegúrate de que cada columna flexione sus ítems internos también */
+.custom-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Esto centrará el contenido verticalmente dentro de la columna */
+  padding-top: 20px; /* Ajusta este valor según sea necesario */
+
+} 
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+}
+
+.text-white {
+  color: rgb(49, 4, 4);
+}
+
+.texto-boton {
+  text-align: right; /* Alinea el contenido a la derecha */
+  padding-right: 0; /* Elimina el padding derecho si lo hay */
+  padding-left: 0; /* Elimina el padding derecho si lo hay */
+
+
+}
+
+.btn-contact-venta {
+  background-color: rgb(227, 10, 10);
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+.btn-contact-venta:hover {
+  background-color: #e6561d; /* Un color ligeramente más claro al pasar el ratón por encima o enfocar */
+  color: rgb(255, 255, 255);
+}
+
+.text-and-image {
+  display: flex;
+  align-items:end;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.membership-logo {
+  width: 40px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.custom-col li {
+  margin-top: 10px;
+  margin-bottom: 5px; /* Ajusta el margen superior e inferior de las listas */
+}
+.custom-col ul.list-unstyled li {
+  margin-bottom: 2vh; /* Aumenta el margen inferior para separar más los elementos de la lista */
+}
+
+
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end; /* Alinea los íconos al final del contenedor */
+  align-items: center; /* Alinea los íconos verticalmente en el centro */
+  gap: 10px; /* Ajusta el espacio entre íconos */
+  height: 100px; /* Ajusta según necesites */
+}
+
+.social-icons a {
+  color: inherit; /* Hereda el color del texto del elemento padre o especifica uno */
+  margin: 0 10px; /* Espacio a cada lado del ícono */
+  font-size: 24px; /* Ajusta el tamaño de los íconos de Font Awesome */
+  display: flex; /* Hace que el enlace (a) se comporte como un flex container */
+  align-items: center; /* Centra el ícono en el enlace */
+}
+
+.social-icons a:hover {
+  color: #333; /* Cambia el color del ícono al pasar el ratón por encima */
+}
+
+/* Opcional: Si quieres utilizar un texto/etiqueta junto a los íconos */
+.social-icons-label {
+  margin-right: 10px; /* Ajusta el margen según necesites */
+  display: inline-flex; /* Muestra la etiqueta como un flex container inline */
+  align-items: center; /* Alinea verticalmente el texto de la etiqueta */
+}
+
+/* Adicional: ajustes para garantizar que los íconos mantengan su aspecto */
+.fa-facebook-f, .fa-instagram, .fa-whatsapp {
+  width: auto; /* Asegura que el ancho se ajuste al contenido (el ícono) */
+  height: auto; /* Asegura que la altura se ajuste al contenido */
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+    padding: 15px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .footer-logo {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .p-custom {
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .btn-direction, .btn-contact-venta {
+    justify-content: center;
+    width: auto;
+    padding: 0.375rem 0.75rem;
+    font-size: 18px;
+    margin: 5vh auto; /* Margen vertical y centrado horizontalmente */
+    display: inline-block; /* El botón ocupa solo el ancho de su contenido */
+  }
+  
+
+  .custom-row {
+    text-align: center; /* Centra el texto de estos elementos */
+    align-items: center; /* Alinea los elementos hijos al centro */
+    justify-content: center; /* Centra los elementos hijos en el eje principal */
+    flex-direction: row; /* Organiza los elementos hijos en una columna */
+  }
+
+  .text-and-image {
+    padding-top: 5vh;
+    display: flex; /* Continúa usando Flexbox */
+    flex-direction: row; /* Mantiene elementos en una fila */
+    align-items: center; /* Alinea elementos en el centro verticalmente */
+    justify-content: start; /* Centra los elementos en el eje principal */
+    gap: 20px; /* Aumenta el espacio entre el texto y la imagen */
+    margin-bottom: 20px; /* Espacio adicional debajo de esta sección si es necesario */
+    border-top: 1px solid #ffffff; /* Agrega una línea sólida en la parte inferior */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Asegúrate de que el texto y la imagen no ocupen más espacio del necesario */
+  .text-and-image p {
+    font-size: 18px; /* Ajusta si es necesario para móviles */
+    margin: 0; /* Elimina los márgenes del párrafo si es necesario */
+  }
+  
+
+  .text-and-image img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+  }
+
+  .texto-boton {
+    text-align: center; /* Alinea el contenido a la derecha */
+    padding-right: 0; /* Elimina el padding derecho si lo hay */
+
+  }
+  .custom-col {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .custom-col ul, .custom-col li {
+    
+    padding-left: 0; /* Asegura que no haya padding a la izquierda */
+    margin-top: 5px;
+    margin-bottom: 5px; /* Ajusta el margen superior e inferior de las listas */
+  }
+  .custom-col ul.list-unstyled li {
+    margin-bottom: 7vh; /* Aumenta el margen inferior para separar más los elementos de la lista */
+  }
+  .custom-col ul {
+    padding-bottom: 0; /* Elimina el padding inferior de las listas */
+  }
+
+  .social-icons {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 1vh;
+    justify-content: flex-start; /* Cambia a 'center' para centrar los íconos en móviles */
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Continúa permitiendo que los íconos se ajusten dentro del contenedor */
+    display: flex; /* Asegura que los íconos se muestren en línea */
+  }
+
+  .social-icons a {
+    margin: 10px; /* Aumenta el margen para mejorar la tocabilidad en pantallas táctiles */
+    font-size: 30px; /* Aumenta el tamaño de los íconos para mejorar la visibilidad */
+    display: inline-flex; /* Hace que el enlace se comporte como un contenedor flex */
+    align-items: center; /* Centra el ícono verticalmente dentro del enlace */
+  }
+
+  .membership-logo {
+    margin-bottom: 10px;
+  }
+
+ 
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  /* Ajustes para el logo, que suele necesitar tamaño específico en tablets */
+  .footer-logo {
+    max-width: 70%; /* Ajusta el tamaño del logo */
+    margin-bottom: 30px; /* Ajusta el margen inferior */
+  }
+
+  /* Para garantizar que los párrafos no sean demasiado anchos y difíciles de leer */
+  .p-custom {
+    width: 70%; /* Aumenta o disminuye el ancho según sea necesario */
+  }
+
+  /* Si los botones se ven demasiado grandes o pequeños en tabletas */
+  .btn-direction, .btn-contact-venta {
+    padding: 10px 20px; /* Ajusta el padding para cambiar el tamaño */
+    font-size: 0.95rem; /* Ajusta el tamaño de la fuente si es necesario */
+  }
+
+  /* Si necesitas ajustar el espaciado de la lista para este rango */
+  .custom-col ul.list-unstyled li {
+    margin-bottom: 15px; /* Aumenta el margen inferior para más espacio entre elementos de la lista */
+  }
+
+  /* Para ajustar el alineamiento y el espaciado de los iconos sociales */
+  .social-icons {
+    justify-content: center; /* Centra los iconos si se dispersan demasiado en tabletas */
+  }
+}
+@media (min-width: 1500px) {
+  /* Estilos que solo se aplicarán para pantallas de 1500px en adelante */
+  
+  .footer {
+    height: 50vh;
+    /* Ajustes para .footer en pantallas grandes */
+    padding: 40px; /* Aumenta el padding para una mejor proporción */
+    justify-content: center; /* Cambia la justificación si es necesario */
+  }
+
+  .footer-logo {
+    /* Ajustes para .footer-logo en pantallas grandes */
+    max-width: 50%; /* Ajusta si el logo se ve muy pequeño o muy grande */
+  }
+
+  .p-custom {
+    /* Ajustes para .p-custom en pantallas grandes */
+    font-size: 27px; /* Aumenta el tamaño de fuente para una mejor legibilidad */
+  }
+
+  /* Ajustes para botones en pantallas grandes */
+  .btn-direction, .btn-contact-venta {
+    padding: 1rem 1rem; /* Aumenta el relleno para botones más grandes */
+    font-size: 23px; /* Aumenta el tamaño de fuente para una mejor visibilidad */
+  }
+
+  /* Ajustes para listas en pantallas grandes */
+  .custom-col ul.list-unstyled li {
+    margin-bottom: 25px; /* Aumenta el espacio entre elementos de lista para evitar que se vean apretados */
+    font-size: 24px;
+  }
+  .membership-logo {
+    width: 60px; /* Ajusta el tamaño de la imagen de membresía */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    /* Agrega más estilos si es necesario */
+  }
+  /* Ajustes para iconos sociales en pantallas grandes */
+  .social-icons {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: flex-end; /* Mantiene los íconos alineados al final del contenedor */
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+    flex-wrap: nowrap; /* Asegura que los íconos se mantengan en una sola línea */
+  }
+
+  .social-icons a {
+    margin: 0 15px; /* Aumenta el margen para más espacio entre íconos en pantallas grandes */
+    font-size: 40px; /* Aumenta el tamaño de los íconos para una mejor visualización */
+    display: inline-flex; /* Asegura que los enlaces se comporten como contenedores flex */
+    align-items: center; /* Centra los íconos verticalmente dentro del enlace */
+  }
+  .custom-col h5 {
+    /* Estilos para pantallas más pequeñas (hasta 768px) */
+    font-size: 35px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    /* Otros ajustes de estilo según sea necesario */
+  }
+  /* Otros ajustes específicos que necesites */
+  .text-and-image p {
+    font-size: 25px; /* Aumenta el tamaño de fuente para pantallas grandes */
+    margin-bottom: 20px; /* Aumenta el espaciado si es necesario */
+    /* Puedes ajustar también la línea de altura, color, etc., para estos dispositivos */
+    line-height: 1.4;
+  }
+}

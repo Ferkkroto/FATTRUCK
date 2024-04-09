@@ -1,0 +1,345 @@
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pickup 2.4</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="pickup2.4.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="index.html">
+          <img src="imagenes/fattruck-logo_white.svg" alt="Logo"> <!-- Ajusta el path a tu logo -->
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active mr-3">
+              <a class="nav-link" href="index.html">
+                <i class="fas fa-home"></i> <span>HOGAR</span><span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <!-- Enlace VEHÍCULOS que siempre redirige, visible solo en dispositivos grandes -->
+            <li class="nav-item mr-3 d-none d-lg-block">
+              <a class="nav-link" href="vehiculos.html">VEHÍCULOS +</a>
+            </li>
+    
+            <!-- Menú desplegable para dispositivos móviles, visible solo en dispositivos pequeños -->
+            <li class="nav-item dropdown mr-3 d-lg-none">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                VEHÍCULOS +
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="pickup2.4.html">PICKUP 2.4</a>
+                <a class="dropdown-item" href="pickup2.8.html">PICKUP 2.8</a>
+                <a class="dropdown-item" href="wagon8x8.html">WAGON 2.8</a>
+                <!-- Agrega más enlaces según sea necesario -->
+              </div>
+            </li>             
+            <!-- Resto de elementos del menú -->
+            <li class="nav-item mr-3">
+              <a class="nav-link" href="caracteristicas.html">CARACTERÍSTICAS</a>
+            </li>
+            <li class="nav-item mr-3">
+              <a class="nav-link" href="galeria.html">GALERIA</a>
+            </li>
+            <li class="nav-item active mr-3">
+              <a class="nav-link btn-contact" href="contacto.html">CONTACTANOS</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid bg-custom" style="background: url('imagenes/24-copy.webp') no-repeat center center / cover;">
+        <div class="dark-overlay"></div>
+      
+        <div class="image-overlay">
+          <img src="imagenes/dot-bg.png" alt="Imagen superpuesta">
+        </div>
+      
+        <div class="content-center">
+            <div class="row">
+                <div class="col-12">
+                    <h1>PICKUP 2.4</h1> <!-- Eliminada la clase text-center -->
+                </div>
+            </div>
+            <div class="row centered-content">
+                <div class="col-md-4">
+                    <p>Su incomparable destreza todoterreno, asientos para cuatro personas, carga útil de 2000 lb y capacidades anfibias redefinen la versatilidad en una potencia compacta.</p> <!-- Eliminada la clase text-center -->
+                </div>
+                <div class="button-container">
+                  <a href="#specContainer" class="btn btn-contact-nosotros">APRENDE MÁS</a>
+              </div>
+          </div>
+    </div>
+    
+    </header>
+    <main>
+      
+      <div class="container-fluid spec-container" id="specContainer">
+        <div class="image-superpuesta">
+          <img src="imagenes/topo-white_small.webp" alt="Imagen superpuesta">
+        </div>
+              <div class="row"> 
+                  <div class="col-lg-3 col-md-6 col-sm-12 spec-item">
+                  <h4 class="spec-heading">RENDIMIENTO VERSÁTIL</h4>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 spec-item">
+                  <h4 class="spec-heading">CONSTRUCCIÓN ROBUSTA Y SEGURIDAD</h4>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 spec-item">
+                  <h4 class="spec-heading">CONSTRUCCIÓN Y SEGURIDAD
+                      CONTROLES Y DIMENSIONES AVANZADOS</h4>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 spec-item">
+                  <h4 class="spec-heading">TREN DE POTENCIA Y TRANSMISIÓN CONFIABLES</h4>
+                </div>
+              </div>
+        </div>
+
+  <div class="container-fluid  contenedor-collague">
+      <div class="row">
+        <!-- Columna para la imagen grande -->
+        <div class="col-md-12 col-lg-6">
+            <img src="imagenes/24-copy.webp" alt="" class="img-fluid imagen-destacada" onclick="abrirModal(this.src, this.alt)">
+        </div>
+        
+        <!-- Columna para las imágenes pequeñas -->
+        <div class="col-md-12 col-lg-6">
+          <a href="contacto.html" class="btn btn-primary boton-superior">PREGUNTE AHORA</a>
+          <div class="row contenedor-imagenes">
+            <!-- Primera columna de imágenes pequeñas -->
+            <div class="col-12 col-md-6 ">
+              <img src="imagenes/24pickup.webp" alt="" class="img-fluid imagen-cuadrada" onclick="abrirModal(this.src, this.alt)">
+              <img src="imagenes/about-img-copy.webp" alt="" class="img-fluid imagen-cuadrada" onclick="abrirModal(this.src, this.alt)">
+            </div>
+            
+            <!-- Segunda columna de imágenes pequeñas -->
+            <div class="col-12 col-md-6">
+              <img src="imagenes/28p.webp" alt="" class="img-fluid imagen-cuadrada" onclick="abrirModal(this.src, this.alt)">
+              <img src="imagenes/image-coming-soon.webp" alt="" class="img-fluid imagen-cuadrada" onclick="abrirModal(this.src, this.alt)">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modalId" class="modal">
+      <div class="modal-content-wrapper">
+        <span class="cerrar">&times;</span>
+        <img src="" alt="Imagen modal" class="modal-contenido">
+        <div class="modal-caption"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="viewport-cover">
+    <div class="background-overlay"><!-- Asegúrate de que el path de la imagen sea correcto --></div>
+    <div class="row no-gutters align-items-start justify-content-between">
+      <div class="col-lg-9 headline-container">
+        <h1 class="headline-text">REVOLUCIONA TU EXPERIENCIA TODOTERRENO CON FAT TRUCK ALBERTA.¡EXPLORE POSIBILIDADES ILIMITADAS HOY!</h1>
+      </div>
+      <div class="col-lg-3 cta-container">
+        <a href="contacto.html" class="cta-button">PREGUNTE AHORA</a>
+      </div>
+    </div>
+  </div>
+  
+      <!-- esta es la segunda seccion, la seccion de INTERFAZ DE USUARIO-->
+        <div class="highlight-section3">
+          <div class="image-superpuesta2">
+            <img src="imagenes/dot-bg.png" alt="Imagen superpuesta">
+          </div>
+          <div class="content-wrapper">
+            <div class="row align-items-center">
+              <div class="col-md-8 d-flex align-items-center">
+                <div class="highlight-title">
+                  <h1>2.4 PICKUP</h1>
+                  <h2 class="highlight-subtitle">Su incomparable destreza todoterreno, asientos para cuatro personas, carga útil de 2000 lb y capacidades anfibias redefinen la versatilidad en una potencia compacta.</h2>
+
+                </div>
+              </div>
+              <div class="col-md-4 py-2 d-flex justify-content-end">
+                <div class="highlight-action">
+                  <a href="Archivos/2-4spec.pdf" class="custom-button" target="_blank">
+                    HOJA DE ESPECIFICACIONES
+                    <span class="button-icon">📄</span> <!-- Usa un ícono o una imagen según prefieras -->
+                  </a>
+                </div>
+              </div>
+            </div>
+              <!-- Contenedor Bootstrap con tres columnas para características -->
+              <div class="row feature-lists">
+                <div class="col-md-3">
+                  <h4 class="category-title" style="text-align: left;">Rendimiento versatil</h4> <!-- Título para la primera columna -->
+                  <ul class="custom-list">
+                      <li>Capacidad de carga útil 900 kg (2000 lb)</li>
+                      <li>capacidad de pasajeros 8 (4 asientos + 2 traseros)</li>
+                      <li>Velocidad máxima en tierra: 19 mph (30 km/h)</li>
+                      <li>Velocidad máxima en agua: 3.1 mph (5 km/h)</li>
+                      <li>Capacidad fuera de carretera excepcional: Pendiente máxima de subida y bajada de 35°/70%, Pendiente máxima lateral de 22°/40%</li>
+                </div>
+              <div class="col-md-3">
+                <h4 class="category-title" style="text-align: left;">Construcción robusta y seguridad</h4> <!-- Título para la segunda columna -->
+                <ul class="custom-list">
+                    <li>Estructura Protectora Contra Vuelcos (ROPS) conforme a ISO 3471</li>
+                    <li>Normativas de emisión EPA Fase 4/Final Etapa IV</li>
+                    <li>Freno de seguridad automático para mayor seguridad durante la operación</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+              <h4 class="category-title" style="text-align: left;">Controles y dimensiones avanzados</h4> <!-- Título para la primera columna -->
+              <ul class="custom-list">
+                  <li>Controlador microprocesador con dirección por joystick</li>
+                  <li>Pantalla a color para una operación intuitiva</li>
+                  <li>Dimensiones compactas: Altura - 9.15 pies, Longitud - 129 pulgadas, Ancho - 88 pulgadas</li>
+                  <li>Altura libre del suelo: 20.6 pulgadas</li>                            
+              </ul>
+          </div>
+          <div class="col-md-3">
+            <h4 class="category-title" style="text-align: left;">Tren de potencia y transmisión confiables</h4> <!-- Título para la primera columna -->
+            <ul class="custom-list">
+                <li>Motor HATZ (Modelo: 3H50TICD) con 56 hp</li>
+                <li>Transmisión hidrostática para una operación suave y eficiente</li>
+                <li>Desaceleración positiva a través de los frenos de transmisión hidrostática</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+        <!-- Contenedor de imágenes fuera de highlight-section -->
+        <div class="container-fluid custom-padding">
+        <div class="row">
+            <div class="col-md-8 col-lg-8 col-padding-8">
+                <img src="imagenes/24-copy.webp" class="img-fluid w-100 img-big" alt="Descripción de la imagen grande">
+            </div>
+            <div class="col-md-4 col-lg-4 col-padding-4">
+                <div class="img-small-container">
+                    <img src="imagenes/24pickup.webp" class="img-fluid w-100" alt="Descripción de la imagen pequeña">
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    <div class="container-images">
+      <img src="imagenes/cta-top-bg.webp" class="image-large" alt="Imagen Grande">
+        <!-- Contenedor Intermedio -->
+       <!-- Nuevo Contenedor Intermedio -->
+       <div class="content-overlay">
+        <h2>¿LISTO PARA MEJORAR TUS CAPACIDADES TODOTERRENO?</h2>
+        <div class="text-and-button">
+          <p>Elija la excelencia con Fat Truck. Como distribuidor autorizado, Fat Truck Alberta es su puerta de entrada a un rendimiento, versatilidad y confiabilidad inigualables. Contáctenos hoy para explorar las posibilidades y llevar el poder de Fat Truck a su flota.</p>
+          <a href="contacto.html" class="btn-sales-inquiry">CONTACTE CON VENTAS AHORA!</a>
+        </div>
+      </div>
+      <img src="imagenes/dot-bg.png" class="image-small" alt="Imagen Pequeña">
+    </div>
+              
+      
+  </main>
+  
+  <footer class="footer container-fluid-ultimo  text-white ">
+    <div class="row">
+        <!-- Sección de texto -->
+        <div class="col-12 col-md-5 text-center text-md-left mb-3 mb-md-0">
+            <img src="imagenes/logooriginal.png" alt="logo" class="footer-logo mb-2">
+            <p class="p-custom">Como distribuidor autorizado de Fat Truck, Fat Truck Alberta está listo para conectarte con estos vehículos extraordinarios.</p>
+            <a href="contacto.html" class="btn btn-direction">Obtener dirección</a>
+          </div>
+    
+        <!-- Sección de modelos e información -->
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <div class="row custom-row">
+                <div class="col-6 custom-col">
+                    <h5>Modelos</h5>
+                    <ul class="list-unstyled">
+                    
+                        <li><a href="pickup2.4.html" class="text-white">Pickup 2.4</a></li>
+                        <li><a href="pickup2.8.html" class="text-white">Pickup 2.8</a></li>
+                        <li><a href="wagon8x8.html" class="text-white">Wagon 8x8</a></li>
+                       
+                    </ul>
+                </div>
+                <div class="col-6 custom-col">
+                    <h5>Más información</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="caracteristicas.html" class="text-white">Características</a></li>
+                        <li><a href="#" class="text-white"><!--Acerca de nosotros --></a></li>
+                        <li><a href="contacto.html" class="text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    
+        <!-- Sección de membresía y CTA -->
+        <div class="col-12 col-md-3 texto-boton">
+          <a href="contacto.html" class="btn btn-contact-venta mb-4">CONTACTA CON VENTAS AHORA!</a>
+            <div class="text-and-image">
+                <p>MIEMBROS ORGULLOSOS DE</p>
+                <img src="imagenes/webclip.png" alt="AEM Member" class="membership-logo mb-2">
+            </div>
+    
+            <div class="social-icons">
+              <a href="https://web.facebook.com/FatTruckAlberta/?_rdc=1&_rdr" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/fattruckalberta/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://wa.me/7802203779" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+            
+        </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.7.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script>
+    
+$(document).ready(function() {
+  // Función para abrir el modal
+  window.abrirModal = function(src, alt) {
+    $('.modal-contenido').attr('src', src);
+    $('.modal-caption').text(alt);
+    $('#modalId').css('display', 'flex');
+  };
+
+  // Evento para cerrar el modal
+  $('.cerrar').on('click', function() {
+    $('#modalId').hide();
+  });
+});
+  // Espera a que el documento esté completamente cargado
+  document.addEventListener("DOMContentLoaded", function() {
+    // Selecciona todos los enlaces que tienen un atributo 'href' que comienza con '#'
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        // Previene el comportamiento predeterminado del enlace
+        e.preventDefault();
+  
+        // Obtiene el elemento destino utilizando el atributo 'href' del enlace
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+  
+        if (targetElement) {
+          // Usa scrollIntoView para desplazarse suavemente hacia el elemento destino
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  });
+
+  
+
+  </script>
+  
+  </body>
+  </html>

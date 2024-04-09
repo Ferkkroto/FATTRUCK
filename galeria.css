@@ -1,0 +1,1315 @@
+/* Restablecer estilos predeterminados de Bootstrap que puedan afectar */
+.navbar {
+  margin-bottom: 0; /* Remover el margen inferior */
+}
+
+/* Estilos para la barra de navegación */
+.navbar-custom {
+  background-color: transparent; /* Fondo transparente */
+  position: fixed;
+  top: 0;
+  left: 0; /* Asegúrate de que la barra de navegación comienza en la esquina izquierda */
+  width: 100%; /* La barra de navegación debe ocupar toda la anchura */
+  z-index: 10;
+  margin: 0; /* Eliminar cualquier margen */
+  padding: 0; /* Eliminar cualquier relleno */
+  display: flex; /* Habilita flexbox para alinear elementos verticalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  height: 85px; /* Ajusta la altura del navbar según necesites */
+}
+/* Asegurar que el logotipo y el botón de toggler no tengan fondo y sean visibles sobre cualquier contenido */
+.navbar-custom .navbar-brand {
+  padding-left: 18px; /* Añade un poco de espacio a la izquierda del logo */
+  height: 100%; /* Iguala la altura de la barra de navegación */
+  width: 30%;
+  display: flex;
+  align-items: center; /* Centra el logo verticalmente */
+}
+
+.navbar-custom .navbar-brand img {
+  height: 45px; /* Ajusta la altura del logo */
+  width: auto; /* Mantiene la relación de aspecto del logo */
+  display: block; /* Asegura que el img se comporte como un bloque */
+}
+/* Estilos para los elementos dentro del navbar-collapse */
+.navbar-custom .navbar-collapse {
+  height: 100%; /* Iguala la altura de la barra de navegación */
+  background-color: rgb(236, 236, 236);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para el fondo blanco */
+}
+
+
+/* Eliminar el relleno predeterminado de Bootstrap en .navbar-nav */
+.navbar-custom .navbar-nav {
+  height: 100%; /* Iguala la altura de la barra de navegación */
+  display: flex;
+  flex-direction: row; /* en línea para pantallas grandes */
+  align-items: center; /* Alineación vertical */
+  justify-content: center; /* Alineación horizontal */
+
+}
+
+/* Estilos para los enlaces de navegación */
+.navbar-custom .nav-link {
+  font-family: Arial, Helvetica, sans-serif;  
+  font-weight: bold;
+  color: #646262; /* Color del texto para los enlaces */
+  margin-right: 10px; /* Espaciado a la derecha para cada enlace */
+}
+
+.navbar-custom .btn-contact {
+  background-color: red; /* Fondo rojo para el botón */
+  color: #fff; /* Texto blanco */
+  border: none; /* Elimina el borde */
+  padding: 0.5rem 1rem; /* Ajustar el relleno */
+  transition: background-color 0.3s; /* Suaviza la transición del color de fondo */
+}
+
+/* Cambio de color al pasar el mouse por encima del botón */
+.navbar-custom .btn-contact:hover {
+  background-color: #e6561d; /* Un color ligeramente más claro al pasar el ratón por encima o enfocar */
+}
+/* Estilos globales, aplicables a todas las resoluciones */
+.navbar-custom .navbar-toggler-icon {
+  /* SVG del icono del toggler en color blanco */
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+/* Cambia el color de fondo del menú desplegable a negro */
+.navbar-custom .dropdown-menu {
+  background-color: #202020; /* Establece el color de fondo a negro */
+}
+
+/* Hace que el menú desplegable ocupe todo el ancho horizontal */
+.navbar-custom .dropdown-menu {
+  width: 100%; /* Hace que el menú desplegable tenga un ancho del 100% del elemento padre */
+  box-sizing: border-box; /* Asegura que el padding y border estén incluidos en el ancho total */
+}
+
+/* Opcional: si necesitas que el menú desplegable ocupe todo el ancho de la ventana del navegador, usa width: 100vw y position: fixed con un z-index alto. */
+.navbar-custom .dropdown-menu {
+  width: 92vw; /* Establece el ancho a la anchura completa de la ventana del navegador */
+  position: relative; /* Fija el menú desplegable en la pantalla */
+  z-index: 1030; /* Asegúrate de que el z-index sea suficiente para estar por encima de otros elementos */
+}
+
+/* Ajusta los elementos del menú desplegable para que el texto sea blanco */
+.navbar-custom .dropdown-menu .dropdown-item {
+  color: #ffffff; /* Establece el color del texto de los elementos a blanco */
+}
+
+@media (min-width: 992px) and (max-width: 1089px) {
+  .navbar-custom .navbar-brand {
+    width: 25%; /* Ancho cuando la pantalla está entre 992px y 1089px */
+  }
+  /* Estilos para los enlaces de navegación */
+.navbar-custom .nav-link {
+font-size: 14px;}
+}
+/* Media query para pantallas de ancho entre 1200px y 1920px */
+@media (min-width: 1300px) and (max-width: 1400px) {
+  .navbar-custom .navbar-brand {
+    width: 40%; /* Ancho se cambia a 50% para pantallas entre 1200px y 1920px */
+  }
+}
+@media (min-width: 1450px) and (max-width: 1500px) {
+  .navbar-custom .navbar-brand {
+    width: 40%; /* Ancho se cambia a 50% para pantallas entre 1200px y 1920px */
+  }
+}
+@media (min-width: 1500px) and (max-width: 2000px) {
+  .navbar-custom .navbar-brand {
+    width: 50%; /* Ancho se cambia a 50% para pantallas entre 1200px y 1920px */
+  }
+}
+@media (max-width: 991px) {
+
+  .navbar-custom {
+    background-color: rgb(27, 25, 25); /* Fondo negro para la barra de navegación */
+  }
+
+  .navbar-custom .navbar-toggler {
+    margin-right: 15px; /* Espacio al lado derecho */
+
+    border-color: black; /* Borde del botón toggler */
+  }
+  .navbar-custom .navbar-nav {
+    flex-direction: column; /* Apila los enlaces en dispositivos móviles */
+    margin-left: 0; /* Anula el margen automático a la derecha */
+    align-items: flex-start; /* Alinea los enlaces al borde izquierdo */
+  }
+
+  .navbar-custom .navbar-collapse {
+    background-color: #ffffff; /* Fondo negro para el contenedor colapsado */
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    padding-left: 15px; /* Agrega un poco de espacio al borde izquierdo para evitar que los elementos toquen el borde */
+  }
+  .navbar-custom .btn-contact {
+    color: #fff; /* Texto blanco */
+  }
+  .navbar-custom .navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: bold;
+    color: #515151; /* Color del texto para los enlaces de navegación */
+  }
+  /* Aumentando la especificidad */
+.navbar-custom .navbar-nav .btn-contact {
+  font-size: 19px;
+  color: #fff; /* Color blanco */
+}
+
+  
+  .navbar-custom .navbar-collapse.show {
+    height: auto; /* Altura automática según el contenido */
+  }
+
+  .navbar-custom .navbar-nav {
+    margin-top: 1rem; /* Espacio superior para los enlaces */
+  }
+
+  .navbar-custom .navbar-nav .nav-item {
+    margin-bottom: 1rem; /* Espacio inferior para cada ítem */
+  }
+
+  .navbar-custom .navbar-toggler-icon {
+    /* Icono de menú por defecto */
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  .navbar-custom .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    /* Icono de cierre cuando el menú está abierto */
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M7 7l16 16M7 23L23 7'/%3E%3C/svg%3E");
+  }
+  
+}
+
+
+
+  
+.top-spacing{
+  background-color: #000;
+  padding-top: 30vh;
+  padding-bottom: 1rem;
+  padding-left: 1rem;  
+  padding-right: 1rem;
+}
+
+  .image-container {
+    cursor: pointer;
+    max-height: 75vh; /* Altura máxima del contenedor */
+    padding: 0;
+    overflow: hidden; /* Asegurar que la imagen no se desborde del contenedor */
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegurar que la imagen cubra completamente el área sin perder su aspecto */
+    padding: 11px;
+    max-height: 100%; /* Evita que la imagen exceda la altura del contenedor */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Suaviza la transición de transformación y opacidad */
+  transform: scale(1.01); /* Ligeramente agrandada para dar un efecto de zoom inicial */
+}
+
+.image-container:hover img {
+  transform: scale(1); /* Vuelve al tamaño normal al pasar el cursor */
+}
+  
+
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0); /* Inicialmente transparente */
+  transition: background-color 0.5s ease; /* Suaviza la transición del fondo */
+  z-index: 1; /* Asegura que esté debajo del texto pero por encima de la imagen */
+}
+
+.image-overlay-text {
+  font-family: 'Chakra Petch', sans-serif;
+  color: #f2f2f2; /* Texto claro, puedes ajustar el color según sea necesario */
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 23px;
+  bottom: 10%; /* Ajusta según sea necesario */
+  transition: opacity 0.5s ease;
+  transform: translateY(20%); /* Inicia ligeramente hacia abajo */
+  opacity: 0; /* Inicialmente oculto */
+  z-index: 2; /* Asegura que el texto esté encima del fondo oscuro */
+}
+
+.image-container:hover::before {
+  background-color: rgba(40, 29, 29, 0.644); /* Fondo negro con opacidad */
+}
+
+.image-container:hover .image-overlay-text {
+  opacity: 1; /* Muestra el texto */
+  transform: translateY(0); /* Mueve el texto a su posición */
+}
+  /* Estilos para tabletas */
+@media (max-width: 768px) {
+  .top-spacing {
+    padding-top: 20vh;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .image-container {
+    max-height: 50vh;
+  }
+
+  .image-overlay-text {
+    font-size: 20px;
+    bottom: 20%; /* Aumenta el espacio en la parte inferior */
+  }
+}
+
+/* Estilos para móviles */
+@media (max-width: 480px) {
+  .top-spacing {
+    padding-top: 20vh;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .image-container {
+    max-height: 30vh;
+  }
+
+  .image-overlay-text {
+    font-size: 16px;
+    bottom: 30%; /* Aumenta aún más el espacio en la parte inferior */
+  }
+}
+
+
+  
+/* Estilos para el modal fullscreen */
+.modal-body {
+  display: flex; /* Establece el modal-body como un contenedor flex */
+  flex-direction: column; /* Organiza los hijos en una columna */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos hijos */
+  height: 100%; /* Establece una altura para permitir la distribución del espacio */
+}
+.modal-dialog.modal-fullscreen {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  max-width: none;
+}
+
+.modal-content {
+  background-color: #000; /* Fondo negro para pantalla completa */
+  height: 100%;
+  color: white;
+  border: 0;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column; /* Organiza el contenido en una columna */
+  justify-content: center; /* Centra verticalmente */
+}
+
+/* Estilos para el carrusel de videos */
+#videoCarousel {
+  width: 60%; /* Tamaño del carrusel respecto a la pantalla completa */
+  margin: auto; /* Centra horizontalmente */
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item iframe {
+  width: 100%;
+  height: 400px; /* Altura fija para los videos */
+  border: none;
+}
+
+/* Estilos para el botón de cierre */
+.modal-header {
+  border-bottom: none; /* Quita el borde inferior del encabezado modal */
+}
+.modal-header .close {
+  color: white;
+  font-size: 2rem;
+  position: absolute; /* Posicionamiento absoluto para sacarlo del flujo normal */
+  right: 20px; /* Distancia desde el lado derecho del contenedor del modal */
+  top: 20px; /* Distancia desde la parte superior del contenedor del modal */
+  z-index: 1050; /* Asegúrate de que esté por encima de otros elementos si es necesario */
+}
+
+.carousel-thumbnails {
+  overflow-x: auto; /* Permite desplazamiento horizontal */
+  white-space: nowrap; /* Mantiene las miniaturas en una línea */
+  padding: 10px 0;
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.thumbnails-container {
+  display: inline-block; /* Cambio a inline-block para alinear con el texto */
+}
+
+.video-thumbnail {
+  display: inline-block; /* Mantenemos inline-block para las miniaturas */
+  margin-right: 10px; /* Espacio entre miniaturas */
+  width: 100px; /* Ancho fijo para las miniaturas */
+  /* Eliminamos flex ya que no estamos usando display: flex aquí */
+}
+
+.video-thumbnail:last-child {
+  margin-right: 0; /* Elimina el margen derecho de la última miniatura */
+}
+
+.video-thumbnail img {
+  display: block; /* Asegura que la imagen llene el contenedor de la miniatura */
+  width: 100%; /* Asegura que la imagen llene el contenedor de la miniatura */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Posiciona los controles fuera del área del carrusel, pero dentro de la ventana modal */
+.carousel-control-prev, .carousel-control-next {
+  position: absolute;
+  top: 50%; /* Centrado verticalmente */
+  transform: translateY(-50%);
+  z-index: 2; /* Asegura que esté por encima del carrusel */
+}
+
+.carousel-control-prev {
+  left: -200px; /* Ajuste para mover hacia la izquierda */
+}
+
+.carousel-control-next {
+  right: -200px; /* Ajuste para mover hacia la derecha */
+}
+
+/* Estilos para los íconos de los controles para que sean visibles */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 35px; /* Tamaño de los íconos */
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+
+
+/* Estilos para móviles (dispositivos con ancho hasta 767px) */
+@media (max-width: 767px) {
+  /* Asegúrate de que los controles del carrusel se ocultan */
+  .carousel-control-prev, .carousel-control-next {
+    display: none;
+  }
+
+  /* Ajustes adicionales para el carrusel y el botón de cierre si es necesario */
+  #videoCarousel {
+    width: 100%;
+  }
+
+  .carousel-item iframe {
+    height: 200px;
+  }
+
+  .modal-header .close {
+    font-size: 1.5rem;
+    right: 10px;
+    top: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.faq-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 20px;
+  background: url('tu-imagen-de-fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.faq-header {
+  margin-bottom: 2rem;
+}
+
+.faq-header h2 {
+  font-size: 2rem; /* O el tamaño de fuente que prefieras */
+  margin-bottom: 1rem;
+}
+
+.faq-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #444; /* O el color que prefieras */
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.faq-toggle {
+  font-size: 1.5rem; /* O el tamaño de fuente que prefieras */
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .faq-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .faq-question h3 {
+    font-size: 1rem;
+  }
+}
+
+
+
+.faq-preguntas {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  background-color: rgb(21, 19, 19);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+  width: 100%; /* Asegura que el elemento ocupe todo el ancho */
+}
+
+.background-image-half {
+  position: absolute; /* Posicionamiento absoluto respecto a su contenedor relativo más cercano */
+  top: 60%; /* Comienza desde el 60% superior de la pantalla */
+  left: 0; /* Alineado a la izquierda */
+  width: 100%; /* Ocupa toda la anchura */
+  height: 40%; /* Ocupa el 40% de la altura restante de la pantalla */
+  background-image: url('imagenes/topo-black_small.webp'); /* Reemplaza con tu imagen de fondo */
+  background-size: cover; /* Asegura que la imagen cubra completamente el área */
+  background-repeat: no-repeat; /* No repetir la imagen */
+  z-index: -1; /* Coloca el fondo detrás de otros elementos */
+}
+
+
+.faq-header {
+  flex-basis: 33.333%; /* Adjust the width as needed */
+  max-width: 33.333%; /* Adjust the width as needed */
+  margin-bottom: 2rem;
+}
+
+.faq-header h2 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.faq-question h3 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fcfafa;
+}
+.faq-answer {
+  color: white;
+  font-size: 18px;
+  display: none; /* Hide answers by default */
+  padding: 0.5rem 0;
+}
+
+.faq-button {
+  display: inline-block; /* Se muestra en línea pero permite propiedades de bloque */
+  background-color: transparent; /* Fondo transparente */
+  color: #fff; /* Color de texto blanco */
+  text-transform: uppercase; /* Pone el texto en mayúsculas */
+  font-weight: bold; /* Fuente en negrita */
+  padding: 10px 25px; /* Añade espacio interno alrededor del texto */
+  border: 1px solid #fff; /* Borde blanco */
+  border-radius: 0px; /* Bordes rectos, cambia si deseas esquinas redondeadas */
+  text-decoration: none; /* Elimina la línea de subrayado del enlace */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: background-color 0.3s ease; /* Suaviza la transición del fondo */
+  text-decoration: none; /* Asegura que no hay línea al pasar el mouse */
+
+}
+
+/* Estilo para el botón cuando se pasa el mouse por encima */
+.faq-button:hover,
+.faq-button:focus {
+  color: white;
+  text-decoration: none; /* Asegura que no hay línea al pasar el mouse */
+  background: linear-gradient(145deg, #333, #222); /* Gradiente de fondo al pasar el mouse o al enfocar */
+  border-color: #656565; /* Cambio de color del borde al pasar el mouse o enfocar */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra más pronunciada al pasar el mouse o al enfocar */
+}
+
+
+
+
+.faq-content {
+  flex-basis: 66.666%; /* Adjust the width as needed */
+  max-width: 66.666%; /* Adjust the width as needed */
+}
+
+.faq-item {
+  margin-bottom: 35px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.faq-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+.response-prefix {
+  font-weight: bold;
+  margin-right: 5px;
+}
+.response-prefix {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.faq-answer p {
+  display: inline; /* Muestra el texto de la respuesta en la misma línea que el prefijo R: */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .faq-preguntas{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .faq-header {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .faq-content {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .faq-header h2 {
+    font-size: 1.9rem;
+  }
+
+  .faq-question h3 {
+    font-size: 16px;
+    margin-right: 15px;
+  }
+  .faq-answer {
+    font-size: 15px; /* Tamaño de fuente más pequeño para dispositivos móviles */
+  }
+  
+}
+@media (min-width: 1600px){
+
+  .faq-header h2 {
+    font-size: 3.5rem; /* Ajusta este valor para pantallas de tabletas */
+  }
+  .faq-question h3 {
+    font-size: 27px; /* Vuelve al tamaño normal para pantallas de tabletas */
+    margin-right: 20px; /* Ajusta si es necesario */
+  }
+  
+  .faq-answer {
+    font-size: 25px; /* Tamaño de fuente para tabletas */
+  }
+
+  /* Ajustes adicionales para elementos que podrían necesitar mayor espacio */
+  .faq-toggle {
+    font-size: 3rem; /* Tamaño más grande del ícono '+' para pantallas de tabletas */
+    padding: 10px; /* Más espacio alrededor del ícono */
+    margin-left: 20px; /* Espacio adicional si es necesario */
+  }
+
+  /* Agrega aquí más reglas si es necesario */
+}
+/* Media queries for tablet to desktop responsiveness */
+@media (min-width: 769px) and (max-width: 1150px) {
+  .faq-preguntas {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .faq-header {
+    flex-basis: 47%;
+    max-width: 50%;
+  }
+
+  .faq-content {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  .faq-header h2 {
+    font-size: 2.5rem; /* Ajusta este valor para pantallas de tabletas */
+  }
+
+  .faq-question h3 {
+    font-size: 18px; /* Vuelve al tamaño normal para pantallas de tabletas */
+    margin-right: 20px; /* Ajusta si es necesario */
+  }
+  
+  .faq-answer {
+    font-size: 18px; /* Tamaño de fuente para tabletas */
+  }
+
+  /* Ajustes adicionales para elementos que podrían necesitar mayor espacio */
+  .faq-toggle {
+    font-size: 2rem; /* Tamaño más grande del ícono '+' para pantallas de tabletas */
+    padding: 10px; /* Más espacio alrededor del ícono */
+    margin-left: 20px; /* Espacio adicional si es necesario */
+  }
+  
+  /* Agrega aquí más reglas si es necesario */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container-images {
+  position: relative; /* Necesario para la posición absoluta de los hijos */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 135vh;
+  overflow: hidden;
+}
+
+.image-large {
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%; /* Ajustamos el ancho al del contenedor */
+  height: 75vh; /* Ajustamos la altura al 70% del viewport */
+  object-fit: cover; /* La imagen cubre su área asignada sin perder proporciones */
+  background-color: white;
+  padding-bottom: 5px; /* Modificado para agregar espacio para el contenedor intermedio */
+}
+
+/* Contenedor Intermedio */
+.intermediate-container {
+  width: 100%; /* Ajustamos el ancho al del contenedor */
+  /* Ajusta la altura según el contenido o la altura deseada */
+  padding: 20px; /* Añade padding si es necesario */
+  /* Añade más estilos aquí si es necesario */
+}
+
+.image-small {
+  padding-top: 5px; /* Añadido para mantener consistencia en el espaciado */
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%; /* Ajustamos el ancho al del contenedor */
+  height: 60vh; /* Ajustamos la altura al 30% del viewport */
+  object-fit: cover; /* La imagen cubre su área asignada sin perder proporciones */
+  background-color: white;
+  opacity: 0.5;
+}
+
+.content-overlay {
+  position: absolute;
+  top: 60%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  width: 58%;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: white;
+  z-index: 2;
+}
+
+.content-overlay h2 {
+  
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  color: black;
+  text-align: left;
+  margin-bottom: 20px; /* Ajusta el margen según necesites */
+  padding-top: 20px;
+  /* Aquí pueden ir más estilos para el título */
+}
+
+.text-and-button {
+  gap: 10px; /* Espacio entre el párrafo y el botón */
+  display: flex;
+  justify-content: space-between; /* Separa el texto y el botón a cada extremo */
+  align-items: flex-start; /* Alinea verticalmente */
+}
+
+.text-and-button p {
+  margin-top: 0;
+  font-size: 17px;
+  color: black;
+  text-align: left;
+  width: 70%; /* Ajusta este porcentaje según lo necesites */
+  margin-right: 20px; /* Añade un margen a la derecha si es necesario */
+  /* Aquí pueden ir más estilos para el párrafo */
+}
+
+.btn-sales-inquiry {
+
+  text-decoration: none; /* Elimina el subrayado */
+  background-color: #f00; /* Color de fondo más claro al pasar el ratón */
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  /* Aquí pueden ir más estilos para el botón */
+}
+.btn-sales-inquiry:hover {
+  text-decoration: none; /* Elimina el subrayado */
+  color: #fff;
+  background-color: #d60000; /* Color de fondo más oscuro al pasar el mouse */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada para efecto de elevación */
+}
+
+
+
+/* Media Queries para dispositivos más grandes que escritorios */
+@media (min-width: 1700px) {
+  .container-images {
+    padding: 40px; /* Añade padding si es necesario */
+    height: 100vh; /* O un valor que se ajuste a la altura deseada */
+    padding-bottom: 0; /* Remueve el padding adicional si no es necesario */
+  }
+
+  .image-large {
+    height: 70vh; /* Ajusta la altura para pantallas grandes */
+    padding: 0; /* Remueve el padding si no es necesario */
+    object-fit: cover; /* Asegura que la imagen cubra su espacio */
+  }
+
+  .image-small {
+    height: 50vh; /* Ajusta la altura para pantallas grandes */
+    padding: 0; /* Remueve el padding si no es necesario */
+    object-fit: cover; /* Asegura que la imagen cubra su espacio */
+  }
+
+  .content-overlay {
+    position: absolute;
+    top: 60%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    width: 50%; /* Ajusta el ancho para pantallas grandes */
+    padding: 20px; /* Padding para mantener el contenido espaciado */
+    background-color: white;
+    z-index: 2;
+  }
+
+  .content-overlay h2 {
+    font-size: 50px; /* Aumenta el tamaño de fuente para pantallas grandes */
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+
+  .text-and-button {
+    flex-direction: row; /* Elementos en fila para pantallas grandes */
+    justify-content: space-between; /* Separa el texto y el botón */
+    align-items: start; /* Alinea elementos verticalmente */
+    padding: 0; /* Remueve el padding si no es necesario */
+  }
+
+  .text-and-button p {
+    font-size: 26px; /* Aumenta el tamaño de fuente para pantallas grandes */
+    text-align: left; /* Alinea el texto a la izquierda */
+    width: 75%; /* Ajusta el ancho del párrafo */
+  }
+
+  .text-and-button button {
+    font-size: 21px; /* Aumenta el tamaño de fuente para pantallas grandes */
+    padding: 12px 24px; /* Aumenta el padding para un botón más grande y tocable */
+  }
+  .btn-sales-inquiry {
+    font-size: 1.4rem;
+  }
+}
+/* Media Queries para dispositivos móviles */
+@media (max-width: 992px) {
+  .container-images {
+    height: auto; /* La altura se adapta al contenido */
+  }
+
+  .image-large {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 70vh; /* Ajusta la altura para que sea proporcional y no demasiado grande */
+    object-fit: cover; /* La imagen cubre su espacio asignado */
+  }
+
+  .image-small {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 50vh; /* Ajusta la altura para equilibrar con la imagen grande */
+    object-fit: cover; /* La imagen cubre su espacio asignado */
+  }
+
+  .content-overlay {
+    position: absolute;
+    top: 50%; /* Coloca el overlay en la mitad de la pantalla para evitar superposición */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Utiliza la mayor parte del ancho de la pantalla para el overlay */
+    padding: 15px; /* Ajusta el padding para mantener el contenido bien espaciado */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    background-color: white;
+    z-index: 2; /* Asegúrate de que se muestre por encima de las imágenes */
+
+  }
+
+  .content-overlay h2 {
+    font-size: 29px; /* Reduce el tamaño de fuente para adaptarlo a la pantalla */
+    margin: 0 0 10px 0; /* Reduce el margen debajo del título */
+    text-align: left; /* Alinea el título a la izquierda */
+  }
+
+  .text-and-button {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: flex-start; /* Alinea elementos a la izquierda */
+    gap: 15px; /* Reduce el espacio entre elementos */
+  }
+
+  .text-and-button p {
+    color: black;
+    width: 100%; /* Ajusta este porcentaje según lo necesites */
+    font-size: 19px; /* Reduce el tamaño de fuente para una mejor legibilidad */
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+  
+
+  .text-and-button button {
+    width: 100%; /* El botón se extiende a lo ancho del contenedor */
+    padding: 12px; /* Ajusta el padding para hacerlo más tocable */
+    font-size: 14px; /* Tamaño de fuente adecuado para botones en dispositivos móviles */
+    margin-top: 20px; /* Añade espacio encima del botón */
+  }
+}
+
+
+
+
+
+.footer {
+  height: 70vh;
+  min-height: auto; /* Usa min-height para garantizar que el contenido no se desborde */
+  background-color: #221f1f;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar contenido verticalmente si hay menos contenido */
+}
+
+.footer-logo{
+  max-width: 60%;
+  margin-bottom: 40px;
+}
+
+.p-custom {
+  width: 50%;
+  color: #ffffff; /* Cambia el color del texto */
+  font-size: 1rem; /* Establece el tamaño del texto */
+  /* Añade cualquier otro estilo que necesites */
+}
+
+.btn-direction {
+  margin-left: 0; /* Elimina cualquier margen izquierdo si existe */
+  color: #ff0404; /* Color del texto del botón */
+  border: 1px solid #f0f0f0; /* Estilo y color del borde */
+  padding: 0.5rem 1rem; /* Relleno del botón */
+  font-size: 1rem; /* Tamaño del texto */
+  text-transform: uppercase; /* Transformación del texto */
+  transition: background-color 0.3s ease; /* Transición suave al cambiar el fondo */
+
+}
+
+.btn-direction:hover {
+  color: #000; /* Color del texto al pasar el ratón por encima */
+  background-color: #fff; /* Color de fondo al pasar el ratón por encima */
+}
+/* Establece la fila para usar flex y tener una altura completa */
+.custom-row {
+  display: flex;
+  align-items: center; /* Esto centrará los ítems verticalmente */
+  height: 100%; /* O define una altura específica */
+}
+
+/* Asegúrate de que cada columna flexione sus ítems internos también */
+.custom-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Esto centrará el contenido verticalmente dentro de la columna */
+  padding-top: 20px; /* Ajusta este valor según sea necesario */
+
+} 
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+}
+
+.text-white {
+  color: rgb(49, 4, 4);
+}
+
+.texto-boton {
+  text-align: right; /* Alinea el contenido a la derecha */
+  padding-right: 0; /* Elimina el padding derecho si lo hay */
+  padding-left: 0; /* Elimina el padding derecho si lo hay */
+
+
+}
+
+.btn-contact-venta {
+  background-color: rgb(227, 10, 10);
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+.btn-contact-venta:hover {
+  background-color: #e6561d; /* Un color ligeramente más claro al pasar el ratón por encima o enfocar */
+  color: rgb(255, 255, 255);
+}
+
+.text-and-image {
+  display: flex;
+  align-items:end;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.membership-logo {
+  width: 40px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.custom-col li {
+  margin-top: 10px;
+  margin-bottom: 5px; /* Ajusta el margen superior e inferior de las listas */
+}
+.custom-col ul.list-unstyled li {
+  margin-bottom: 2vh; /* Aumenta el margen inferior para separar más los elementos de la lista */
+}
+
+
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end; /* Alinea los íconos al final del contenedor */
+  align-items: center; /* Alinea los íconos verticalmente en el centro */
+  gap: 10px; /* Ajusta el espacio entre íconos */
+  height: 100px; /* Ajusta según necesites */
+}
+
+.social-icons a {
+  color: inherit; /* Hereda el color del texto del elemento padre o especifica uno */
+  margin: 0 10px; /* Espacio a cada lado del ícono */
+  font-size: 24px; /* Ajusta el tamaño de los íconos de Font Awesome */
+  display: flex; /* Hace que el enlace (a) se comporte como un flex container */
+  align-items: center; /* Centra el ícono en el enlace */
+}
+
+.social-icons a:hover {
+  color: #333; /* Cambia el color del ícono al pasar el ratón por encima */
+}
+
+/* Opcional: Si quieres utilizar un texto/etiqueta junto a los íconos */
+.social-icons-label {
+  margin-right: 10px; /* Ajusta el margen según necesites */
+  display: inline-flex; /* Muestra la etiqueta como un flex container inline */
+  align-items: center; /* Alinea verticalmente el texto de la etiqueta */
+}
+
+/* Adicional: ajustes para garantizar que los íconos mantengan su aspecto */
+.fa-facebook-f, .fa-instagram, .fa-whatsapp {
+  width: auto; /* Asegura que el ancho se ajuste al contenido (el ícono) */
+  height: auto; /* Asegura que la altura se ajuste al contenido */
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+    padding: 15px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .footer-logo {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .p-custom {
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .btn-direction, .btn-contact-venta {
+    justify-content: center;
+    width: auto;
+    padding: 0.375rem 0.75rem;
+    font-size: 18px;
+    margin: 5vh auto; /* Margen vertical y centrado horizontalmente */
+    display: inline-block; /* El botón ocupa solo el ancho de su contenido */
+  }
+  
+
+  .custom-row {
+    text-align: center; /* Centra el texto de estos elementos */
+    align-items: center; /* Alinea los elementos hijos al centro */
+    justify-content: center; /* Centra los elementos hijos en el eje principal */
+    flex-direction: row; /* Organiza los elementos hijos en una columna */
+  }
+
+  .text-and-image {
+    padding-top: 5vh;
+    display: flex; /* Continúa usando Flexbox */
+    flex-direction: row; /* Mantiene elementos en una fila */
+    align-items: center; /* Alinea elementos en el centro verticalmente */
+    justify-content: start; /* Centra los elementos en el eje principal */
+    gap: 20px; /* Aumenta el espacio entre el texto y la imagen */
+    margin-bottom: 20px; /* Espacio adicional debajo de esta sección si es necesario */
+    border-top: 1px solid #ffffff; /* Agrega una línea sólida en la parte inferior */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Asegúrate de que el texto y la imagen no ocupen más espacio del necesario */
+  .text-and-image p {
+    font-size: 18px; /* Ajusta si es necesario para móviles */
+    margin: 0; /* Elimina los márgenes del párrafo si es necesario */
+  }
+  
+
+  .text-and-image img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+  }
+
+  .texto-boton {
+    text-align: center; /* Alinea el contenido a la derecha */
+    padding-right: 0; /* Elimina el padding derecho si lo hay */
+
+  }
+  .custom-col {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .custom-col ul, .custom-col li {
+    
+    padding-left: 0; /* Asegura que no haya padding a la izquierda */
+    margin-top: 5px;
+    margin-bottom: 5px; /* Ajusta el margen superior e inferior de las listas */
+  }
+  .custom-col ul.list-unstyled li {
+    margin-bottom: 7vh; /* Aumenta el margen inferior para separar más los elementos de la lista */
+  }
+  .custom-col ul {
+    padding-bottom: 0; /* Elimina el padding inferior de las listas */
+  }
+
+  .social-icons {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 1vh;
+    justify-content: flex-start; /* Cambia a 'center' para centrar los íconos en móviles */
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Continúa permitiendo que los íconos se ajusten dentro del contenedor */
+    display: flex; /* Asegura que los íconos se muestren en línea */
+  }
+
+  .social-icons a {
+    margin: 10px; /* Aumenta el margen para mejorar la tocabilidad en pantallas táctiles */
+    font-size: 30px; /* Aumenta el tamaño de los íconos para mejorar la visibilidad */
+    display: inline-flex; /* Hace que el enlace se comporte como un contenedor flex */
+    align-items: center; /* Centra el ícono verticalmente dentro del enlace */
+  }
+
+  .membership-logo {
+    margin-bottom: 10px;
+  }
+
+ 
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  /* Ajustes para el logo, que suele necesitar tamaño específico en tablets */
+  .footer-logo {
+    max-width: 70%; /* Ajusta el tamaño del logo */
+    margin-bottom: 30px; /* Ajusta el margen inferior */
+  }
+
+  /* Para garantizar que los párrafos no sean demasiado anchos y difíciles de leer */
+  .p-custom {
+    width: 70%; /* Aumenta o disminuye el ancho según sea necesario */
+  }
+
+  /* Si los botones se ven demasiado grandes o pequeños en tabletas */
+  .btn-direction, .btn-contact-venta {
+    padding: 10px 20px; /* Ajusta el padding para cambiar el tamaño */
+    font-size: 0.95rem; /* Ajusta el tamaño de la fuente si es necesario */
+  }
+
+  /* Si necesitas ajustar el espaciado de la lista para este rango */
+  .custom-col ul.list-unstyled li {
+    margin-bottom: 15px; /* Aumenta el margen inferior para más espacio entre elementos de la lista */
+  }
+
+  /* Para ajustar el alineamiento y el espaciado de los iconos sociales */
+  .social-icons {
+    justify-content: center; /* Centra los iconos si se dispersan demasiado en tabletas */
+  }
+}
+@media (min-width: 1500px) {
+  /* Estilos que solo se aplicarán para pantallas de 1500px en adelante */
+  
+  .footer {
+    height: 50vh;
+    /* Ajustes para .footer en pantallas grandes */
+    padding: 40px; /* Aumenta el padding para una mejor proporción */
+    justify-content: center; /* Cambia la justificación si es necesario */
+  }
+
+  .footer-logo {
+    /* Ajustes para .footer-logo en pantallas grandes */
+    max-width: 50%; /* Ajusta si el logo se ve muy pequeño o muy grande */
+  }
+
+  .p-custom {
+    /* Ajustes para .p-custom en pantallas grandes */
+    font-size: 27px; /* Aumenta el tamaño de fuente para una mejor legibilidad */
+  }
+
+  /* Ajustes para botones en pantallas grandes */
+  .btn-direction, .btn-contact-venta {
+    padding: 1rem 1rem; /* Aumenta el relleno para botones más grandes */
+    font-size: 23px; /* Aumenta el tamaño de fuente para una mejor visibilidad */
+  }
+
+  /* Ajustes para listas en pantallas grandes */
+  .custom-col ul.list-unstyled li {
+    margin-bottom: 25px; /* Aumenta el espacio entre elementos de lista para evitar que se vean apretados */
+    font-size: 24px;
+  }
+  .membership-logo {
+    width: 60px; /* Ajusta el tamaño de la imagen de membresía */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    /* Agrega más estilos si es necesario */
+  }
+  /* Ajustes para iconos sociales en pantallas grandes */
+  .social-icons {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: flex-end; /* Mantiene los íconos alineados al final del contenedor */
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+    flex-wrap: nowrap; /* Asegura que los íconos se mantengan en una sola línea */
+  }
+
+  .social-icons a {
+    margin: 0 15px; /* Aumenta el margen para más espacio entre íconos en pantallas grandes */
+    font-size: 40px; /* Aumenta el tamaño de los íconos para una mejor visualización */
+    display: inline-flex; /* Asegura que los enlaces se comporten como contenedores flex */
+    align-items: center; /* Centra los íconos verticalmente dentro del enlace */
+  }
+  .custom-col h5 {
+    /* Estilos para pantallas más pequeñas (hasta 768px) */
+    font-size: 35px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    /* Otros ajustes de estilo según sea necesario */
+  }
+  /* Otros ajustes específicos que necesites */
+  .text-and-image p {
+    font-size: 25px; /* Aumenta el tamaño de fuente para pantallas grandes */
+    margin-bottom: 20px; /* Aumenta el espaciado si es necesario */
+    /* Puedes ajustar también la línea de altura, color, etc., para estos dispositivos */
+    line-height: 1.4;
+  }
+}

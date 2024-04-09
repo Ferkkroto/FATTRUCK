@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <!-- Coloca aquí tus enlaces a hojas de estilo o fuentes externas -->
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Opcional: incluir íconos de FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Tu CSS personalizado aquí -->
+    <link rel="stylesheet" href="contacto.css">
+
+
+</head>
+<body>
+    <header>
+        <!-- Aquí va el contenido del encabezado, como la barra de navegación y los títulos principales -->
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <a class="navbar-brand" href="index.html">
+              <img src="imagenes/fattruck-logo_white.svg" alt="Logo"> <!-- Ajusta el path a tu logo -->
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active mr-3">
+                  <a class="nav-link" href="index.html">
+                    <i class="fas fa-home"></i> <span>HOGAR</span><span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <!-- Enlace VEHÍCULOS que siempre redirige, visible solo en dispositivos grandes -->
+                <li class="nav-item mr-3 d-none d-lg-block">
+                  <a class="nav-link" href="vehiculos.html">VEHÍCULOS +</a>
+                </li>
+        
+                <!-- Menú desplegable para dispositivos móviles, visible solo en dispositivos pequeños -->
+                <li class="nav-item dropdown mr-3 d-lg-none">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    VEHÍCULOS +
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="pickup2.4.html">PICKUP 2.4</a>
+                    <a class="dropdown-item" href="pickup2.8.html">PICKUP 2.8</a>
+                    <a class="dropdown-item" href="wagon8x8.html">WAGON 2.8</a>
+                    <!-- Agrega más enlaces según sea necesario -->
+                  </div>
+                </li>             
+                <!-- Resto de elementos del menú -->
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="caracteristicas.html">CARACTERÍSTICAS</a>
+                </li>
+                <li class="nav-item mr-3">
+                  <a class="nav-link" href="galeria.html">GALERIA</a>
+                </li>
+                <li class="nav-item active mr-3">
+                  <a class="nav-link btn-contact" href="contacto.html">CONTACTANOS</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+      
+    </header>
+
+    <main>
+        <div class="contenedor-contacto">
+            <div class="dark-overlay"></div>
+              <!-- Contenido principal debajo de la cabecera -->
+            <div class="container-fluid mt-3">
+                <div class="row justify-content-center">
+                    <!-- Columna Izquierda -->
+                        <div class="col-12 col-sm-12 col-md-6 d-flex flex-column justify-content-start izquierda-column">
+                            <h1>CONÉCTESE CON FAT TRUCK ALBERTA: SU DISTRIBUIDOR AUTORIZADO
+                            </h1>
+                            <div style="max-width: 60% ;">
+                                <p class="lead ">Comuníquese hoy y allanemos el camino para su próximo proyecto extraordinario juntos</p>
+                            </div>             
+                            <div class="social-icons2 d-flex justify-content-start align-items-center">
+                                <p class="follow-us">Síguenos en:</p>
+                                <a href="https://www.facebook.com/yourpage" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.instagram.com/yourpage" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://wa.me/7802203779" target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                           
+                            
+                        
+                              
+                        </div>
+                
+                        <!-- Columna Derecha: Contenedor del Formulario -->
+                        <div class="col-12 col-sm-12 col-md-6 d-flex flex-column justify-content-start derecha-column">
+                            <!-- Contenedor del formulario -->
+                            <div class="contact-form-container p-3">
+                                <!-- Formulario -->
+                                <form action="contactos.php" method="POST">
+                                    <!-- Fila para nombre completo y correo electrónico -->
+                                    <div class="form-row mb-3">
+                                        <!-- Columna para el nombre completo -->
+                                        <div class="col-12 col-md-6 col-lg-6 mb-3">
+                                            <label for="fullName">Nombre completo</label>
+                                            <input type="text" class="form-control input-dark" id="fullName" name="nombre" required>
+                                        </div>
+                                        <!-- Columna para el correo electrónico -->
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email">Correo electrónico</label>
+                                            <input type="email" class="form-control input-dark" id="email" name="correo" required>
+                                        </div>
+                                    </div>
+                        
+                                    <!-- Fila para teléfono y compañía -->
+                                    <div class="form-row mb-3">
+                                        <!-- Columna para el teléfono -->
+                                        <div class="col-md-6 mb-3">
+                                            <label for="phone">Teléfono</label>
+                                            <input type="tel" class="form-control input-dark" id="phone" name="telefono">
+                                        </div>
+                                        <!-- Columna para la compañía -->
+                                        <div class="col-md-6 mb-3">
+                                            <label for="company">Compañía (opcional)</label>
+                                            <input type="text" class="form-control input-dark" id="company" name="compania">
+                                        </div>
+                                    </div>
+                        
+                                    <!-- Área de texto para el mensaje -->
+                                    <div class="form-group mb-3">
+                                        <label for="message">Déjanos tu mensaje</label>
+                                        <textarea class="form-control input-dark" id="message" rows="3" name="mensaje" required></textarea>
+                                    </div>
+                        
+                                    <!-- Botón de envío -->
+                                    <div class="form-group text-right"> <!-- Alineación a la derecha -->
+                                        <button type="submit" class="btn btn-danger">ENVIAR MENSAJE</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+        </div>    
+            
+    </main>
+    
+    <footer class="footer container-fluid-ultimo  text-white ">
+      <div class="row">
+          <!-- Sección de texto -->
+          <div class="col-12 col-md-5 text-center text-md-left mb-3 mb-md-0">
+              <img src="imagenes/logooriginal.png" alt="logo" class="footer-logo mb-2">
+              <p class="p-custom">Como distribuidor autorizado de Fat Truck, Fat Truck Alberta está listo para conectarte con estos vehículos extraordinarios.</p>
+              <a href="contacto.html" class="btn btn-direction">Obtener dirección</a>
+            </div>
+      
+          <!-- Sección de modelos e información -->
+          <div class="col-12 col-md-4 mb-3 mb-md-0">
+              <div class="row custom-row">
+                  <div class="col-6 custom-col">
+                      <h5>Modelos</h5>
+                      <ul class="list-unstyled">
+                      
+                          <li><a href="pickup2.4.html" class="text-white">Pickup 2.4</a></li>
+                          <li><a href="pickup2.8.html" class="text-white">Pickup 2.8</a></li>
+                          <li><a href="wagon8x8.html" class="text-white">Wagon 8x8</a></li>
+                         
+                      </ul>
+                  </div>
+                  <div class="col-6 custom-col">
+                      <h5>Más información</h5>
+                      <ul class="list-unstyled">
+                          <li><a href="caracteristicas.html" class="text-white">Características</a></li>
+                          <li><a href="#" class="text-white"><!--Acerca de nosotros --></a></li>
+                          <li><a href="contacto.html" class="text-white">Contacto</a></li>
+                      </ul>
+                  </div>
+                  
+              </div>
+          </div>
+      
+          <!-- Sección de membresía y CTA -->
+          <div class="col-12 col-md-3 texto-boton">
+            <a href="contacto.html" class="btn btn-contact-venta mb-4">CONTACTA CON VENTAS AHORA!</a>
+              <div class="text-and-image">
+                  <p>MIEMBROS ORGULLOSOS DE</p>
+                  <img src="imagenes/webclip.png" alt="AEM Member" class="membership-logo mb-2">
+              </div>
+      
+              <div class="social-icons">
+                <a href="https://web.facebook.com/FatTruckAlberta/?_rdc=1&_rdr" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/fattruckalberta/" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/7802203779" target="_blank">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+              
+          </div>
+      </div>
+    </footer>
+    
+    
+
+    <!-- Scripts al final del body para cargar la página más rápido -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

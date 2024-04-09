@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehículos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+
+
+/* Restablecer estilos predeterminados de Bootstrap que puedan afectar */
+.navbar {
+  margin-bottom: 0; /* Remover el margen inferior */
+}
+
+/* Estilos para la barra de navegación */
+.navbar-custom {
+  z-index: 10000;
+  background-color: transparent; /* Fondo transparente */
+  position: fixed;
+  top: 0;
+  left: 0; /* Asegúrate de que la barra de navegación comienza en la esquina izquierda */
+  width: 100%; /* La barra de navegación debe ocupar toda la anchura */
+  z-index: 10;
+  margin: 0; /* Eliminar cualquier margen */
+  padding: 0; /* Eliminar cualquier relleno */
+  display: flex; /* Habilita flexbox para alinear elementos verticalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  height: 85px; /* Ajusta la altura del navbar según necesites */
+}
+/* Asegurar que el logotipo y el botón de toggler no tengan fondo y sean visibles sobre cualquier contenido */
+.navbar-custom .navbar-brand {
+  padding-left: 18px; /* Añade un poco de espacio a la izquierda del logo */
+  height: 100%; /* Iguala la altura de la barra de navegación */
+  width: 35%;
+  display: flex;
+  align-items: center; /* Centra el logo verticalmente */
+}
+
+.navbar-custom .navbar-brand img {
+  height: 45px; /* Ajusta la altura del logo */
+  width: auto; /* Mantiene la relación de aspecto del logo */
+  display: block; /* Asegura que el img se comporte como un bloque */
+}
+/* Estilos para los elementos dentro del navbar-collapse */
+.navbar-custom .navbar-collapse {
+  height: 100%; /* Iguala la altura de la barra de navegación */
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para el fondo blanco */
+}
+
+/* Eliminar el relleno predeterminado de Bootstrap en .navbar-nav */
+.navbar-custom .navbar-nav {
+  height: 100%; /* Iguala la altura de la barra de navegación */
+  display: flex;
+  flex-direction: row; /* en línea para pantallas grandes */
+  align-items: center; /* Alineación vertical */
+  justify-content: center; /* Alineación horizontal */
+
+}
+
+/* Estilos para los enlaces de navegación */
+.navbar-custom .nav-link {
+  font-family: Arial, Helvetica, sans-serif;  
+  font-weight: bold;
+  color: #646262; /* Color del texto para los enlaces */
+  margin-right: 10px; /* Espaciado a la derecha para cada enlace */
+}
+
+.navbar-custom .btn-contact {
+  background-color: red; /* Fondo rojo para el botón */
+  color: #fff; /* Texto blanco */
+  border: none; /* Elimina el borde */
+  padding: 0.5rem 1rem; /* Ajustar el relleno */
+  transition: background-color 0.3s; /* Suaviza la transición del color de fondo */
+}
+
+/* Cambio de color al pasar el mouse por encima del botón */
+.navbar-custom .btn-contact:hover {
+  background-color: #e6561d; /* Un color ligeramente más claro al pasar el ratón por encima o enfocar */
+}
+/* Estilos globales, aplicables a todas las resoluciones */
+.navbar-custom .navbar-toggler-icon {
+  /* SVG del icono del toggler en color blanco */
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 991px) {
+  .navbar-custom {
+    background-color: rgb(27, 25, 25); /* Fondo negro para la barra de navegación */
+  }
+
+  .navbar-custom .navbar-toggler {
+    margin-right: 15px; /* Espacio al lado derecho */
+
+    border-color: black; /* Borde del botón toggler */
+  }
+  .navbar-custom .navbar-nav {
+    flex-direction: column; /* Apila los enlaces en dispositivos móviles */
+    margin-left: 0; /* Anula el margen automático a la derecha */
+    align-items: flex-start; /* Alinea los enlaces al borde izquierdo */
+  }
+
+  .navbar-custom .navbar-collapse {
+    background-color: #ffffff; /* Fondo negro para el contenedor colapsado */
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    padding-left: 15px; /* Agrega un poco de espacio al borde izquierdo para evitar que los elementos toquen el borde */
+  }
+  .navbar-custom .btn-contact {
+    color: #fff; /* Texto blanco */
+  }
+  .navbar-custom .navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: bold;
+    color: #515151; /* Color del texto para los enlaces de navegación */
+  }
+  /* Aumentando la especificidad */
+.navbar-custom .navbar-nav .btn-contact {
+  font-size: 19px;
+  color: #fff; /* Color blanco */
+}
+
+  
+  .navbar-custom .navbar-collapse.show {
+    height: auto; /* Altura automática según el contenido */
+  }
+
+  .navbar-custom .navbar-nav {
+    margin-top: 1rem; /* Espacio superior para los enlaces */
+  }
+
+  .navbar-custom .navbar-nav .nav-item {
+    margin-bottom: 1rem; /* Espacio inferior para cada ítem */
+  }
+
+  .navbar-custom .navbar-toggler-icon {
+    /* Icono de menú por defecto */
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  .navbar-custom .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    /* Icono de cierre cuando el menú está abierto */
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M7 7l16 16M7 23L23 7'/%3E%3C/svg%3E");
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+/* empieza la seccion de contendores de vehiculos */
+.full-screen-background {
+  padding-top: 90px;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #201f1f;
+  min-height: 100vh; /* Usar min-height asegura que el contenedor sea al menos tan alto como la ventana gráfica, pero puede crecer si el contenido es más largo */
+  position: relative;
+}
+
+.full-screen-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('imagenes/topo-black_small.webp') center center / cover no-repeat;
+  opacity: 0.2; /* Ajusta la opacidad de la imagen para que el fondo café oscuro sea visible */
+  z-index: 0;
+}
+
+.custom-card {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Asegúrate de que los elementos se apilen verticalmente */
+  justify-content: flex-end; /* Centra los elementos verticalmente */
+  align-items: flex-start; /* Centra los elementos horizontalmente, si lo deseas */
+  height: 200px; /* Ajusta según la altura deseada */
+  background-size: cover; /* Cubre todo el contenedor, puede recortar verticalmente */
+  background-position: center center; /* Centra la imagen de fondo */
+  border-radius: 0; /* Opcional: para bordes redondeados */
+  background-repeat: no-repeat; /* No repetir la imagen */
+  overflow: hidden; /* Previene desbordamientos si añades más contenido */
+  position: relative; /* Necesario para posicionar el título correctamente */
+  display: flex;
+  padding: 15px; /* Espacio interior para el título */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: sombra para añadir profundidad */
+  transition: transform 0.3s ease; /* Suaviza la transición al cambiar el tamaño/hover */
+
+}
+
+.custom-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.075); /* Capa semitransparente para oscurecer la imagen */
+  z-index: 1;
+  transition: opacity 0.5s ease; /* Transición suave para la opacidad */
+}
+.custom-card:hover::before {
+  opacity: 0; /* Al pasar el cursor, la capa oscurecida desaparece */
+}
+a:hover, a:focus {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+
+.custom-card:hover {
+  transform: scale(1.05); /* Efecto de hover que aumenta ligeramente el tamaño */
+}
+
+.card-title h5 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 35px;
+  position: relative;
+  color: #FFFFFF; /* Asegúrate de que el título sea legible sobre la imagen de fondo */
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7); /* Opcional: sombra de texto para mejorar la legibilidad */
+}
+
+.card-title span {
+  font-size: 20px; /* Ajusta esto para cambiar el tamaño relativo de '24' en comparación con 'PICKUP' */
+  color: #ffffff; /* Esto es para el color rojo, pero ajústalo según necesites */
+  margin-left: 0.25em; /* Esto agrega un pequeño espacio entre 'PICKUP' y '24' */
+  position: relative; /* Esto permite posicionar el span relativo a su posición normal */
+  top: -10px; /* Ajusta esto para mover '24' arriba o abajo relativo a 'PICKUP' */
+  font-weight: bold;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.card-img:hover {
+  transform: scale(1.05);
+}
+
+  
+.sidebar-menu i {
+  margin-left: 9px; /* Espacio entre el ícono y el texto */
+  transform: rotate(45deg); /* Rota el ícono hacia la esquina superior derecha */
+  /* Otros estilos para tu ícono */
+}
+
+.sidebar-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar-menu ul li a {
+  font-size: 25px;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar-menu ul li a i {
+  margin-left: 5px;
+}
+
+.fas.fa-arrow-up {
+  transition: transform 0.3s ease;
+}
+
+.unavailable-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  font-weight: bold;
+  display: none; /* Oculto inicialmente */
+}
+
+    </style>
+    
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <a class="navbar-brand" href="index.html">
+        <img src="imagenes/fattruck-logo_white.svg" alt="Logo"> <!-- Ajusta el path a tu logo -->
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active mr-3">
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-home"></i> <span>HOGAR</span><span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <!-- Enlace VEHÍCULOS que siempre redirige, visible solo en dispositivos grandes -->
+          <li class="nav-item mr-3 d-none d-lg-block">
+            <a class="nav-link" href="vehiculos.html">VEHÍCULOS +</a>
+          </li>
+  
+          <!-- Menú desplegable para dispositivos móviles, visible solo en dispositivos pequeños -->
+          <li class="nav-item dropdown mr-3 d-lg-none">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              VEHÍCULOS +
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="pickup2.4.html">PICKUP 2.4</a>
+              <a class="dropdown-item" href="pickup2.8.html">PICKUP 2.8</a>
+              <a class="dropdown-item" href="wagon8x8.html">WAGON 2.8</a>
+              <!-- Agrega más enlaces según sea necesario -->
+            </div>
+          </li>             
+          <!-- Resto de elementos del menú -->
+          <li class="nav-item mr-3">
+            <a class="nav-link" href="caracteristicas.html">CARACTERÍSTICAS</a>
+          </li>
+          <li class="nav-item mr-3">
+            <a class="nav-link" href="galeria.html">GALERIA</a>
+          </li>
+          <li class="nav-item active mr-3">
+            <a class="nav-link btn-contact" href="contacto.html">CONTACTANOS</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  <div class="container-fluid  full-screen-background">
+    <div class="vehicles-section">
+          <div class="container-fluid-vehiculos">
+              <div class="row mt-4">
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                  <a href="pickup2.4.html" class="custom-card d-flex" style="background-image: url('imagenes/24-copy.webp');">
+                    <!-- Contenedor del título -->
+                    <div class="card-title">
+                      <h5>PICKUP<span>2.4</span></h5>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                  <a href="pickup2.8.html"   class="custom-card d-flex" style="background-image: url('imagenes/fattruck-copy.webp');">
+                    <!-- Contenedor del título -->
+                    <div class="card-title">
+                      <h5>PICKUP<span>2.8</span></h5>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                  <a href="wagon8x8.html"   class="custom-card d-flex" style="background-image: url('imagenes/8x8hauler.webp');">
+                    <!-- Contenedor del título -->
+                    <div class="card-title">
+                      <h5>WAGON<span>8x8</span></h5>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                  <a href="pickup2.4.html"  class="custom-card d-flex unavailable-link" style="background-image: url('imagenes/8x8hauler-2.webp');">
+                    <!-- Contenedor del título -->
+                    <div class="card-title">
+                      <h5>WAGON<span>2.8</span></h5>
+                    </div>
+                    <div class="unavailable-message" style="display: none;">No disponible</div>
+                  </a>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                  <a href="pickup2.4.html"  class="custom-card d-flex unavailable-link" style="background-image: url('imagenes/8x8-copy.webp');">
+                    <!-- Contenedor del título -->
+                    <div class="card-title">
+                      <h5>HAULER <span>8X8</span></h5>
+                    </div>
+                    <div class="unavailable-message" style="display: none;">No disponible</div>
+                  </a>
+                </div>
+              
+                    <!--Agrega mas imagenes aqui -->
+  
+  
+                  <!-- seccion de navs -->
+                  <div class="sidebar-menu col-sm-12 col-md-6 col-lg-4 mb-4">
+                      <ul>
+                          <li><a href="#haulers">HAULERS & AMPHIBIOUS TRAILER<i class="fas fa-arrow-up"></i></a></li>
+                          <li><a href="#accessories">ACCESSORIES<i class="fas fa-arrow-up"></i></a></li>
+                          <li><a href="#features">FEATURES & BENEFITS<i class="fas fa-arrow-up"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+             
+          </div>
+      </div>
+  </div>
+  
+  </header>
+ 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  // Espera a que el contenido de la página se cargue
+  document.addEventListener('DOMContentLoaded', function () {
+    // Encuentra todos los enlaces con la clase 'unavailable-link'
+    var unavailableLinks = document.querySelectorAll('.unavailable-link');
+  
+    // Agrega un escuchador de eventos de clic a cada enlace
+    unavailableLinks.forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        // Previene el comportamiento predeterminado del enlace
+        event.preventDefault();
+        // Encuentra el contenedor del mensaje dentro del enlace y lo muestra
+        var message = link.querySelector('.unavailable-message');
+        if (message) {
+          message.style.display = 'block';
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

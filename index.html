@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAT TRUCK</title>
+    <!-- Bootstrap CSS CDN (Asegúrate de usar la versión que estés implementando) -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Oswald:wght@400;700&family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=League+Gothic&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <a class="navbar-brand" href="index.html">
+      <img src="imagenes/fattruck-logo_white.svg" alt="Logo"> <!-- Ajusta el path a tu logo -->
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active mr-3">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-home"></i> <span>HOGAR</span><span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <!-- Enlace VEHÍCULOS que siempre redirige, visible solo en dispositivos grandes -->
+        <li class="nav-item mr-3 d-none d-lg-block">
+          <a class="nav-link" href="vehiculos.html">VEHÍCULOS +</a>
+        </li>
+
+        <!-- Menú desplegable para dispositivos móviles, visible solo en dispositivos pequeños -->
+        <li class="nav-item dropdown mr-3 d-lg-none">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            VEHÍCULOS +
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="pickup2.4.html">PICKUP 2.4</a>
+            <a class="dropdown-item" href="pickup2.8.html">PICKUP 2.8</a>
+            <a class="dropdown-item" href="wagon8x8.html">WAGON 2.8</a>
+            <!-- Agrega más enlaces según sea necesario -->
+          </div>
+        </li>             
+        <!-- Resto de elementos del menú -->
+        <li class="nav-item mr-3">
+          <a class="nav-link" href="caracteristicas.html">CARACTERÍSTICAS</a>
+        </li>
+        <li class="nav-item mr-3">
+          <a class="nav-link" href="galeria.html">GALERIA</a>
+        </li>
+        <li class="nav-item active mr-3">
+          <a class="nav-link btn-contact" href="contacto.html">CONTACTANOS</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="container-fluid bg-custom">
+  <div class="dark-overlay"></div>
+
+  <div class="image-overlay">
+    <img src="imagenes/dot-bg.png" alt="Imagen superpuesta">
+  </div>
+
+  <div class="content-center">
+      <div class="row">
+          <div class="col-12">
+              <h1>LIBERE POTENCIA Y VERSATILIDAD ILIMITADAS</h1> <!-- Eliminada la clase text-center -->
+          </div>
+      </div>
+      <div class="row centered-content">
+          <div class="col-md-4">
+              <p>Explore el futuro del transporte todoterreno y mejore su flota con el rendimiento incomparable de Fat Truck.</p> <!-- Eliminada la clase text-center -->
+          </div>
+          <div class="button-container">
+            <a href="contacto.html" class="btn btn-contact-us">CONTACTANOS</a>
+            <a href="tel:7802203779" class="btn inquiry-button">PREGUNTA AHORA</a>
+          </div>
+          
+    </div>
+  </div>
+</div>
+
+</header>
+
+<main>
+
+<section class="intro-section">
+        <div class="container-fluid h-100">
+            <div class="row align-items-flex-start"> <!-- Asegura alineación vertical centrada -->
+                <div class="col-md-6 no-padding-left intro-text">
+                    <div class="imagenprimera"> 
+                        <img src="imagenes/topo-p-500.png" alt="Descripción de la imagen" class="img-fluid mb-3">
+                    </div>                    
+                    <div class="title-container mb-3"> <!-- Contenedor para el título -->
+                        <h1>BIENVENIDO A UN MUNDO DONDE LA EXCELENCIA ES LA NORMA Y SUS ESFUERZOS TODOTERRENO SE ELEVAN A NIVELES SIN PRECEDENTES.</h1>
+                    </div>
+    
+                    <div class="row"> <!-- Fila anidada para párrafo y botón -->
+                        <div class="col-md-7"> <!-- 4 de 6 partes para el párrafo -->
+                            <p>Como distribuidor autorizado de Fat Truck, Fat Truck Alberta está listo para conectarlo con estos vehículos extraordinarios, asegurándole que tenga la potencia y la versatilidad necesarias para transformar los desafíos en oportunidades.</p>
+                        </div>
+                        <div class="col-md-5"> <!-- 2 de 6 partes para el botón -->
+                          <a href="#carruselContenedor" class="my-button">
+                            VER LOS MODELOS
+                            <span class="arrow">→</span>
+                          </a>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="col-md-6 intro-img padding-right-10px ">
+                  <img src="imagenes/about-img-copy.webp" alt="Off-Road Vehicle" class="img-fluid">
+                </div>
+            </div>
+        </div>    
+</section>
+<div id="carruselContenedor" class="carrusel-contenedor">
+  <div class="carrusel-imagen"></div> <!-- Esto ocupará la mitad izquierda -->
+  
+  <!-- Contenido y Carrusel de Bootstrap en la mitad derecha -->
+  <div class="container-fluid centrado-vertical">
+    <div class="row ">
+      <!-- Contenido del lado izquierdo -->
+      <div class="col-12 col-lg-3 model-discovery-container">
+        <h1>DESCUBRE NUESTROS MODELOS</h1>
+        <p>Como distribuidor autorizado de Fat Truck, Fat Truck Alberta está listo para conectarlo con estos extraordinarios vehículos.</p>
+        <a href="contacto.html" class="inquire-btn">PREGUNTE AHORA</a>
+      </div>
+      
+     <!-- Contenedor de la columna donde irá el carrusel -->
+     <div class="col-12 col-lg-9 carousel-container">
+      <div class="carousel">
+        <button class="carousel-button prev-button">❮</button>
+        <div class="carousel-track-container">
+          <ul class="carousel-track">
+            <li class="carousel-slide">
+              <div class="slide-content">
+                <a href="pickup2.4.html">
+                  <img src="imagenes/24-copy.webp" alt="Pickup 2.4" class="carousel-image">
+                </a>
+                <div class="slide-caption">
+                  <h2>PICKUP 2.4</h2>
+                </div>
+              </div>
+            </li>
+            <li class="carousel-slide">
+              <div class="slide-content">
+                <a href="pickup2.8.html">
+                  <img src="imagenes/fattruck-copy.webp" alt="Wagon 2.8" class="carousel-image">
+                </a>
+                <div class="slide-caption">
+                  <h2>PICKUP 2.8</h2>
+                </div>
+              </div>
+            </li>
+            
+            <li class="carousel-slide">
+              <div class="slide-content">
+                <a href="wagon8x8.html">
+                  <img src="imagenes/8x8hauler.webp" alt="Pickup 2.8" class="carousel-image">
+                </a>
+                <div class="slide-caption">
+                  <h2>WAGON 8X8</h2>
+                </div>
+              </div>
+            </li>
+           
+           
+            <!-- Agrega más slides según sea necesario -->
+          </ul>
+        </div>
+        <div class="carousel-indicators">
+          <button class="carousel-indicator" data-slide-to="0"></button>
+          <button class="carousel-indicator" data-slide-to="1"></button>
+          <button class="carousel-indicator" data-slide-to="2"></button>
+          
+        </div>
+
+        <button class="carousel-button next-button">❯</button>
+      </div>
+    </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+<div class="industries-hero-banner">
+  <div class="industries-info">
+    <h1 class="industries-title">EMPODERANDO INDUSTRIAS</h1>
+    <p class="industries-subtitle">Explore las extraordinarias características de Fat Trucks, orgullosamente diseñadas y desarrolladas en Canadá. Libere las extraordinarias capacidades creadas con el ingenio canadiense para redefinir las experiencias todoterreno y elevar sus proyectos a nuevas alturas</p>
+  </div>
+  <div class="image-container">
+    <!-- Otros contenidos si los hay -->
+    <img src="imagenes/topo-white_small.webp" alt="Top Image" class="top-right-image">
+    <img src="imagenes/topo-white_small.webp" alt="Bottom Image" class="bottom-right-image">
+  </div>
+</div>
+
+
+
+      <div class="full-height-banner">
+        <div class="banner-content">
+          <h2>EMPODERANDO INDUSTRIAS</h2>
+          <p>Como distribuidor autorizado de Fat Truck, Fat Truck Alberta está listo para conectarlo con estos extraordinarios vehículos</p>
+        </div>
+      </div>
+      
+    
+
+      <div class="container-fluid-columnas">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 ">
+                <div class="red-border-bottom">
+                    <h2>CUMPLIMIENTO DE LA LEY</h2>
+                    <p>Diseñado con precisión para hacer cumplir la ley, Fat Truck proporciona una solución sólida y adaptable para patrullar diversos terrenos y responder a emergencias.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4  ">
+                <div class="red-border-bottom">
+                    <h2>BÚSQUEDA Y RESCATE</h2>
+                    <p>Fat Truck ayuda en misiones de búsqueda y rescate rápidas y efectivas con su destreza anfibia, garantizando que los equipos de rescate puedan llegar a lugares remotos de manera eficiente.</p>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4 ">
+                <div class="red-border-bottom">
+                    <h2>PROYECTO DE OLEODUCTO</h2>
+                    <p>Ideal para proyectos de oleoductos, Fat Truck navega por paisajes desafiantes, transportando equipos y cuadrillas de manera eficiente en áreas de construcción remotas y accidentadas.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4  ">
+                <div class="red-border-bottom">
+                    <h2>TRABAJOS DE SERVICIOS PÚBLICOS DE ALTO RIESGO</h2>
+                    <p>Fat Truck se destaca en trabajos de servicios públicos de alto riesgo y ofrece una solución segura y confiable con su durabilidad, características de seguridad y adaptabilidad a condiciones exigentes.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 ">
+                <div class="red-border-bottom">
+                    <h2>MILITAR</h2>
+                    <p>En operaciones militares, Fat Truck mejora la movilidad y la efectividad operativa con sus capacidades todoterreno, navegando por diversos paisajes con facilidad.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 ">
+                <div class="red-border-bottom">
+                    <h2>USO DE OCIO</h2>
+                    <p>Más allá del trabajo, Fat Truck es un emocionante compañero para los entusiastas del todoterreno, ya que ofrece una versatilidad inigualable para explorar senderos, conquistar la nieve y navegar sobre el agua.</p>
+                </div>
+            </div> 
+         </div>          
+    </div>
+
+    <div class="snow-container">
+      <div class="foreground-image-container">
+        <img src="imagenes/feature-bg-copy.webp" alt="Foreground" class="foreground-image">
+      </div>
+      <!-- Contenido nuevo con Bootstrap -->
+      <div class="container-fluid centered-container">
+        <div class="row align-items-center ">
+          <div class="col-12 col-md-12 col-lg-6 snow-features-text">
+            <h1>CARACTERÍSTICAS PRINCIPALES DE FAT TRUCK</h1>
+            <p>Una inmersión en el dominio anfibio y el control intuitivo</p>
+            <a href="caracteristicas.html" class="btn btn-primary snow-btn-full">CARACTERÍSTICAS COMPLETAS</a>
+            <a href="galeria.html" class="btn btn-outline-primary snow-btn-action">VÉALO EN ACCIÓN</a>
+          </div>
+          <div class="col-12 col-md-12 col-lg-6">
+            <div class="interactive-image-container">
+              <img src="imagenes/fattruck-army3-real-copy.webp" alt="Fat Truck" class="img-fluid">
+              <div class="point" data-top="68" data-left="22" data-description="Ajuste automático de la presión de los neumaticos"></div>
+              <div class="point" data-top="30" data-left="22" data-description="Entrada y salida sin esfuerzo"></div>
+              <div class="point" data-top="44" data-left="34" data-description="Ajuste automático de la presión de los neumaticos"></div>
+              <div class="point" data-top="39" data-left="68" data-description="Totalmente anfibio"></div>
+              <!-- ... otros puntos según necesites -->
+            </div>
+            
+            
+           </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+
+
+    <div class="container-fluid  contenedor-collague">
+      <div class="row">
+        <!-- Columna para la imagen grande -->
+        <div class="col-md-12 col-lg-6">
+            <img src="imagenes/24-copy.webp" alt="" class="img-fluid imagen-destacada" onclick="abrirModal(this.src, this.alt)">
+        </div>
+        
+        <!-- Columna para las imágenes pequeñas -->
+        <div class="col-md-12 col-lg-6">
+
+          <div class="row contenedor-imagenes">
+            <!-- Primera columna de imágenes pequeñas -->
+            <div class="col-12 col-md-6 ">
+              <img src="imagenes/28wagon.webp" alt="" class="img-fluid imagen-cuadrada" onclick="abrirModal(this.src, this.alt)">
+              <img src="imagenes/8x8hauler.webp" alt="" class="img-fluid imagen-cuadrada" onclick="abrirModal(this.src, this.alt)">
+            </div>
+            
+            <!-- Segunda columna de imágenes pequeñas -->
+            <div class="col-12 col-md-6">
+              <img src="imagenes/28p.webp" alt="" class="img-fluid imagen-cuadrada" onclick="abrirModal(this.src, this.alt)">
+              <img src="imagenes/8x8hauler-2.webp" alt="" class="img-fluid imagen-cuadrada" onclick="abrirModal(this.src, this.alt)">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="modalId" class="modal">
+      <div class="modal-content-wrapper">
+        <span class="cerrar">&times;</span>
+        <img src="" alt="Imagen modal" class="modal-contenido">
+        <div class="modal-caption"></div>
+      </div>
+    </div>
+  </div>
+    
+
+      
+
+
+      <div class="faq-preguntas">
+        <div class="background-image-half"></div>
+        <div class="faq-header">
+          <h2>PREGUNTAS FRECUENTES</h2>
+          <a href="contacto.html" class="faq-button">¿TENGO UNA PREGUNTA?</a>
+        </div>
+        <div class="faq-content">
+          <!-- Pregunta 1 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3 >
+                ¿Cómo maneja Fat Truck diferentes terrenos, incluido el terreno?
+            </h3>              <button class="faq-toggle">+</button>
+            </div>
+            <div class="faq-answer">
+                <span class="response-prefix">R:</span>
+                <p>El excepcional diseño anfibio de Fat Truck le permite navegar sin esfuerzo por diversos terrenos, desde paisajes cubiertos de nieve hasta cruces de agua. Con sus capacidades de rendimiento versátiles, realiza una transición perfecta entre tierra y agua, lo que garantiza una operación confiable y eficiente en diversos entornos.</p>
+              </div>
+          </div>
+            <!-- Pregunta 2 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>
+                ¿Puede Fat Truck acomodar un equipo de trabajadores o equipo adicional?
+            </h3>              <button class="faq-toggle">+</button>
+            </div>
+            <div class="faq-answer">
+                <span class="response-prefix">R:</span>
+                <p>Absolutamente. Fat Truck está diseñado para satisfacer las necesidades tanto de su equipo como de equipo. Ya sea que esté transportando un equipo de trabajadores a ubicaciones remotas o llevando equipo adicional para sus proyectos, el diseño espacioso y la capacidad de carga útil de Fat Truck lo convierten en una solución versátil para diversos escenarios de trabajo.</p>
+              </div>
+          </div>
+           <!-- Pregunta 3 -->
+           <div class="faq-item">
+            <div class="faq-question">
+              <h3 >
+                ¿Qué características de seguridad tiene Fat Truck para proyectos todo terreno?
+            </h3>              <button class="faq-toggle">+</button>
+            </div>
+            <div class="faq-answer">
+                <span class="response-prefix">R:</span>
+                <p>Fat Truck prioriza la seguridad con características robustas como una estructura de protección antivuelco (ROPS) que cumple con la norma ISO 3471, garantizando la protección de los ocupantes durante maniobras todoterreno desafiantes. El freno de seguridad automático mejora aún más la seguridad al proporcionar una desaceleración controlada, agregando una capa adicional de seguridad durante la operación en terrenos exigentes.</p>
+              </div>
+          </div>
+           <!-- Pregunta 4 -->
+           <div class="faq-item">
+            <div class="faq-question">
+              <h3 >
+                ¿Qué tan fácil es operar el Fat Truck, especialmente en condiciones difíciles ?
+            </h3>
+              <button class="faq-toggle">+</button>
+            </div>
+            <div class="faq-answer">
+                <span class="response-prefix">R:</span>
+                <p>Fat Truck está diseñado con controles fáciles de usar, que incluyen un joystick proporcional intuitivo y una pantalla a color para facilitar la navegación. Incluso en condiciones difíciles, sus controles avanzados contribuyen a una operación sencilla y fluida, lo que permite a los operadores maniobrar con confianza.</p>
+              </div>
+          </div>
+          <!-- Más preguntas aquí -->
+        </div>
+      </div>
+      
+
+      <div class="container-images">
+        <img src="imagenes/cta-top-bg.webp" class="image-large" alt="Imagen Grande">
+          <!-- Contenedor Intermedio -->
+         <!-- Nuevo Contenedor Intermedio -->
+         <div class="content-overlay">
+          <h2>¿LISTO PARA MEJORAR TUS CAPACIDADES TODOTERRENO?</h2>
+          <div class="text-and-button">
+            <p>Elija la excelencia con Fat Truck. Como distribuidor autorizado, Fat Truck Alberta es su puerta de entrada a un rendimiento, versatilidad y confiabilidad inigualables. Contáctenos hoy para explorar las posibilidades y llevar el poder de Fat Truck a su flota.</p>
+            <a href="contacto.html" class="btn-sales-inquiry">CONTACTE CON VENTAS AHORA!</a>
+          </div>
+        </div>
+        <img src="imagenes/dot-bg.png" class="image-small" alt="Imagen Pequeña">
+      </div>
+                
+        
+    </main>
+    
+    <footer class="footer container-fluid-ultimo  text-white ">
+      <div class="row">
+          <!-- Sección de texto -->
+          <div class="col-12 col-md-5 text-center text-md-left mb-3 mb-md-0">
+              <img src="imagenes/logooriginal.png" alt="logo" class="footer-logo mb-2">
+              <p class="p-custom">Como distribuidor autorizado de Fat Truck, Fat Truck Alberta está listo para conectarte con estos vehículos extraordinarios.</p>
+              <a href="contacto.html" class="btn btn-direction">Obtener dirección</a>
+            </div>
+      
+          <!-- Sección de modelos e información -->
+          <div class="col-12 col-md-4 mb-3 mb-md-0">
+              <div class="row custom-row">
+                  <div class="col-6 custom-col">
+                      <h5>Modelos</h5>
+                      <ul class="list-unstyled">
+                      
+                          <li><a href="pickup2.4.html" class="text-white">Pickup 2.4</a></li>
+                          <li><a href="pickup2.8.html" class="text-white">Pickup 2.8</a></li>
+                          <li><a href="wagon8x8.html" class="text-white">Wagon 8x8</a></li>
+                         
+                      </ul>
+                  </div>
+                  <div class="col-6 custom-col">
+                      <h5>Más información</h5>
+                      <ul class="list-unstyled">
+                          <li><a href="caracteristicas.html" class="text-white">Características</a></li>
+                          <li><a href="#" class="text-white"><!--Acerca de nosotros --></a></li>
+                          <li><a href="contacto.html" class="text-white">Contacto</a></li>
+                      </ul>
+                  </div>
+                  
+              </div>
+          </div>
+      
+          <!-- Sección de membresía y CTA -->
+          <div class="col-12 col-md-3 texto-boton">
+            <a href="contacto.html" class="btn btn-contact-venta mb-4">CONTACTA CON VENTAS AHORA!</a>
+              <div class="text-and-image">
+                  <p>MIEMBROS ORGULLOSOS DE</p>
+                  <img src="imagenes/webclip.png" alt="AEM Member" class="membership-logo mb-2">
+              </div>
+      
+              <div class="social-icons">
+                <a href="https://web.facebook.com/FatTruckAlberta/?_rdc=1&_rdr" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/fattruckalberta/" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/7802203779" target="_blank">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+              
+          </div>
+      </div>
+    </footer>
+
+ <!-- Incluir Bootstrap JS y dependencias -->
+<!-- Primero jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- Luego Popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- Y finalmente Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Tus otros scripts aquí -->
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+<script src="avanzar.js"></script>
+
+
+</body>
+</html>
