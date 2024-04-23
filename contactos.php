@@ -16,7 +16,7 @@ if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Estructurar el correo
-$to = "mbisrael@gmail.com, fmontiel599@gmail.com";
+$to = "fmontiel599@gmail.com";
 $subject = "FATTRUK";
 $body = "Nombre: $nombre\nCorreo electrónico: $correo\nTeléfono: $telefono\nCompañía: $compania\nMensaje:\n$mensaje";
 $headers = "From: webmaster@fattruck.com\r\n";
